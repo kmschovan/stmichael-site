@@ -88,11 +88,11 @@
   .about-photo img { aspect-ratio: 4/3; object-fit: cover; }
 
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-  .card { background: #fff; border: 1px solid var(--line); padding: 26px 24px; text-decoration: none; color: var(--ink); transition: box-shadow .18s ease; }
+  .card { background: #fff; border: 1px solid var(--line); padding: 26px 24px; text-decoration: none; color: var(--ink); transition: box-shadow .18s ease; display: flex; flex-direction: column; }
   .card:hover { box-shadow: 0 10px 30px rgba(15,24,32,.09); }
   .card h3 { font-size: 1.6rem; font-weight: 600; color: var(--burgundy); margin-bottom: 12px; }
   .card p { font-size: .93rem; color: var(--muted); }
-  .card .more { display: inline-block; margin-top: 16px; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .card .more { display: inline-block; margin-top: auto; padding-top: 16px; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
 
   /* ---- 16:8 band ---- */
   .band { background: var(--burgundy-deep); color: var(--ivory); text-align: center; padding: 56px 0; }
