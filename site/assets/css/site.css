@@ -310,6 +310,6 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
 .cards-168 { grid-template-columns: repeat(3, 1fr); margin: 28px 0; }
 .reflection-card {
   max-width: 760px; border: 1px solid var(--gold-light); border-left: 3px solid var(--gold);
-  background: #fff; padding: 26px 30px; margin: 24px 0 40px;
+  background: #fff; padding: 26px 30px; margin: 24px auto 40px;
 }
 @media (max-width: 860px) { .cards-168 { grid-template-columns: 1fr; } }
