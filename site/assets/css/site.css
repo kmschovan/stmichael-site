@@ -302,3 +302,7 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
   border: 1px solid var(--gold-light); border-radius: 999px;
   padding: 6px 16px; margin-bottom: 26px;
 }
+
+.seal-art { border: none; background: none; padding: 0; box-shadow: none; width: 300px; }
+.seal-art img { width: 100%; height: auto; display: block; }
+@media (max-width: 860px) { .seal-art { width: min(240px, 80%); } }

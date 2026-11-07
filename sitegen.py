@@ -561,13 +561,16 @@ P("anointing.html", "Anointing of the Sick",
 P("168.html", "16:8",
   "16:8 at St. Michael's — a shared commitment to prayer, faith, and sacrifice.",
   "16:8", "16:8 at St. Michael's — Begin With Us",
-  """<div class="prose">
+  """<div class="sacrament-layout">
+<div class="sacrament-art seal-art"><img src="assets/img/168-seal.png" alt="16:8 at St. Michael's seal — Saint Michael the Archangel"></div>
+<div class="prose">
   <p class="lead">There is brokenness all around us: in our families, in sickness, in grief, and in the burdens we sometimes carry silently. At St. Michael &amp; All Angels, we want to bring those burdens to God together.</p>
   <p>Inspired by 1 Chronicles 16:8, which calls us to give thanks to the Lord, call upon His name, and make His deeds known, <strong>16:8 at St. Michael's</strong> invites our parish into a shared commitment to prayer, faith, and sacrifice.</p>
   <blockquote>"Give thanks to the Lord, call upon His name, and make His deeds known."<div class="cite">— 1 Chronicles 16:8</div></blockquote>
   <p>We will begin on the first Wednesday of Advent with a special blessing of the candles. Bring your candle and join us as we begin this journey together.</p>
   <h2>We believe God hears our prayers. We believe miracles can and do happen.</h2>
   <p>We hold strong to the faith that God listens to our prayers. Miracles are real and happen every day. We seek healing and trust in His perfect timing and presence during our challenges.</p>
+</div>
 </div>""")
 
 P("contact.html", "Contact Us",
