@@ -201,6 +201,16 @@ def build_home():
   </div>
 </div>
 
+<section class="band">
+  <div class="wrap">
+    <div class="band-tag">New &middot; Begins this Advent</div>
+    <p class="verse">"Give thanks to the Lord, call upon His name, make known His deeds."</p>
+    <p class="ref">— 1 Chronicles 16:8</p>
+    <p><strong>16:8 at St. Michael's</strong> — a shared commitment to prayer, faith, and sacrifice. We will begin on the first Wednesday of Advent with a blessing of the candles. Bring your candle and join us as we begin this journey together.</p>
+    <a class="btn btn-primary" style="background: var(--gold);" href="168.html">Learn About 16:8</a>
+  </div>
+</section>
+
 <section id="sacraments">
   <div class="wrap">
     <div class="section-head">
@@ -225,15 +235,6 @@ def build_home():
         <span class="more">Learn More</span>
       </a>
     </div>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <p class="verse">"Give thanks to the Lord, call upon His name, make known His deeds."</p>
-    <p class="ref">— 1 Chronicles 16:8</p>
-    <p><strong>16:8 at St. Michael's</strong> — a shared commitment to prayer, faith, and sacrifice. We will begin on the first Wednesday of Advent with a blessing of the candles. Bring your candle and join us as we begin this journey together.</p>
-    <a class="btn btn-primary" style="background: var(--gold);" href="168.html">Learn About 16:8</a>
   </div>
 </section>
 

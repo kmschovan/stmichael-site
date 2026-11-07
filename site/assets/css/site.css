@@ -295,3 +295,10 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
 }
 .hero-photo img { width: 100%; height: auto; display: block; }
 @media (max-width: 860px) { .hero-photo { width: min(300px, 100%); margin: 0 auto; } }
+
+.band-tag {
+  display: inline-block; font-size: .72rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--gold-light);
+  border: 1px solid var(--gold-light); border-radius: 999px;
+  padding: 6px 16px; margin-bottom: 26px;
+}
