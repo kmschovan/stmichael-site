@@ -185,6 +185,9 @@ def build_home():
       <p class="welcome">All are welcome at the Lord's table.</p>
       <p class="sub">A small Roman Catholic church with a big heart, celebrating reverent liturgy and rich Anglican heritage in the heart of Denison, Texas &mdash; a parish of the Personal Ordinariate of the Chair of Saint Peter.</p>
     </div>
+    <figure class="hero-photo">
+      <img src="assets/img/hero-church.jpg" alt="St. Michael's church with cross">
+    </figure>
   </div>
 </section>
 

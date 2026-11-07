@@ -39,7 +39,7 @@
   .hero-photo { max-width: 460px; justify-self: end; }
   .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
   .hero-photo .cap { margin-top: 12px; font-size: .8rem; color: var(--muted); text-align: center; letter-spacing: .04em; }
-  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 940px; margin: 0 auto; padding: 0 24px; text-align: left; }
+  .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; max-width: 940px; margin: 0 auto; padding: 0 24px; text-align: left; }
   .hero .ord { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
   .hero h1 { font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 600; color: var(--burgundy); line-height: 1.12; margin-bottom: 18px; }
   .hero .welcome { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-style: italic; color: var(--gold); margin: 2px 0 14px; }
@@ -283,4 +283,15 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
   .sacrament-layout { flex-direction: column-reverse; gap: 28px; }
   .sacrament-art { width: min(336px, 100%); align-self: center; }
   .hero .btn-new { position: static; justify-self: start; margin-bottom: 14px; }
+  .hero-grid { grid-template-columns: 1fr; }
 }
+
+.hero-photo {
+  width: 300px;
+  border: 1px solid var(--line);
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(15,24,32,.08);
+}
+.hero-photo img { width: 100%; height: auto; display: block; }
+@media (max-width: 860px) { .hero-photo { width: min(300px, 100%); margin: 0 auto; } }
