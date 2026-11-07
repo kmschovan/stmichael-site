@@ -6,3 +6,6 @@ desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# Local Netlify folder
+.netlify
