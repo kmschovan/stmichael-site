@@ -34,8 +34,8 @@
 
   /* ---- Hero: white, text left, church photo as a small framed block ---- */
   .hero { background: var(--ivory); padding: 34px 0 34px; position: relative; }
-  .hero .btn-new { position: absolute; bottom: 50px; right: calc(50% - 590px); white-space: nowrap; }
-  @media (max-width: 1219px) { .hero .btn-new { right: 0; } }
+  .hero .btn-new { position: absolute; bottom: 50px; right: calc(50% - 585px); white-space: nowrap; }
+  @media (max-width: 1219px) { .hero .btn-new { right: 5px; } }
   .hero-photo { max-width: 460px; justify-self: end; }
   .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
   .hero-photo .cap { margin-top: 12px; font-size: .8rem; color: var(--muted); text-align: center; letter-spacing: .04em; }

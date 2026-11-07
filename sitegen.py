@@ -182,8 +182,8 @@ def build_home():
     <a class="btn btn-ghost btn-new" href="about.html">I&#8217;m New</a>
     <div>
       <h1>St. Michael &amp; All Angels</h1>
-      <p class="welcome">All are welcome at the Lord's table.</p>
-      <p class="sub">A small Roman Catholic church with a big heart, celebrating reverent liturgy and rich Anglican heritage in the heart of Denison, Texas &mdash; a parish of the Personal Ordinariate of the Chair of Saint Peter.</p>
+      <p class="welcome">A Parish of the Personal Ordinariate of the Chair of Saint Peter</p>
+      <p class="sub">A small Roman Catholic church with a big heart, celebrating reverent liturgy and rich Anglican heritage in the heart of Denison, Texas.</p>
     </div>
     <figure class="hero-photo">
       <img src="assets/img/hero-church.jpg" alt="St. Michael's church with cross">
