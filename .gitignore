@@ -9,3 +9,5 @@ __pycache__/
 
 # Local Netlify folder
 .netlify
+# scratch notes are local-only
+notes/
