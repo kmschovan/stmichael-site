@@ -179,14 +179,11 @@ def subpage(fname, title, desc, eyebrow, hero_title, body, hero_sub=None):
 def build_home():
     body = f"""<section class="hero" id="home">
   <div class="hero-grid">
+    <a class="btn btn-ghost btn-new" href="about.html">I&#8217;m New</a>
     <div>
       <h1>St. Michael &amp; All Angels</h1>
       <p class="welcome">All are welcome at the Lord's table.</p>
-      <p class="sub">A small Catholic church with a big heart, celebrating reverent liturgy and rich Anglican heritage in the heart of Denison, Texas &mdash; a parish of the Personal Ordinariate of the Chair of Saint Peter.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="mass-times.html">Mass Times</a>
-        <a class="btn btn-ghost" href="about.html">New to the Parish?</a>
-      </div>
+      <p class="sub">A small Roman Catholic church with a big heart, celebrating reverent liturgy and rich Anglican heritage in the heart of Denison, Texas &mdash; a parish of the Personal Ordinariate of the Chair of Saint Peter.</p>
     </div>
   </div>
 </section>

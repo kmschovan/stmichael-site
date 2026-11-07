@@ -34,6 +34,8 @@
 
   /* ---- Hero: white, text left, church photo as a small framed block ---- */
   .hero { background: var(--ivory); padding: 34px 0 34px; }
+  .hero-grid { position: relative; }
+  .hero-grid .btn-new { position: absolute; top: 0; right: 24px; white-space: nowrap; }
   .hero-photo { max-width: 460px; justify-self: end; }
   .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
   .hero-photo .cap { margin-top: 12px; font-size: .8rem; color: var(--muted); text-align: center; letter-spacing: .04em; }
@@ -280,4 +282,5 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
 @media (max-width: 860px) {
   .sacrament-layout { flex-direction: column-reverse; gap: 28px; }
   .sacrament-art { width: min(336px, 100%); align-self: center; }
+  .hero-grid .btn-new { position: static; justify-self: start; margin-bottom: 14px; }
 }
