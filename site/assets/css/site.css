@@ -19,13 +19,13 @@
 
   /* ---- Navy header, like St. Ignatius ---- */
   header.site { background: var(--burgundy); border-bottom: 2px solid var(--gold-light); position: sticky; top: 0; z-index: 50; }
-  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; max-width: 1180px; margin: 0 auto; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 6px 20px; max-width: 1180px; margin: 0 auto; }
   .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
-  .brand .crest { width: 46px; height: 46px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #1d4266, var(--burgundy-deep)); display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--gold); flex-shrink: 0; }
-  .brand .crest span { color: var(--gold-light); font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; }
-  .brand .name { line-height: 1.2; }
-  .brand .name strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.28rem; font-weight: 600; letter-spacing: .01em; color: #fff; }
-  .brand .name small { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); }
+  .brand .crest { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #1d4266, var(--burgundy-deep)); display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--gold); flex-shrink: 0; }
+  .brand .crest span { color: var(--gold-light); font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 700; }
+  .brand .name { line-height: 1.15; }
+  .brand .name strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.06rem; font-weight: 600; letter-spacing: .01em; color: #fff; }
+  .brand .name small { font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); }
   nav.main { display: flex; gap: 24px; align-items: center; }
   nav.main a { text-decoration: none; color: #e9eef3; font-size: .88rem; font-weight: 500; letter-spacing: .02em; padding: 6px 0; }
   nav.main a:hover { color: var(--gold-light); }
@@ -33,14 +33,15 @@
   nav.main a.give:hover { background: var(--gold-light); color: var(--burgundy-deep); }
 
   /* ---- Hero: white, text left, church photo as a small framed block ---- */
-  .hero { background: var(--ivory); padding: 44px 0 36px; }
+  .hero { background: var(--ivory); padding: 34px 0 34px; }
   .hero-photo { max-width: 460px; justify-self: end; }
   .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
   .hero-photo .cap { margin-top: 12px; font-size: .8rem; color: var(--muted); text-align: center; letter-spacing: .04em; }
   .hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 940px; margin: 0 auto; padding: 0 24px; text-align: left; }
   .hero .ord { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
   .hero h1 { font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 600; color: var(--burgundy); line-height: 1.12; margin-bottom: 18px; }
-  .hero .sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin-bottom: 28px; }
+  .hero .welcome { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-style: italic; color: var(--gold); margin: 2px 0 14px; }
+.hero .sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin-bottom: 28px; }
   .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn { display: inline-block; padding: 12px 26px; border-radius: 2px; text-decoration: none; font-weight: 600; font-size: .92rem; letter-spacing: .03em; }
   .btn-primary { background: var(--burgundy); color: var(--ivory); }
