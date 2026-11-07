@@ -109,10 +109,10 @@
   /* ---- Visit ---- */
   .visit { background: #fff; border-top: 1px solid var(--line); }
   .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-  .visit .hours { list-style: none; }
-  .visit .hours li { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
-  .visit .hours li span:first-child { font-weight: 600; color: var(--burgundy); }
-  .visit .hours li span:last-child { color: var(--muted); }
+  .hours { list-style: none; }
+  .hours li { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
+  .hours li span:first-child { font-weight: 600; color: var(--burgundy); }
+  .hours li span:last-child { color: var(--muted); }
   .map-embed { border: 1px solid var(--line); background: var(--parchment); min-height: 360px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .9rem; }
 
   /* ---- Footer ---- */
