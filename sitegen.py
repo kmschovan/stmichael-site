@@ -20,6 +20,7 @@ NAV = [
     ("About", None, [
         ("About Us", "about.html", False),
         ("Mass Times", "mass-times.html", False),
+        ("Finding Us", "finding-us.html", False),
         ("Prayers & Intentions", "prayers.html", False),
         ("Parish Calendar", "calendar.html", False),
         ("Volunteer Signup", "https://signup.com/go/LBAHSJn", True),
@@ -263,35 +264,7 @@ def build_home():
   </div>
 </section>
 
-<section class="visit" id="contact">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Visit Us</div>
-      <h2>Finding us</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="visit-grid">
-      <div>
-        <ul class="hours">
-          <li><span>Wednesday</span><span>6:30 pm — Weekday Mass</span></li>
-          <li><span>Saturday</span><span>6:00 pm — Vigil Mass &middot; 10:00 am Confession</span></li>
-          <li><span>Sunday</span><span>8:00 am &amp; 10:00 am — Mass (English)</span></li>
-          <li><span>1st Friday</span><span>6:30 pm — First Friday Mass</span></li>
-          <li><span>Confession</span><span>Saturdays 10–11 am, or by appointment</span></li>
-        </ul>
-        <p style="margin-top: 20px; color: var(--muted); font-size: .92rem;">
-          Saint Michael &amp; All Angels Catholic Church<br>
-          101 E Texas St, Denison, TX 75020<br>
-          <a href="tel:9038217511">903-821-7511</a>
-        </p>
-        <a class="btn btn-primary" style="margin-top:18px" href="contact.html">Contact Us</a>
-      </div>
-      <iframe class="map-embed" style="min-height:380px;border:1px solid var(--line);"
-        src="https://www.google.com/maps?q=101+E+Texas+St,+Denison,+TX+75020&output=embed"
-        loading="lazy" title="Map to Saint Michael &amp; All Angels"></iframe>
-    </div>
-  </div>
-</section>"""
+"""
     return make_page("index.html",
         "Saint Michael & All Angels Catholic Church — Denison, TX",
         "A parish of the Personal Ordinariate of the Chair of Saint Peter in Denison, Texas. Mass times, sacraments, stewardship, and a warm welcome.",
@@ -326,6 +299,30 @@ P("about.html", "About Us",
 <div class="prose" style="margin-top: 44px;">
   <h2>Mass Readings</h2>
   <p>If you are interested in the specific readings for any day of the year, please see the <a href="{ORDO_URL}"{tgt(True)}>Ordinariate Ordo</a>.</p>
+</div>""")
+
+P("finding-us.html", "Finding Us",
+  "Location, directions, and Mass times for Saint Michael & All Angels Catholic Church, 101 E Texas St, Denison, TX 75020.",
+  "About Us", "Finding us",
+  """<div class="visit-grid">
+  <div>
+    <ul class="hours">
+      <li><span>Wednesday</span><span>6:30 pm — Weekday Mass</span></li>
+      <li><span>Saturday</span><span>6:00 pm — Vigil Mass &middot; 10:00 am Confession</span></li>
+      <li><span>Sunday</span><span>8:00 am &amp; 10:00 am — Mass (English)</span></li>
+      <li><span>1st Friday</span><span>6:30 pm — First Friday Mass</span></li>
+      <li><span>Confession</span><span>Saturdays 10–11 am, or by appointment</span></li>
+    </ul>
+    <p style="margin-top: 20px; color: var(--muted); font-size: .92rem;">
+      Saint Michael &amp; All Angels Catholic Church<br>
+      101 E Texas St, Denison, TX 75020<br>
+      <a href="tel:9038217511">903-821-7511</a>
+    </p>
+    <a class="btn btn-primary" style="margin-top:18px" href="contact.html">Contact Us</a>
+  </div>
+  <iframe class="map-embed" style="min-height:380px;border:1px solid var(--line);"
+    src="https://www.google.com/maps?q=101+E+Texas+St,+Denison,+TX+75020&output=embed"
+    loading="lazy" title="Map to Saint Michael &amp; All Angels"></iframe>
 </div>""")
 
 P("mass-times.html", "Mass Times",
