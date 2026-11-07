@@ -200,27 +200,6 @@ def build_home():
   </div>
 </div>
 
-<section id="about" style="background: var(--ivory);">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">About Us</div>
-      <h2>A small church with a big heart</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="about-grid">
-      <div class="text">
-        <p class="lead">"We believe that the door to salvation is always open — and so are the doors to our church."</p>
-        <p>Our parish is part of the Personal Ordinariate of the Chair of Saint Peter, established by Pope Benedict XVI in 2012 to welcome Anglicans into full communion with the Roman Catholic Church. We are fully Roman Catholic while retaining elements of Anglican heritage — reverent liturgy and historical sacred music.</p>
-        <p>All Catholics are warmly invited to join our Divine Worship liturgy. Parishioners come from across greater Grayson County, Texas, and southern Bryan County, Oklahoma.</p>
-        <a class="btn btn-primary" href="about.html">More About Us</a>
-      </div>
-      <div class="about-photo">
-        <img src="assets/images/church-tall-a.jpg" alt="Parish life at Saint Michael &amp; All Angels">
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="sacraments">
   <div class="wrap">
     <div class="section-head">
@@ -332,12 +311,19 @@ def P(fname, title, desc, eyebrow, hero_title, body, hero_sub=None, art=None):
 P("about.html", "About Us",
   "About Saint Michael & All Angels Catholic Church — a parish of the Personal Ordinariate of the Chair of Saint Peter in Denison, Texas.",
   "About Us", "A small church with a big heart",
-  f"""<div class="prose">
-  <p class="lead">"We believe that the door to salvation is always open — and so are the doors to our church."</p>
-  <p>We are a small Catholic church with a big heart. Our church is part of the <a href="https://ordinariate.net/"{tgt(True)}>Personal Ordinariate of the Chair of Saint Peter</a>, established by Pope Benedict XVI in 2012 to welcome Anglicans seeking full communion with the Roman Catholic Church. Ordinariate parishes and churches are fully Roman Catholic, while retaining elements of Anglican heritage, enriching the faith through reverent liturgy and historical sacred music.</p>
-  <p>All Catholics are warmly invited to join our Divine Worship liturgy and receive Holy Communion. Following the traditions of the Ordinariate, Communion is received by kneeling (if able) at the altar rail and on the tongue.</p>
-  <p>The parishioners generally come from across greater Grayson County, Texas, and Southern Bryan County, Oklahoma. United by our love for Christ and our steadfast commitment to the teachings of the Roman Catholic Church, we celebrate our faith with reverence, joy, and warm hospitality, forming a vibrant and diverse community.</p>
-  <p>If you are searching for a church home, we warmly invite you to visit us. Saint Michael and All Angels is a welcoming and loving family.</p>
+  f"""<div class="about-grid">
+  <div class="text">
+    <p class="lead">"We believe that the door to salvation is always open — and so are the doors to our church."</p>
+    <p>We are a small Catholic church with a big heart. Our church is part of the <a href="https://ordinariate.net/"{tgt(True)}>Personal Ordinariate of the Chair of Saint Peter</a>, established by Pope Benedict XVI in 2012 to welcome Anglicans seeking full communion with the Roman Catholic Church. Ordinariate parishes and churches are fully Roman Catholic, while retaining elements of Anglican heritage, enriching the faith through reverent liturgy and historical sacred music.</p>
+    <p>All Catholics are warmly invited to join our Divine Worship liturgy and receive Holy Communion. Following the traditions of the Ordinariate, Communion is received by kneeling (if able) at the altar rail and on the tongue.</p>
+    <p>The parishioners generally come from across greater Grayson County, Texas, and Southern Bryan County, Oklahoma. United by our love for Christ and our steadfast commitment to the teachings of the Roman Catholic Church, we celebrate our faith with reverence, joy, and warm hospitality, forming a vibrant and diverse community.</p>
+    <p>If you are searching for a church home, we warmly invite you to visit us. Saint Michael and All Angels is a welcoming and loving family.</p>
+  </div>
+  <div class="about-photo">
+    <img src="assets/images/church-tall-a.jpg" alt="Parish life at Saint Michael &amp; All Angels">
+  </div>
+</div>
+<div class="prose" style="margin-top: 44px;">
   <h2>Mass Readings</h2>
   <p>If you are interested in the specific readings for any day of the year, please see the <a href="{ORDO_URL}"{tgt(True)}>Ordinariate Ordo</a>.</p>
 </div>""")
