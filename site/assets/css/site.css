@@ -169,7 +169,7 @@
   font-size: 1.25rem; color: var(--burgundy);
   border-left: 3px solid var(--gold); padding: 8px 0 8px 22px; margin: 26px 0;
 }
-.prose .cite { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: -14px; }
+.prose .cite { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
 
 /* Schedule table (Mass Times) */
 .sched { max-width: 760px; margin: 0 auto 40px; }

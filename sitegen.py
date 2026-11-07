@@ -566,7 +566,7 @@ P("168.html", "16:8",
 <div class="prose">
   <p class="lead">There is brokenness all around us: in our families, in sickness, in grief, and in the burdens we sometimes carry silently. At St. Michael &amp; All Angels, we want to bring those burdens to God together.</p>
   <p>Inspired by 1 Chronicles 16:8, which calls us to give thanks to the Lord, call upon His name, and make His deeds known, <strong>16:8 at St. Michael's</strong> invites our parish into a shared commitment to prayer, faith, and sacrifice.</p>
-  <blockquote>"Give thanks to the Lord, call upon His name, and make His deeds known."<div class="cite">— 1 Chronicles 16:8</div></blockquote>
+  <blockquote>"Give thanks to the Lord, call upon His name, and make His deeds known."<div class="cite"><a href="https://www.biblegateway.com/passage/?search=1%20Chronicles%2016%3A8&version=RSVCE" target="_blank" rel="noopener">— 1 Chronicles 16:8</a></div></blockquote>
   <p>We will begin on the first Wednesday of Advent with a special blessing of the candles. Bring your candle and join us as we begin this journey together.</p>
   <h2>We believe God hears our prayers. We believe miracles can and do happen.</h2>
   <p>We hold strong to the faith that God listens to our prayers. Miracles are real and happen every day. We seek healing and trust in His perfect timing and presence during our challenges.</p>
