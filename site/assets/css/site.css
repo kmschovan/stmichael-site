@@ -1,0 +1,282 @@
+:root {
+    --burgundy: #14324f;
+    --burgundy-deep: #0f1820;
+    --gold: #b07a2a;
+    --gold-light: #dcbb78;
+    --ivory: #fcf9f3;
+    --parchment: #f2eee5;
+    --ink: #15212c;
+    --muted: #5f6b76;
+    --line: #dfe3e8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--ivory); line-height: 1.65; overflow-x: hidden; }
+  h1, h2, h3, .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--burgundy); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- Navy header, like St. Ignatius ---- */
+  header.site { background: var(--burgundy); border-bottom: 2px solid var(--gold-light); position: sticky; top: 0; z-index: 50; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; max-width: 1180px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+  .brand .crest { width: 46px; height: 46px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #1d4266, var(--burgundy-deep)); display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--gold); flex-shrink: 0; }
+  .brand .crest span { color: var(--gold-light); font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; }
+  .brand .name { line-height: 1.2; }
+  .brand .name strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.28rem; font-weight: 600; letter-spacing: .01em; color: #fff; }
+  .brand .name small { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); }
+  nav.main { display: flex; gap: 24px; align-items: center; }
+  nav.main a { text-decoration: none; color: #e9eef3; font-size: .88rem; font-weight: 500; letter-spacing: .02em; padding: 6px 0; }
+  nav.main a:hover { color: var(--gold-light); }
+  nav.main a.give { background: var(--gold); color: #fff; padding: 9px 20px; border-radius: 2px; letter-spacing: .06em; }
+  nav.main a.give:hover { background: var(--gold-light); color: var(--burgundy-deep); }
+
+  /* ---- Hero: white, text left, church photo as a small framed block ---- */
+  .hero { background: var(--ivory); padding: 44px 0 36px; }
+  .hero-photo { max-width: 460px; justify-self: end; }
+  .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .hero-photo .cap { margin-top: 12px; font-size: .8rem; color: var(--muted); text-align: center; letter-spacing: .04em; }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 940px; margin: 0 auto; padding: 0 24px; text-align: left; }
+  .hero .ord { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
+  .hero h1 { font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 600; color: var(--burgundy); line-height: 1.12; margin-bottom: 18px; }
+  .hero .sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin-bottom: 28px; }
+  .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 26px; border-radius: 2px; text-decoration: none; font-weight: 600; font-size: .92rem; letter-spacing: .03em; }
+  .btn-primary { background: var(--burgundy); color: var(--ivory); }
+  .btn-primary:hover { background: var(--burgundy-deep); color: #fff; }
+  .btn-ghost { border: 1.5px solid var(--burgundy); color: var(--burgundy); }
+  .btn-ghost:hover { background: var(--burgundy); color: var(--ivory); }
+
+  /* the photo: small framed block, NOT full-bleed */
+  .hero-photo { position: relative; max-width: 460px; justify-self: end; }
+  .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .hero-photo::after { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 2px solid var(--gold); z-index: -1; }
+  .hero-photo .cap { margin-top: 14px; font-size: .8rem; color: var(--muted); text-align: center; letter-spacing: .04em; }
+
+  /* ---- Mass schedule strip ---- */
+  .mass-strip { background: var(--ivory); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .mass-inner { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1180px; margin: 0 auto; }
+  .mass-cell { padding: 18px 16px; text-align: center; border-right: 1px solid var(--line); }
+  .mass-cell:last-child { border-right: none; }
+  .mass-cell .day { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+  .mass-cell .time { font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 600; color: var(--burgundy); }
+  .mass-cell .note { font-size: .84rem; color: var(--muted); margin-top: 4px; }
+
+  /* ---- Sections ---- */
+  section { padding: 48px 0; }
+  .section-head {
+    background: var(--burgundy);
+    color: #fff;
+    text-align: center;
+    max-width: none;
+    margin: 0 calc(50% - 50vw) 34px;
+    padding: 30px 24px 26px;
+  }
+  .section-head .eyebrow { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); font-weight: 600; margin-bottom: 12px; }
+  .section-head h2 { font-size: 2.3rem; font-weight: 600; color: #fff; margin-bottom: 14px; }
+  .section-head .rule { width: 64px; height: 2px; background: var(--gold-light); margin: 18px auto 0; }
+  .section-head p { color: #c9d4de; max-width: 700px; margin: 0 auto; }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .about-grid .text p { margin-bottom: 18px; color: #443b33; }
+  .about-grid .text .lead { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: var(--burgundy); margin-bottom: 22px; }
+  .about-photo { border: 1px solid var(--line); padding: 10px; background: var(--ivory); }
+  .about-photo img { aspect-ratio: 4/3; object-fit: cover; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .card { background: #fff; border: 1px solid var(--line); padding: 26px 24px; text-decoration: none; color: var(--ink); transition: box-shadow .18s ease; }
+  .card:hover { box-shadow: 0 10px 30px rgba(15,24,32,.09); }
+  .card h3 { font-size: 1.6rem; font-weight: 600; color: var(--burgundy); margin-bottom: 12px; }
+  .card p { font-size: .93rem; color: var(--muted); }
+  .card .more { display: inline-block; margin-top: 16px; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+
+  /* ---- 16:8 band ---- */
+  .band { background: var(--burgundy-deep); color: var(--ivory); text-align: center; padding: 56px 0; }
+  .band .verse { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-style: italic; max-width: 760px; margin: 0 auto 16px; }
+  .band .ref { font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 26px; }
+  .band p { max-width: 640px; margin: 0 auto 30px; color: #ecdfc8; }
+
+  /* ---- Giving ---- */
+  .give-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .give-card { background: var(--ivory); border: 1px solid var(--line); padding: 26px 24px; }
+  .give-card h3 { font-size: 1.45rem; color: var(--burgundy); font-weight: 600; margin-bottom: 12px; }
+  .give-card p { font-size: .92rem; color: var(--muted); margin-bottom: 20px; }
+
+  /* ---- Visit ---- */
+  .visit { background: #fff; border-top: 1px solid var(--line); }
+  .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .visit .hours { list-style: none; }
+  .visit .hours li { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
+  .visit .hours li span:first-child { font-weight: 600; color: var(--burgundy); }
+  .visit .hours li span:last-child { color: var(--muted); }
+  .map-embed { border: 1px solid var(--line); background: var(--parchment); min-height: 360px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .9rem; }
+
+  /* ---- Footer ---- */
+  footer { background: var(--burgundy-deep); color: #d8c9ae; padding: 64px 0 28px; }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1180px; margin: 0 auto; padding: 0 24px 44px; }
+  footer h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--gold-light); font-weight: 600; margin-bottom: 16px; }
+  footer a { display: block; color: #d8c9ae; text-decoration: none; font-size: .9rem; padding: 4px 0; }
+  footer a:hover { color: #fff; }
+  footer .mission { font-size: .92rem; color: #c4b295; max-width: 340px; }
+  .foot-bottom { border-top: 1px solid rgba(217,185,108,.25); max-width: 1180px; margin: 0 auto; padding: 22px 24px 0; display: flex; justify-content: space-between; font-size: .8rem; color: #a08e72; }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-photo { justify-self: start; max-width: 100%; }
+    .mass-inner { grid-template-columns: 1fr 1fr; }
+    .cards, .give-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; }
+    nav.main { display: none; }
+  }
+
+
+/* ==== SUBPAGES ==== */
+
+/* Page hero: navy band at top of internal pages */
+.page-hero {
+  background: #2e4a62;
+  color: #fff;
+  text-align: center;
+  padding: 10px 24px;
+  margin-bottom: 30px;
+}
+.page-hero .eyebrow {
+  font-size: .74rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold-light); font-weight: 600; margin-bottom: 8px;
+}
+.page-hero h1 {
+  font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 600;
+  color: #fff; line-height: 1.15; max-width: 780px; margin: 0 auto;
+}
+.page-hero p { color: #c9d4de; max-width: 640px; margin: 10px auto 0; font-size: .98rem; }
+
+/* Prose content area for internal pages */
+.prose { max-width: 760px; margin: 0 auto; }
+.prose p { margin-bottom: 20px; color: #333e48; font-size: 1.02rem; }
+.prose h2 {
+  font-size: 1.9rem; font-weight: 600; color: var(--burgundy);
+  margin: 44px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold-light);
+}
+.prose h3 { font-size: 1.4rem; font-weight: 600; color: var(--burgundy); margin: 32px 0 12px; }
+.prose ul { margin: 0 0 20px 22px; color: #333e48; }
+.prose li { margin-bottom: 8px; }
+.prose a { color: var(--gold); text-decoration: underline; }
+.prose blockquote {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 1.25rem; color: var(--burgundy);
+  border-left: 3px solid var(--gold); padding: 8px 0 8px 22px; margin: 26px 0;
+}
+.prose .cite { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: -14px; }
+
+/* Schedule table (Mass Times) */
+.sched { max-width: 760px; margin: 0 auto 40px; }
+.sched table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); }
+.sched th {
+  background: var(--burgundy); color: var(--gold-light);
+  font-family: 'Inter', sans-serif; font-size: .78rem; letter-spacing: .12em;
+  text-transform: uppercase; text-align: left; padding: 14px 18px;
+}
+.sched td { padding: 14px 18px; border-bottom: 1px solid var(--line); font-size: .98rem; color: #333e48; }
+.sched td:first-child { font-weight: 600; color: var(--burgundy); width: 32%; }
+.sched td:last-child { color: var(--muted); }
+.sched tr:last-child td { border-bottom: none; }
+
+/* Info cards on subpages */
+.info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1120px; margin: 40px auto 0; }
+.info-card { background: #fff; border: 1px solid var(--line); padding: 32px 28px; }
+.info-card h3 { font-size: 1.35rem; font-weight: 600; color: var(--burgundy); margin-bottom: 12px; }
+.info-card p { font-size: .92rem; color: var(--muted); margin-bottom: 14px; }
+
+/* PDF/form download cards */
+.pdf-list { max-width: 760px; margin: 0 auto; display: grid; gap: 16px; }
+.pdf-card {
+  display: flex; align-items: center; gap: 18px;
+  background: #fff; border: 1px solid var(--line); padding: 20px 24px;
+  text-decoration: none; transition: box-shadow .18s ease;
+}
+.pdf-card:hover { box-shadow: 0 10px 30px rgba(15,24,32,.09); }
+.pdf-card .badge {
+  width: 46px; height: 46px; background: var(--burgundy); color: var(--gold-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .7rem; font-weight: 700; letter-spacing: .05em; flex-shrink: 0;
+}
+.pdf-card .t { font-weight: 600; color: var(--burgundy); font-size: 1rem; }
+.pdf-card .d { font-size: .85rem; color: var(--muted); }
+
+/* Contact form */
+.contact-form { max-width: 640px; margin: 0 auto; background: #fff; border: 1px solid var(--line); padding: 40px; }
+.contact-form label { display: block; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 8px; }
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: 12px 14px; border: 1px solid var(--line);
+  background: var(--ivory); font-family: inherit; font-size: .95rem; margin-bottom: 20px;
+}
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--gold-light); }
+.contact-form .btn { width: 100%; text-align: center; border: none; cursor: pointer; }
+
+/* Placeholder / coming soon block */
+.placeholder {
+  max-width: 760px; margin: 0 auto; background: var(--parchment);
+  border: 1px dashed var(--gold); padding: 40px; text-align: center;
+}
+.placeholder h3 { color: var(--burgundy); font-size: 1.5rem; margin-bottom: 10px; }
+.placeholder p { color: var(--muted); font-size: .95rem; }
+
+/* External-link button row */
+.btn-row-center { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 36px 0; }
+
+@media (max-width: 900px) {
+  .info-grid { grid-template-columns: 1fr; }
+  .contact-form { padding: 28px 20px; }
+}
+
+/* Dropdown nav */
+nav.main .has-sub { position: relative; }
+nav.main .has-sub > a::after { content: ' \25BE'; opacity: .7; }
+nav.main .sub {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #fff; border: 1px solid var(--line); border-top: 2px solid var(--gold);
+  min-width: 230px; padding: 8px 0; z-index: 100;
+  box-shadow: 0 10px 30px rgba(15,24,32,.14);
+}
+nav.main .has-sub:hover .sub, nav.main .has-sub:focus-within .sub { display: block; }
+nav.main .sub a { display: block; color: var(--ink); padding: 9px 18px; white-space: nowrap; }
+nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
+
+/* Mobile menu */
+.menu-btn { display: none; background: none; border: 1.5px solid var(--gold-light);
+  color: var(--gold-light); font-size: 1.05rem; padding: 8px 14px; cursor: pointer;
+  border-radius: 2px; font-family: inherit; }
+.mobile-panel { display: none; background: var(--burgundy-deep); }
+.mobile-panel.open { display: block; }
+.mobile-panel a, .mobile-panel .grp { display: block; color: #e9eef3; text-decoration: none;
+  padding: 12px 28px; border-bottom: 1px solid rgba(220,187,120,.15); font-size: .95rem; }
+.mobile-panel .grp { color: var(--gold-light); font-size: .74rem; letter-spacing: .16em;
+  text-transform: uppercase; padding: 14px 28px 6px; }
+@media (max-width: 900px) {
+  .menu-btn { display: inline-block; }
+  .mobile-panel { position: absolute; left: 0; right: 0; top: 100%; max-height: 70vh; overflow-y: auto; }
+}
+
+
+/* ==== SACRAMENT ART LAYOUT (St. Ignatius style) ==== */
+.sacrament-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.sacrament-layout .prose { flex: 1; min-width: 0; }
+.sacrament-art {
+  width: 336px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(15,24,32,.08);
+}
+.sacrament-art img { width: 100%; height: auto; display: block; }
+@media (max-width: 860px) {
+  .sacrament-layout { flex-direction: column-reverse; gap: 28px; }
+  .sacrament-art { width: min(336px, 100%); align-self: center; }
+}

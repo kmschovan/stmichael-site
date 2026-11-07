@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saint Michael &amp; All Angels Catholic Church — Denison, TX</title>
+<meta name="description" content="Saint Michael & All Angels Catholic Church, Denison TX. A parish of the Personal Ordinariate of the Chair of Saint Peter. Mass times, sacraments, and a warm welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #5e1424;
+    --burgundy-deep: #42091a;
+    --gold: #b08d3e;
+    --gold-light: #d9b96c;
+    --ivory: #faf7f0;
+    --parchment: #f3ede0;
+    --ink: #2b2320;
+    --muted: #6d6156;
+    --line: #e2d9c8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.65; }
+  h1, h2, h3, .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--burgundy); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- White header, like St. Ignatius ---- */
+  header.site { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; max-width: 1180px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+  .brand .crest { width: 46px; height: 46px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #7a2036, var(--burgundy-deep)); display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--gold); flex-shrink: 0; }
+  .brand .crest span { color: var(--gold-light); font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; }
+  .brand .name { line-height: 1.2; }
+  .brand .name strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.28rem; font-weight: 600; letter-spacing: .01em; color: var(--burgundy); }
+  .brand .name small { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  nav.main { display: flex; gap: 24px; align-items: center; }
+  nav.main a { text-decoration: none; color: var(--ink); font-size: .88rem; font-weight: 500; letter-spacing: .02em; padding: 6px 0; }
+  nav.main a:hover { color: var(--burgundy); }
+  nav.main a.give { background: var(--burgundy); color: var(--ivory); padding: 9px 20px; border-radius: 2px; letter-spacing: .06em; }
+  nav.main a.give:hover { background: var(--burgundy-deep); color: #fff; }
+
+  /* ---- Hero: white, text left, church photo as a small framed block ---- */
+  .hero { background: #fff; padding: 72px 0 64px; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .hero .ord { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 600; color: var(--burgundy); line-height: 1.12; margin-bottom: 18px; }
+  .hero .sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin-bottom: 28px; }
+  .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 26px; border-radius: 2px; text-decoration: none; font-weight: 600; font-size: .92rem; letter-spacing: .03em; }
+  .btn-primary { background: var(--burgundy); color: var(--ivory); }
+  .btn-primary:hover { background: var(--burgundy-deep); color: #fff; }
+  .btn-ghost { border: 1.5px solid var(--burgundy); color: var(--burgundy); }
+  .btn-ghost:hover { background: var(--burgundy); color: var(--ivory); }
+
+  /* the photo: small framed block, NOT full-bleed */
+  .hero-photo { position: relative; max-width: 460px; justify-self: end; }
+  .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .hero-photo::after { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 2px solid var(--gold); z-index: -1; }
+  .hero-photo .cap { margin-top: 14px; font-size: .8rem; color: var(--muted); text-align: center; letter-spacing: .04em; }
+
+  /* ---- Mass schedule strip ---- */
+  .mass-strip { background: var(--ivory); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .mass-inner { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1180px; margin: 0 auto; }
+  .mass-cell { padding: 28px 20px; text-align: center; border-right: 1px solid var(--line); }
+  .mass-cell:last-child { border-right: none; }
+  .mass-cell .day { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+  .mass-cell .time { font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 600; color: var(--burgundy); }
+  .mass-cell .note { font-size: .84rem; color: var(--muted); margin-top: 4px; }
+
+  /* ---- Sections ---- */
+  section { padding: 76px 0; }
+  .section-head { text-align: center; max-width: 700px; margin: 0 auto 52px; }
+  .section-head .eyebrow { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 12px; }
+  .section-head h2 { font-size: 2.3rem; font-weight: 600; color: var(--burgundy); margin-bottom: 14px; }
+  .section-head .rule { width: 64px; height: 2px; background: var(--gold); margin: 18px auto 0; }
+  .section-head p { color: var(--muted); }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .about-grid .text p { margin-bottom: 18px; color: #443b33; }
+  .about-grid .text .lead { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: var(--burgundy); margin-bottom: 22px; }
+  .about-photo { border: 1px solid var(--line); padding: 10px; background: var(--ivory); }
+  .about-photo img { aspect-ratio: 4/3; object-fit: cover; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .card { background: #fff; border: 1px solid var(--line); padding: 36px 30px; text-decoration: none; color: var(--ink); transition: box-shadow .18s ease; }
+  .card:hover { box-shadow: 0 10px 30px rgba(66,9,26,.09); }
+  .card h3 { font-size: 1.6rem; font-weight: 600; color: var(--burgundy); margin-bottom: 12px; }
+  .card p { font-size: .93rem; color: var(--muted); }
+  .card .more { display: inline-block; margin-top: 16px; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+
+  /* ---- 16:8 band ---- */
+  .band { background: var(--burgundy-deep); color: var(--ivory); text-align: center; padding: 84px 0; }
+  .band .verse { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-style: italic; max-width: 760px; margin: 0 auto 16px; }
+  .band .ref { font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 26px; }
+  .band p { max-width: 640px; margin: 0 auto 30px; color: #ecdfc8; }
+
+  /* ---- Giving ---- */
+  .give-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .give-card { background: var(--ivory); border: 1px solid var(--line); padding: 34px 28px; }
+  .give-card h3 { font-size: 1.45rem; color: var(--burgundy); font-weight: 600; margin-bottom: 12px; }
+  .give-card p { font-size: .92rem; color: var(--muted); margin-bottom: 20px; }
+
+  /* ---- Visit ---- */
+  .visit { background: #fff; border-top: 1px solid var(--line); }
+  .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .visit .hours { list-style: none; }
+  .visit .hours li { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
+  .visit .hours li span:first-child { font-weight: 600; color: var(--burgundy); }
+  .visit .hours li span:last-child { color: var(--muted); }
+  .map-embed { border: 1px solid var(--line); background: var(--parchment); min-height: 360px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .9rem; }
+
+  /* ---- Footer ---- */
+  footer { background: var(--burgundy-deep); color: #d8c9ae; padding: 64px 0 28px; }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1180px; margin: 0 auto; padding: 0 24px 44px; }
+  footer h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--gold-light); font-weight: 600; margin-bottom: 16px; }
+  footer a { display: block; color: #d8c9ae; text-decoration: none; font-size: .9rem; padding: 4px 0; }
+  footer a:hover { color: #fff; }
+  footer .mission { font-size: .92rem; color: #c4b295; max-width: 340px; }
+  .foot-bottom { border-top: 1px solid rgba(217,185,108,.25); max-width: 1180px; margin: 0 auto; padding: 22px 24px 0; display: flex; justify-content: space-between; font-size: .8rem; color: #a08e72; }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-photo { justify-self: start; max-width: 100%; }
+    .mass-inner { grid-template-columns: 1fr 1fr; }
+    .cards, .give-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; }
+    nav.main { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <a class="brand" href="#home">
+      <div class="crest"><span>M</span></div>
+      <div class="name">
+        <strong>Saint Michael &amp; All Angels</strong>
+        <small>Catholic Church · Denison, TX</small>
+      </div>
+    </a>
+    <nav class="main">
+      <a href="#about">About</a>
+      <a href="#mass">Mass Times</a>
+      <a href="#sacraments">Sacraments</a>
+      <a href="#giving">Stewardship</a>
+      <a href="#contact">Contact</a>
+      <a href="#giving" class="give">GIVE</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="ord">A Parish of the Personal Ordinariate of the Chair of Saint Peter</div>
+      <h1>All are welcome at the Lord's table.</h1>
+      <p class="sub">A small Catholic church with a big heart, celebrating reverent liturgy and rich Anglican heritage in the heart of Denison, Texas.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#mass">Mass Times</a>
+        <a class="btn btn-ghost" href="#about">New to the Parish?</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="https://static.wixstatic.com/media/432be6_fc7b5d6adf6e4c5cb384156bddae38ca~mv2.jpg/v1/fill/w_542,h_254,al_c,q_80/432be6_fc7b5d6adf6e4c5cb384156bddae38ca~mv2.jpg" alt="Saint Michael & All Angels Catholic Church, Denison">
+      <figcaption class="cap">101 East Texas St · Denison, Texas</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="mass-strip" id="mass">
+  <div class="mass-inner">
+    <div class="mass-cell"><div class="day">Wednesday</div><div class="time">6:30 pm</div><div class="note">Weekday Mass</div></div>
+    <div class="mass-cell"><div class="day">Saturday Vigil</div><div class="time">6:00 pm</div><div class="note">English</div></div>
+    <div class="mass-cell"><div class="day">Sunday</div><div class="time">8:00 &amp; 10:00 am</div><div class="note">English</div></div>
+    <div class="mass-cell"><div class="day">Confession</div><div class="time">10:00 – 11:00 am</div><div class="note">Saturdays, or by appointment</div></div>
+  </div>
+</div>
+
+<section id="about" style="background: var(--ivory);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">About Us</div>
+      <h2>A small church with a big heart</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="text">
+        <p class="lead">"We believe that the door to salvation is always open — and so are the doors to our church."</p>
+        <p>Our parish is part of the Personal Ordinariate of the Chair of Saint Peter, established by Pope Benedict XVI in 2012 to welcome Anglicans into full communion with the Roman Catholic Church. We are fully Roman Catholic while retaining elements of Anglican heritage — reverent liturgy and historical sacred music.</p>
+        <p>All Catholics are warmly invited to join our Divine Worship liturgy. Parishioners come from across greater Grayson County, Texas, and southern Bryan County, Oklahoma.</p>
+        <p>If you are searching for a church home, we warmly invite you to visit us. We hope you will find Saint Michael and All Angels to be a welcoming and loving family.</p>
+        <a class="btn btn-primary" href="#">More About Us</a>
+      </div>
+      <div class="about-photo">
+        <img src="https://static.wixstatic.com/media/432be6_fc7b5d6adf6e4c5cb384156bddae38ca~mv2.jpg/v1/fill/w_542,h_254,al_c,q_80/432be6_fc7b5d6adf6e4c5cb384156bddae38ca~mv2.jpg" alt="Parish life at Saint Michael & All Angels">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sacraments">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Sacraments</div>
+      <h2>The life of grace</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="cards">
+      <a class="card" href="#">
+        <h3>Baptism</h3>
+        <p>"The basis of the whole Christian life, the gateway to life in the Spirit, and the door which gives access to the other sacraments."</p>
+        <span class="more">Learn More</span>
+      </a>
+      <a class="card" href="#">
+        <h3>Confession</h3>
+        <p>Saturdays 10:00 – 11:00 am, or by appointment with Father Randall. "Pardon from God's mercy... reconciled with the Church."</p>
+        <span class="more">Learn More</span>
+      </a>
+      <a class="card" href="#">
+        <h3>Communion</h3>
+        <p>"The holy Eucharist completes Christian initiation." Received kneeling at the altar rail, per the Ordinariate tradition.</p>
+        <span class="more">Learn More</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="verse">"Give thanks to the Lord, call upon His name, make known His deeds."</p>
+    <p class="ref">— 1 Chronicles 16:8</p>
+    <p><strong>16:8 at St. Michael's</strong> — a shared commitment to prayer, faith, and sacrifice. We will begin on the first Wednesday of Advent with a blessing of the candles. Bring your candle and join us as we begin this journey together.</p>
+    <a class="btn btn-primary" style="background: var(--gold);" href="#">Learn About 16:8</a>
+  </div>
+</section>
+
+<section id="giving">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Stewardship</div>
+      <h2>Time · Talent · Treasure</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="give-grid">
+      <div class="give-card">
+        <h3>Regular Offertory</h3>
+        <p>Contributions cover the day-to-day operations of the parish — Father's payroll, building maintenance, utilities, and our liturgical programs.</p>
+        <a class="btn btn-ghost" href="#">Give Online</a>
+      </div>
+      <div class="give-card">
+        <h3>Sacramentals Fund</h3>
+        <p>Keeping our worship equipped with the essentials — the Paschal Candle, communion supplies, palms, and more. No donation is too small.</p>
+        <a class="btn btn-ghost" href="#">Give to the Fund</a>
+      </div>
+      <div class="give-card">
+        <h3>Bishop's Appeal</h3>
+        <p>Supporting the Ordinariate of the Chair of Saint Peter in proclaiming Christ — vocations, programs, and full communion for new members.</p>
+        <a class="btn btn-ghost" href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Visit Us</div>
+      <h2>We hope to see you Sunday</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="visit-grid">
+      <div>
+        <ul class="hours">
+          <li><span>Wednesday</span><span>6:30 pm — Weekday Mass</span></li>
+          <li><span>Saturday</span><span>6:00 pm — Vigil Mass (English)</span></li>
+          <li><span>Sunday</span><span>8:00 am — Mass (English)</span></li>
+          <li><span>Sunday</span><span>10:00 am — Mass (English)</span></li>
+          <li><span>1st Friday</span><span>6:30 pm — First Friday Mass</span></li>
+          <li><span>Saturday</span><span>10:00 – 11:00 am — Confession</span></li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--muted); font-size: .92rem;">
+          Saint Michael &amp; All Angels Catholic Church<br>
+          101 E Texas St, Denison, TX 75020<br>
+          <a href="tel:9038217511">903-821-7511</a>
+        </p>
+      </div>
+      <div class="map-embed">Google Maps embed — 101 E Texas St, Denison, TX 75020</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Saint Michael &amp; All Angels</h4>
+      <p class="mission">A parish of the Personal Ordinariate of the Chair of Saint Peter. Reverent liturgy, rich heritage, and a warm welcome in Denison, Texas.</p>
+    </div>
+    <div>
+      <h4>Our Parish</h4>
+      <a href="#">Prayers &amp; Intentions</a>
+      <a href="#">Calendar</a>
+      <a href="#">Volunteer</a>
+      <a href="#">Councils</a>
+    </div>
+    <div>
+      <h4>Stewardship</h4>
+      <a href="#">Time, Talent &amp; Treasure</a>
+      <a href="#">Regular Offertory</a>
+      <a href="#">Online Giving</a>
+      <a href="#">Bishop's Appeal</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="#">Flocknote</a>
+      <a href="#">Facebook</a>
+      <a href="#">Newsletter</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Saint Michael &amp; All Angels Catholic Church · 101 E Texas St, Denison, TX 75020</span>
+    <span>903-821-7511</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "Saint Michael & All Angels Catholic Church",
+  "address": {"@type": "PostalAddress", "streetAddress": "101 E Texas St", "addressLocality": "Denison", "addressRegion": "TX", "postalCode": "75020"},
+  "telephone": "903-821-7511",
+  "url": "https://www.stmichaelsallangels.com/"
+}
+</script>
+</body>
+</html>

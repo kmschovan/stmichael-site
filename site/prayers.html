@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayers & Intentions — Saint Michael &amp; All Angels Catholic Church, Denison TX</title>
+<meta name="description" content="Submit prayer requests and Mass intentions to Saint Michael & All Angels Catholic Church.">
+<link rel="icon" href="assets/images/crest.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Church","name":"Saint Michael & All Angels Catholic Church","url":"https://www.stmichaelsallangels.com/","telephone":"903-821-7511","address":{"@type":"PostalAddress","streetAddress":"101 E Texas St","addressLocality":"Denison","addressRegion":"TX","postalCode":"75020","addressCountry":"US"},"denomination":"Roman Catholic"}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/images/crest.jpg" alt="Parish crest"
+           style="width:46px;height:46px;border-radius:50%;border:1.5px solid var(--gold);object-fit:cover;">
+      <div class="name">
+        <strong>Saint Michael &amp; All Angels</strong>
+        <small>Catholic Church &middot; Denison, TX</small>
+      </div>
+    </a>
+    <nav class="main"><a href="index.html">Home</a><a href="168.html">16:8</a><div class="has-sub"><a href="#">About</a><div class="sub"><a href="about.html">About Us</a><a href="mass-times.html">Mass Times</a><a href="prayers.html">Prayers & Intentions</a><a href="calendar.html">Parish Calendar</a><a href="https://signup.com/go/LBAHSJn" target="_blank" rel="noopener">Volunteer Signup</a><a href="finance-council.html">Finance Council</a><a href="parish-council.html">Parish Council</a></div></div><div class="has-sub"><a href="#">Stewardship</a><div class="sub"><a href="time-talent-treasure.html">Time, Talent & Treasure</a><a href="offertory.html">Regular Offertory</a><a href="sacramentals-fund.html">Sacramentals Fund</a><a href="online-giving.html">Online Giving</a><a href="bishops-appeal.html">Bishop's Appeal</a></div></div><div class="has-sub"><a href="#">Sacraments</a><div class="sub"><a href="baptism.html">Baptism</a><a href="confession.html">Confession</a><a href="communion.html">Communion</a><a href="confirmation.html">Confirmation</a><a href="marriage.html">Marriage</a><a href="holy-orders.html">Holy Orders</a><a href="anointing.html">Anointing of the Sick</a></div></div><div class="has-sub"><a href="#">Resources</a><div class="sub"><a href="contact.html">Contact Us</a><a href="newsletter.html">Newsletter Archive</a><a href="flocknote.html">Flocknote</a><a href="novena.html">Holy Spirit Novena</a><a href="forms.html">Forms</a></div></div><a href="online-giving.html" class="give">GIVE</a></nav>
+    <button class="menu-btn" onclick="document.querySelector('.mobile-panel').classList.toggle('open')">&#9776; Menu</button>
+  </div>
+  <div class="mobile-panel"><a href="index.html">Home</a><a href="168.html">16:8</a><div class="grp">About</div><a href="about.html">About Us</a><a href="mass-times.html">Mass Times</a><a href="prayers.html">Prayers & Intentions</a><a href="calendar.html">Parish Calendar</a><a href="https://signup.com/go/LBAHSJn" target="_blank" rel="noopener">Volunteer Signup</a><a href="finance-council.html">Finance Council</a><a href="parish-council.html">Parish Council</a><div class="grp">Stewardship</div><a href="time-talent-treasure.html">Time, Talent & Treasure</a><a href="offertory.html">Regular Offertory</a><a href="sacramentals-fund.html">Sacramentals Fund</a><a href="online-giving.html">Online Giving</a><a href="bishops-appeal.html">Bishop's Appeal</a><div class="grp">Sacraments</div><a href="baptism.html">Baptism</a><a href="confession.html">Confession</a><a href="communion.html">Communion</a><a href="confirmation.html">Confirmation</a><a href="marriage.html">Marriage</a><a href="holy-orders.html">Holy Orders</a><a href="anointing.html">Anointing of the Sick</a><div class="grp">Resources</div><a href="contact.html">Contact Us</a><a href="newsletter.html">Newsletter Archive</a><a href="flocknote.html">Flocknote</a><a href="novena.html">Holy Spirit Novena</a><a href="forms.html">Forms</a><a href="online-giving.html" style="color:var(--gold-light)">Give Online &rarr;</a></div>
+</header>
+<div class="page-hero">
+  <div class="eyebrow">Our Parish</div>
+  <h1>Prayer Requests & Mass Intentions</h1>
+  
+</div>
+<section style="padding: 24px 0 76px;">
+  <div class="wrap"><div class="prose">
+  <p>Please use the form below to send us your prayer requests and Mass Intentions. Due to the many prayer requests we receive, we will not be able to respond to your request — but please be assured our prayer teams will be praying for your prayer requests. For Mass Intentions, we will get back to you when we can schedule your request. May God bless you.</p>
+</div>
+<div class="contact-form" style="margin-top: 32px;">
+  <form data-netlify="true" name="prayer-requests" method="POST">
+    <input type="hidden" name="form-name" value="prayer-requests">
+    <label for="pr-name">Your Name (optional)</label>
+    <input id="pr-name" name="name" type="text" placeholder="Your name">
+    <label for="pr-intention">Prayer Request / Mass Intention *</label>
+    <textarea id="pr-intention" name="intention" rows="6" required placeholder="For whom, or for what intention, shall we pray?"></textarea>
+    <label for="pr-type">Request Type *</label>
+    <select id="pr-type" name="type" required style="width:100%;padding:10px 12px;border:1px solid var(--line);margin-bottom:20px;">
+      <option value="prayer">Prayer request only</option>
+      <option value="mass">Mass intention (please schedule)</option>
+    </select>
+    <button class="btn btn-primary" type="submit">Send Request</button>
+  </form>
+</div></div>
+</section>
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Saint Michael & All Angels Catholic Church</h4>
+      <p class="mission">A parish of the Personal Ordinariate of the Chair of Saint Peter — fully Catholic, enriched by our Anglican heritage. All are welcome.</p>
+      <p class="mission">101 E Texas St, Denison, TX 75020<br>903-821-7511</p>
+    </div>
+    <div><h4>Our Parish</h4><a href="prayers.html">Prayers & Intentions</a><a href="calendar.html">Parish Calendar</a><a href="https://signup.com/go/LBAHSJn" target="_blank" rel="noopener">Volunteer Signup</a><a href="finance-council.html">Finance Council</a><a href="parish-council.html">Parish Council</a></div><div><h4>Stewardship</h4><a href="time-talent-treasure.html">Time, Talent & Treasure</a><a href="offertory.html">Regular Offertory</a><a href="sacramentals-fund.html">Sacramentals Fund</a><a href="online-giving.html">Online Giving</a><a href="bishops-appeal.html">Bishop's Appeal</a></div><div><h4>Connect</h4><a href="contact.html">Contact Us</a><a href="newsletter.html">Newsletter Archive</a><a href="flocknote.html">Flocknote</a><a href="https://www.facebook.com/stmichaelallangel" target="_blank" rel="noopener">Facebook</a><a href="forms.html">Forms</a></div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 Saint Michael & All Angels Catholic Church &middot; Denison, Texas</span>
+    <span>Ordinariate of the Chair of Saint Peter</span>
+  </div>
+</footer>
+</body>
+</html>

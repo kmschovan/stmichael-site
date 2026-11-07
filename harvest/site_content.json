@@ -1,0 +1,69 @@
+{
+  "site": {
+    "url": "https://www.stmichaelsallangels.com/",
+    "name": "Saint Michael & All Angels Catholic Church",
+    "address": "101 E Texas St, Denison, TX 75020",
+    "phone": "903-821-7511",
+    "facebook": "https://www.facebook.com/stmichaelallangel",
+    "flocknote": "http://saintmichaelallangels.flocknote.com",
+    "ordinariate": "https://ordinariate.net/",
+    "platform": "Wix",
+    "nav": {
+      "Home": "/",
+      "16:8": "/services-4",
+      "About Us": "/about-us",
+      "Mass Times": "/mass-times",
+      "Our Parish": {
+        "Prayers & Intentions": "/mass-intentions",
+        "Calendar": "/events",
+        "Volunteer Signup (ext)": "https://signup.com/go/LBAHSJn",
+        "Finance Council": "/council",
+        "Parish Council": "/parish-council"
+      },
+      "Stewardship": {
+        "Time, Talent & Treasure": "/services-1",
+        "Regular Offertory": "/regular-offertory",
+        "Sacramentals Fund 2025": "/paschalcandle",
+        "Online Giving": "/parishioner",
+        "Bishop's Appeal 2025": "/bishop-s-appeal-2024"
+      },
+      "Sacraments": {
+        "Baptism": "/baptism",
+        "Confession": "/confession",
+        "Communion": "/communion"
+      },
+      "Resources": {
+        "Contact Us": "/contact-us",
+        "Newsletter Archive": "/newsletter-files",
+        "Flocknote": "/flocknote",
+        "Novena to the Holy Spirit": "/about-3",
+        "Forms": "/forms"
+      }
+    }
+  },
+  "pages": {
+    "home": "# Our Mission\nWe believe that the door to salvation is always open and so are the doors to our church. Our mission is to be fully devoted to Jesus by opening our arms to those in search of the truth. We show God's love and concern for our fellow man at every opportunity. Through works of charity and opening our doors to listen and love, we feel that we are walking in the footsteps of Jesus Christ.\n\n# Mass Schedule\n| Wednesday | 6:30 pm | Weekday Mass |\n| Saturday | 6:00 pm | Vigil Mass (English) |\n| Sunday | 8:00 am | (English) |\n| Sunday | 10:00 am | (English) |\n| 1st Friday of Each Month | 6:30 pm | First Friday Mass (Next: November 6th) |\n\n# Confession\nSaturdays from 10am - 11am. For alternate times please call Father Randall at: 903.821.7511\n\n# Mass Readings\nIf you are interested in the specific readings for any day of the year please see: https://ordinariate.net/ordo\n\nWe invite to join our mailing list and receive emails we send out with news, or special Mass schedules",
+    "about-us": "# About Us\nWe are a small Catholic Church with a big heart. Our church is part of the Personal Ordinariate of the Chair of Saint Peter, established by Pope Benedict XVI in 2012 to welcome Anglicans seeking full communion with the Roman Catholic Church. Ordinariate parishes and churches are fully Roman Catholic, while retaining elements of Anglican heritage, enriching the faith through reverent liturgy and historical sacred music.\n\nAll Catholics are warmly invited to join our Divine Worship liturgy and receive Holy Communion. Following the traditions of the Ordinariate, Communion is received by kneeling (if able) at the altar rail and on the tongue.\n\nThe parishioners generally come from across greater Grayson County, Texas, and Southern Bryan County, Oklahoma. United by our love for Christ and our steadfast commitment to the teachings of the Roman Catholic Church, we celebrate our faith with reverence, joy, and warm hospitality, forming a vibrant and diverse community.\n\nIf you are searching for a church home, we warmly invite you to visit us. We warmly invite you to visit us. Saint Michael and All Angels is a welcoming and loving family.\n\nFor more information about the Ordinariate of the Chair of Saint Peter, visit the website or download a fact sheet.",
+    "mass-times": "# Mass Schedule\n| Wednesday | 6:30 pm | Weekday Mass |\n| Saturday | 6:00 pm | Vigil Mass (English) |\n| Sunday | 8:00 am | (English) |\n| Sunday | 10:00 am | (English) |\n| 1st Friday of Each Month | 6:30 pm | First Friday Mass (Next: November 6th) |",
+    "mass-intentions": "# Prayer Requests and Mass Intentions\nPlease use this form to send us your prayer requests and Mass Intentions. Due to the many prayer requests we receive, we will not be able to respond to your request. Please be assured our prayer teams will be praying for your prayer requests. For Mass Intentions, we will get back to you when we can schedule your request. May God bless you.",
+    "events": "# Calendar (Google Calendar embed)\n'and add your Google Calendar URL to connect.'",
+    "contact-us": "# Contact\nSt Michael & All Angels Catholic Church\n101 E Texas St, Denison, Tx 75020\n903-821-7511\n[Contact form present — 'Your details were sent successfully!']",
+    "services-4 (16:8)": "# 16:8 at St. Michael's — Begin With Us\nThere is brokenness all around us: in our families, in sickness, in grief, and in the burdens we sometimes carry silently. At St. Michael & All Angels, we want to bring those burdens to God together.\n\nInspired by 1 Chronicles 16:8, which calls us to give thanks to the Lord, call upon His name, and make His deeds known, 16:8 at St. Michael's invites our parish into a shared commitment to prayer, faith, and sacrifice.\n\n- 1 Chronicles 16:8 -\nGive thanks to the Lord, call upon His name, and make His deeds known.\n\nWe will begin on the first Wednesday of Advent with a special blessing of the candles. Bring your candle and join us as we begin this journey together.\n\n# We believe God hears our prayers. We believe miracles can and do happen.\nWe hold strong to the faith that God listens to our prayers. Miracles are real and happen every day. We seek healing and trust in His perfect timing and presence during our challenges.",
+    "baptism": "# Baptism\nHoly Baptism is the basis of the whole Christian life, the gateway to life in the Spirit, and the door which gives access to the other sacraments. Through Baptism we are freed from sin and reborn as sons of God; we become members of Christ, are incorporated into the Church and made sharers in her mission.\n\nAs the first of the seven Sacraments, and the way by which to receive the other Sacraments, Baptism unites us to Christ, who died for us and repaired our relationship with God the Father. The Sacrament of Baptism signifies our new life in Christ as the believer receives not only remission of original and personal sin but also the various fruits, gifts, and virtues necessary to live a holy life.\n\nThrough the waters of Baptism, the believer is incorporated into the Body of Christ, the Church.\n[Catechism, 1213]",
+    "communion": "# Communion\nThe holy Eucharist completes Christian initiation. Those who have been raised to the dignity of the royal priesthood by Baptism and configured to the dignity of the royal priesthood by Confirmation participate with the Lord in his sacrifice.\n[Catechism, 1322]",
+    "confession": "# Confession\nThose who approach the sacrament of Penance obtain pardon from God's mercy for the offense committed against Him, and are, at the same time, reconciled with the Church which they have wounded by their sins and which by charity, by example, and by prayer labors for their conversion.\n\nIn the Sacrament of Reconciliation, we approach God understanding how sin has hurt our soul and ask for his love and mercy. Confession helps the person to acknowledge one's sinfulness, and they ask for his love and mercy.\n\nConfession Times:\nSaturdays from 10am - 11am",
+    "forms": "# Forms\n- Parish Hall Use Form: https://www.stmichaelsallangels.com/_files/ugd/f68a3f_a5aa2aa4be214f4f9c063c35d43fa8e8.pdf\n- Parish Registration Form: https://www.stmichaelsallangels.com/_files/ugd/f68a3f_2acbbf3f4f9c063c35d43fa8e8.pdf",
+    "newsletter-files": "# Faithful Focus Archive\n[Newsletter archive — currently just an image placeholder]",
+    "flocknote": "# Flocknote\nFlocknote is an email and text messaging tool for the Parishioners at St Michael & All Angels. Give it a try by clicking below... It is a smart way that we can all communicate.\nLink: http://saintmichaelallangels.flocknote.com",
+    "services-1": "# Time, Talent, and Treasure\nSharing all that God has provided you by giving back and growing together.\n\n## Time\nOur time on earth, approximately 25,000 days, is precious and cannot be hoarded like grain. God created us to reach heaven, which is why He sent Jesus. Our earthly life is a journey toward heaven, requiring daily progress and devotion to God.\n\nDaily prayer fosters a personal relationship with God, where we share our joys, sorrows, and seek His guidance. Reading Scripture daily allows us to meditate on His word and understand His boundless love for us.\n\nGiving our time to assist others and organizations glorifies God, allowing Christ to work through us. Your gift of time is irreplaceable, as only you can offer it.\n\n## Talent\nEach of us possesses unique talents and gifts, demonstrating God's boundless power and magnificence. These gifts aren't solely for our benefit but are meant to enrich the lives of others and enhance our service to God.\n\nSt. Peter urges us to steward these gifts responsibly for the service of others, recognizing the diverse graces bestowed upon us by God.\n\nIn our parish and community, we are called to embody Christ's works:\n- Visiting the sick and elderly\n- Feeding the hungry\n- Teaching the eager\n- Comforting the lonely and grieving\n- Offering prayers and support\n\nBeing Christ's hands and voice in the world.\n\nBy engaging in these Spiritual and Corporal Works of Mercy, we become partners with Christ in the work of redemption, a profound privilege indeed.\n\nYour talent is a unique offering, echoing St. Francis of Assisi's wisdom: 'It is in giving that we receive.'\n\n## Treasure\nThe parable of the talents in Matthew 25:14-30 illustrates the Christian responsibility to share our material gifts. The first servant doubles five talents, the second doubles two, but the third buries one. The master praises the first two but rebukes the third for not utilizing the gift. This teaches us to steward our material blessings wisely; neglecting them is sinful.\n\nScripture guides us in expressing gratitude for these gifts:\n- Returning a portion to God as an act of thanksgiving, traditionally a tithe of 10%.\n- Sharing with those in need within our family, community, diocese, and beyond (2 Cor. 9:1-15).\n\nYour gift of treasure is unique and vital.",
+    "regular-offertory": "# Regular Offertory\nContributions to the Regular Offertory are crucial in covering the expenses associated with the day-to-day operations of the parish and its programs. These expenses encompass Father's payroll, building maintenance, utilities, and daily supplies, along with supporting our sacramental preparation services and liturgical programs.\n\nYou can contribute traditionally by placing your offering in the offertory plate during Mass. Alternatively, we encourage parish members to set up a recurring gift using the Online Giving tool on this website (link below). Through this tool, you'll have full control over the amount and frequency of your contributions.\n\nWe deeply appreciate your investment in and ongoing support of your parish. Thank you.",
+    "paschalcandle": "# Sacramental Fund 2025\nWe are excited to continue the impactful legacy of our Sacramental Fund, which was established last year thanks to the extraordinary generosity of our church community.\n\nThis fund ensures that our church is always equipped with the essential items that enrich our worship from the Easter Paschal Candle to communion supplies, palms, and more. These sacred elements not only illuminate our physical space but also symbolize the light of Christ in our lives.\n\nAs we look ahead to the Easter Vigil 2025, we invite you to join us in sustaining this vital fund. Your contributions, no matter the size, help keep our spiritual journey vibrant and our worship experience deeply meaningful. Together, we can continue to illuminate our path forward with faith, unity, and gratitude. Click the button below and select the 'Candle Fund' to make your donation today.\n\nThank you for your unwavering support and blessings!\n\nWith gratitude and blessings.\n\nClick the button below and choose the 'Sacramentals Fund' in the drop down. No donation is too small.",
+    "bishop-s-appeal-2024": "# Bishop's Appeal 2025\nOrdinariate of the Chair of Saint Peter\n\nThe Bishop's Appeal provides essential support for the Ordinariate of the Chair of Saint Peter and its mission to proclaim Christ.\n\nYour generosity towards this annual appeal helps us in our mission that all may have a personal relationship with the Lord Jesus and receive him as the Bread of Life. Your gift helps invigorate services and programs that connect the Ordinariate's faithful to their bishop and to their brothers and sisters across the diocese, invite new members into full communion, and cultivate vocations to the priesthood and religious life further spreading our Eucharistic faith.",
+    "parishioner": "# Online Giving\n[Online giving page — likely an embedded widget]",
+    "about-3": "# Holy Spirit Novena\nA novena to the Holy Spirit is a nine-day prayer that invokes the third person of the Trinity and asks for his gifts and graces. It is usually prayed between Ascension Thursday and Pentecost Sunday, when the first disciples received the Holy Spirit. Below is an embedded page from the 'My Catholic Life' site. Use the scroll bars on the right side of the site below to scroll through the days. You will also find an audio recording for each day. If you would rather go directly to that webpage, click here: https://mycatholic.life/catholic-prayers/novena-to-the-holy-spirit/"
+  },
+  "pages_missing": {
+    "council": "EMPTY (96 chars — nav shell only)",
+    "parish-council": "EMPTY (96 chars — nav shell only)"
+  }
+}
