@@ -306,3 +306,10 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
 .seal-art { border: none; background: none; padding: 0; box-shadow: none; width: 300px; }
 .seal-art img { width: 100%; height: auto; display: block; }
 @media (max-width: 860px) { .seal-art { width: min(240px, 80%); } }
+
+.cards-168 { grid-template-columns: repeat(3, 1fr); margin: 28px 0; }
+.reflection-card {
+  max-width: 760px; border: 1px solid var(--gold-light); border-left: 3px solid var(--gold);
+  background: #fff; padding: 26px 30px; margin: 24px 0 40px;
+}
+@media (max-width: 860px) { .cards-168 { grid-template-columns: 1fr; } }
