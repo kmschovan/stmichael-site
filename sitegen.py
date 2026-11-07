@@ -481,7 +481,7 @@ P("baptism.html", "Baptism",
   <p>Through Baptism we are freed from sin and reborn as sons of God; we become members of Christ, are incorporated into the Church and made sharers in her mission.</p>
   <p>As the first of the seven Sacraments, and the way by which to receive the other Sacraments, Baptism unites us to Christ, who died for us and repaired our relationship with God the Father. The Sacrament of Baptism signifies our new life in Christ, as the believer receives not only remission of original and personal sin but also the various fruits, gifts, and virtues necessary to live a holy life.</p>
   <p>Through the waters of Baptism, the believer is incorporated into the Body of Christ, the Church.</p>
-  <p style="color:var(--muted);font-size:.86rem;">— Catechism of the Catholic Church, 1213</p>
+  <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P3G.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1213</a></p>
   <h2>Arranging a Baptism</h2>
   <p>To arrange a baptism for an infant or an adult, please call the parish at <a href="tel:9038217511">903-821-7511</a>. Preparation is coordinated with Father Randall.</p>
 </div>""", art="art-baptism.webp")
@@ -492,7 +492,7 @@ P("confession.html", "Confession",
   """<div class="prose">
   <p class="lead">"Those who approach the sacrament of Penance obtain pardon from God's mercy for the offense committed against Him, and are, at the same time, reconciled with the Church which they have wounded by their sins."</p>
   <p>In the Sacrament of Reconciliation, we approach God understanding how sin has hurt our soul and ask for His love and mercy. Confession helps us acknowledge our sinfulness, receive God's forgiveness, and labor — by charity, example, and prayer — for the conversion of others.</p>
-  <p style="color:var(--muted);font-size:.86rem;">— Catechism of the Catholic Church, 1422</p>
+  <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P46.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1422</a></p>
   <h2>Confession Times</h2>
   <p><strong>Saturdays from 10:00 – 11:00 am</strong> at the parish.</p>
   <p>For alternate times, please call Father Randall at <a href="tel:9038217511">903-821-7511</a>.</p>
@@ -504,7 +504,7 @@ P("communion.html", "Communion",
   """<div class="prose">
   <p class="lead">"The holy Eucharist completes Christian initiation. Those who have been raised to the dignity of the royal priesthood by Baptism and configured to Christ by Confirmation participate with the whole community in the Lord's own sacrifice."</p>
   <p>The Eucharist is the source and summit of the Christian life. In the Blessed Sacrament, Christ is truly present — Body, Blood, Soul, and Divinity — under the appearances of bread and wine.</p>
-  <p style="color:var(--muted);font-size:.86rem;">— Catechism of the Catholic Church, 1322</p>
+  <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P3W.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1322</a></p>
   <h2>Receiving Holy Communion at Saint Michael's</h2>
   <p>All Catholics free from grave sin and properly disposed are welcome to receive Holy Communion at our Masses. Following the traditions of the Ordinariate, Communion is received <strong>by kneeling (if able) at the altar rail and on the tongue</strong>.</p>
 </div>""", art="art-communion.webp")
@@ -516,7 +516,7 @@ P("confirmation.html", "Confirmation",
   <p class="lead">"Baptism, the Eucharist, and the sacrament of Confirmation together constitute the 'sacraments of Christian initiation,' whose unity must be safeguarded."</p>
   <p>In Confirmation, the baptized are more perfectly bound to the Church and are enriched with the special strength of the Holy Spirit. Through the anointing with chrism and the laying on of hands, the soul receives a permanent seal — the mark that consecrates us for Christian service.</p>
   <p>The Spirit strengthens us to witness to Christ boldly, in word and in deed, and to live out our baptismal calling as mature members of the Body of Christ.</p>
-  <p style="color:var(--muted);font-size:.86rem;">— Catechism of the Catholic Church, 1285</p>
+  <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P3P.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1285</a></p>
   <h2>Receiving Confirmation</h2>
   <p>Preparation for Confirmation — for youth and for adults entering the Church through the Ordinariate — is coordinated through the parish. Please contact the office at <a href="tel:9038217511">903-821-7511</a> to learn about the next formation program.</p>
 </div>""", art="art-confirmation.webp")
@@ -528,7 +528,7 @@ P("marriage.html", "Marriage",
   <p class="lead">"The matrimonial covenant, by which a man and a woman establish between themselves a partnership of the whole of life, is by its nature ordered toward the good of the spouses and the procreation and education of offspring."</p>
   <p>Marriage between baptized persons is a true sacrament — a living sign of Christ's unfailing love for His Church. In the exchange of consent, the couple gives themselves to one another completely and irrevocably, and Christ himself strengthens and sanctifies that bond.</p>
   <p>Grounded in the nuptial blessing of the Church's tradition, the wedding liturgy at Saint Michael's draws from the Church's rich treasury — sacred music, reverent ritual, and the solemn vows exchanged before God and His people.</p>
-  <p style="color:var(--muted);font-size:.86rem;">— Catechism of the Catholic Church, 1601</p>
+  <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P50.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1601</a></p>
   <h2>Arranging a Wedding</h2>
   <p>Arrangements for marriage at the parish should begin at least six months in advance, allowing time for preparation, instruction, and scheduling with Father Randall. Please call the parish office at <a href="tel:9038217511">903-821-7511</a> to begin.</p>
 </div>""", art="art-marriage.webp")
@@ -540,7 +540,7 @@ P("holy-orders.html", "Holy Orders",
   <p class="lead">"Holy Orders is the sacrament through which the mission entrusted by Christ to his apostles continues to be exercised in the Church until the end of time."</p>
   <p>Through the anointing of the Holy Spirit and the laying on of hands by the bishop, men are configured to Christ in one of three degrees: episcopate (bishops), presbyterate (priests), and diaconate (deacons). Each shares, in his own degree, in the ministry of teaching, sanctifying, and governing the people of God.</p>
   <p>Our parish is shepherded by this same sacrament — Father Randall's priestly ministry, from the celebration of the Mass to the absolution of sins in the confessional, flows from his ordination in service of Christ and His flock.</p>
-  <p style="color:var(--muted);font-size:.86rem;">— Catechism of the Catholic Church, 1536</p>
+  <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P4R.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1536</a></p>
   <h2>Considering a Vocation?</h2>
   <p>If you, or someone you know, feels called to the priesthood or diaconate, Father Randall would be glad to talk with you. Call the parish office at <a href="tel:9038217511">903-821-7511</a>, or visit the <a href="https://ordinariate.net/" target="_blank" rel="noopener">Ordinariate's vocations page</a>.</p>
 </div>""", art="art-holy-orders.webp")
@@ -553,7 +553,7 @@ P("anointing.html", "Anointing of the Sick",
   <p class="cite">— James 5:14-15</p>
   <p>The Church believes and confesses that this sacrament — once called Extreme Unction — is Christ's special gift for those facing serious illness, advanced age, or the frailty of life. Through the anointing with blessed oil and the prayer of the priest, the sick receive grace, strength, peace, and, when it is God's will, healing.</p>
   <p>The sacrament may also be received before serious surgery, and those who are chronically ill may receive it more than once. It is never to be feared: it is a visitation of Christ's mercy and comfort.</p>
-  <p style="color:var(--muted);font-size:.86rem;">— Catechism of the Catholic Church, 1511</p>
+  <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P4K.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1511</a></p>
   <h2>Requesting the Sacrament</h2>
   <p>To request anointing for yourself or a loved one — at the church, at home, or in the hospital — please call Father Randall at <a href="tel:9038217511">903-821-7511</a>. In urgent situations, call at any time.</p>
 </div>""", art="art-anointing.webp")
