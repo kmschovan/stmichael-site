@@ -23,6 +23,7 @@ NAV = [
         ("Finding Us", "finding-us.html", False),
         ("Prayers & Intentions", "prayers.html", False),
         ("Parish Calendar", "calendar.html", False),
+        ("Ministry Schedules", "https://parish.key-three.com", True),
         ("Volunteer Signup", "https://signup.com/go/LBAHSJn", True),
         ("Finance Council", "finance-council.html", False),
         ("Parish Council", "parish-council.html", False),

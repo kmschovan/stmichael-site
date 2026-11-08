@@ -12,3 +12,5 @@ __pycache__/
 # scratch notes are local-only
 notes/
 .agents/
+shop196.cfg
+*.cfg
