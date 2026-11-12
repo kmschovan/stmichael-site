@@ -20,6 +20,7 @@ NAV = [
     ("About", None, [
         ("About Us", "about.html", False),
         ("Mass Times", "mass-times.html", False),
+        ("Holy Days of Obligation", "holy-days.html", False),
         ("Finding Us", "finding-us.html", False),
         ("Prayers & Intentions", "prayers.html", False),
         ("Parish Calendar", "calendar.html", False),
@@ -327,6 +328,55 @@ P("finding-us.html", "Finding Us",
     loading="lazy" title="Map to Saint Michael &amp; All Angels"></iframe>
 </div>""")
 
+P("holy-days.html", "Holy Days of Obligation",
+  "The Holy Days of Obligation observed by Catholics, and by Saint Michael & All Angels Catholic Church (Ordinariate of the Chair of Saint Peter), Denison TX.",
+  "About Us", "Holy Days of Obligation",
+  f"""<p class="lead" style="margin-bottom: 26px;">In addition to Sunday Mass, Catholics are obliged to attend Holy Mass on the following Holy Days of Obligation:</p>
+<div class="sched">
+  <table>
+    <tr><th>Date</th><th>Holy Day</th><th>What We Celebrate</th></tr>
+    <tr>
+      <td>January 1</td>
+      <td>Solemnity of Mary, the Holy Mother of God</td>
+      <td>The Octave Day of Christmas, honoring the Blessed Virgin Mary as the Mother of God.</td>
+    </tr>
+    <tr>
+      <td>Ascension Thursday</td>
+      <td>Solemnity of the Ascension of the Lord</td>
+      <td>Forty days after Easter, the Risen Christ ascends into heaven and is seated at the right hand of the Father. In the Ordinariate it is kept on its traditional Thursday.</td>
+    </tr>
+    <tr>
+      <td>August 15</td>
+      <td>Solemnity of the Assumption of the Blessed Virgin Mary</td>
+      <td>At the end of her earthly life, Mary was taken up body and soul into heavenly glory.</td>
+    </tr>
+    <tr>
+      <td>November 1</td>
+      <td>Solemnity of All Saints</td>
+      <td>The Church honors all the saints in heaven &mdash; those known by name and the countless unnamed.</td>
+    </tr>
+    <tr>
+      <td>December 8</td>
+      <td>Solemnity of the Immaculate Conception</td>
+      <td>God preserved the Blessed Virgin Mary from all stain of original sin from the first moment of her conception. She is the Patroness of the United States.</td>
+    </tr>
+    <tr>
+      <td>December 25</td>
+      <td>Solemnity of the Nativity of Our Lord Jesus Christ</td>
+      <td>Christmas &mdash; the Word became flesh and dwelt among us.</td>
+    </tr>
+  </table>
+</div>
+<div class="prose">
+  <h2>What the Obligation Means</h2>
+  <p>Attending Holy Mass on Sundays and Holy Days of Obligation is one of the precepts of the Church &mdash; the minimum asked of every Catholic. On those days the faithful are bound to participate in the Mass just as on Sunday, unless prevented by serious reason or dispensed by their pastor.</p>
+  <p class="cite">Catechism of the Catholic Church, <a href="https://www.vatican.va/archive/ENG0015/__P7O.HTM"{tgt(True)}>2180</a></p>
+  <h2>The Holy Days in Our Ordinariate</h2>
+  <p>Upon the recommendation of the Governing Council in 2016, Bishop Steven J. Lopes decreed that the six solemnities listed above are observed as Holy Days of Obligation throughout the Personal Ordinariate of the Chair of Saint Peter. Two customs are particular to us: the Ascension is kept on its traditional date, the Thursday forty days after Easter, and whenever January 1, August 15, or November 1 falls on a Saturday or a Monday, the obligation to attend Mass is abrogated &mdash; the feast is still joyfully celebrated, but attendance is no longer required.</p>
+  <h2>Holy Day Masses at Saint Michael's</h2>
+  <p>When a Holy Day falls on a weekday, Holy Mass is ordinarily offered at 6:30 pm; when it falls on a Sunday, the Sunday Masses of that day fulfill the observance. Please see <a href="mass-times.html">Mass Times</a> and our <a href="https://parish.key-three.com"{tgt(True)}>Ministry Schedules</a> for the exact Holy Day schedule, including Christmas and the Easter Triduum.</p>
+</div>""")
+
 P("mass-times.html", "Mass Times",
   "Mass schedule and confession times for Saint Michael & All Angels Catholic Church, Denison TX.",
   "Mass Times", "The Holy Sacrifice of the Mass",
@@ -343,6 +393,8 @@ P("mass-times.html", "Mass Times",
 <div class="prose">
   <h2>Confession</h2>
   <p>Saturdays from 10:00 – 11:00 am. For alternate times, please call Father Randall at <a href="tel:9038217511">903-821-7511</a>.</p>
+  <h2>Holy Days of Obligation</h2>
+  <p>In addition to Sunday Mass, Catholics are obliged to attend Holy Mass on six Holy Days — see <a href="holy-days.html">Holy Days of Obligation</a>.</p>
   <h2>Mass Readings</h2>
   <p>If you are interested in the specific readings for any day of the year, please see the <a href="https://ordinariate.net/ordo" target="_blank" rel="noopener">Ordinariate Ordo</a>.</p>
   <h2>Stay Informed</h2>
