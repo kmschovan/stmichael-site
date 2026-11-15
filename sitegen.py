@@ -152,12 +152,12 @@ def page_head(title, desc):
 </script>
 </head>"""
 
-def give_card(note_html=""):
+def give_card(note_html="", title="Give to Saint Michael &amp; All Angels"):
     """Branded card: external-page warning + button opening the ParishSoft giving form in a new tab."""
     note = f'<p style="margin:18px auto 0;font-size:.88rem;color:var(--ink);max-width:520px;">{note_html}</p>' if note_html else ""
     return f"""<div style="max-width:760px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(20,50,79,.08);">
   <div style="background:var(--burgundy);color:#fff;padding:14px 24px;min-height:62px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:4px;">
-    <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;">Give to Saint Michael &amp; All Angels</span>
+    <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;">{title}</span>
     <span style="font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);">Secure &middot; ParishSoft Giving</span>
   </div>
   <div style="padding:40px 32px 44px;text-align:center;">
@@ -547,7 +547,7 @@ P("sacramentals-fund.html", "Sacramentals Fund",
   </div>
   <div class="fund-give-col">
   """
-  + give_card('When the form opens, be sure to choose <strong>&ldquo;Sacramentals Fund&rdquo;</strong> from the fund drop-down — that directs your gift to candles, palms, communion supplies, and more.') + """
+  + give_card('When the form opens, be sure to choose <strong>&ldquo;Sacramentals Fund&rdquo;</strong> from the fund drop-down — that directs your gift to candles, palms, communion supplies, and more.', title='Give to the Sacramental Fund') + """
   </div>
 </div>
 <p style="max-width:1060px;margin:14px auto 0;font-size:.85rem;color:var(--muted);text-align:center;">
