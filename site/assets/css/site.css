@@ -313,3 +313,22 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
   background: #fff; padding: 26px 30px; margin: 24px auto 40px;
 }
 @media (max-width: 860px) { .cards-168 { grid-template-columns: 1fr; } }
+
+/* Floating Online Giving badge (like a "powered by" corner pill) */
+.give-float {
+  position: fixed; right: 18px; bottom: 18px; z-index: 90;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--burgundy); color: #fff;
+  font-family: 'Inter', system-ui, sans-serif; font-size: .8rem; font-weight: 600;
+  letter-spacing: .07em; text-transform: uppercase;
+  padding: 12px 20px; border-radius: 999px;
+  border: 1px solid var(--gold);
+  box-shadow: 0 6px 18px rgba(20, 50, 79, .35);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.give-float:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(20, 50, 79, .45); color: var(--gold-light); }
+@media (max-width: 640px) {
+  .give-float { right: 12px; bottom: 12px; padding: 9px 15px; font-size: .72rem; }
+}
+@media print { .give-float { display: none; } }

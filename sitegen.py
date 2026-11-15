@@ -160,6 +160,7 @@ def make_page(fname, title, desc, body):
 {header()}
 {body}
 {footer()}
+<a class="give-float" href="online-giving.html">Online Giving &nearr;</a>
 </body>
 </html>"""
     with open(os.path.join(SITE, fname), "w", encoding="utf-8") as f:
