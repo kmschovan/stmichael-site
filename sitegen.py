@@ -19,6 +19,7 @@ NAV = [
     ("16:8", None, [
         ("Introduction", "168-introduction.html", False),
         ("Progress & Prayer Log", "168-progress.html", False),
+        ("Weekly Reflections", "168-reflections.html", False),
     ]),
     ("About", None, [
         ("About Us", "about.html", False),
@@ -763,13 +764,7 @@ P("168-introduction.html", "16:8 — Introduction",
   <p>It is a visible reminder that God is working through the time we give Him.</p>
 
   <h2>Weekly Reflections</h2>
-  <p>Each week we will post a short Scripture reflection and prayer encouragement here &mdash; something to carry with you into your hour of Adoration and your daily prayer.</p>
-</div>
-<div class="prose reflection-card">
-  <p class="lead">First Reflection &mdash; Advent, Week One</p>
-  <p>"Give thanks to the Lord, call upon His name; make known His deeds among the nations." <a href="https://www.biblegateway.com/passage/?search=1%20Chronicles%2016%3A8&version=RSVCE" target="_blank" rel="noopener">1 Chronicles 16:8</a></p>
-  <p>Advent begins in the dark &mdash; the days are shortest just as we light the first candle. That is the shape of the Christian life: we bring our small light to the darkness, and God does the rest. As you begin your hour of Adoration or your twenty minutes of daily prayer, start with thanksgiving. Name one thing &mdash; even one small thing &mdash; God has carried you through, and let that be the first word of your prayer.</p>
-  <p style="color:var(--muted);font-size:.9rem;">Check back each week &mdash; new reflections will be posted here throughout the year.</p>
+  <p>Each week we post a short Scripture reflection and prayer encouragement &mdash; something to carry with you into your hour of Adoration and your daily prayer. The growing collection lives on its own page: <a href="168-reflections.html">Read the Weekly Reflections</a>.</p>
 </div>""")
 
 P("168-progress.html", "16:8 — Progress & Prayer Log",
@@ -856,6 +851,60 @@ P("168-progress.html", "16:8 — Progress & Prayer Log",
 <div class="prose" style="margin-top:36px;">
   <p style="color:var(--muted);font-size:.9rem;">Your individual entries stay private &mdash; the parish sees only the combined total and how many people are praying.</p>
 </div>""")
+
+P("168-reflections.html", "16:8 — Weekly Reflections",
+  "Weekly Scripture reflections and prayer encouragement for the 16:8 initiative at Saint Michael & All Angels.",
+  "16:8", "Weekly Reflections",
+  """<div class="prose">
+  <p class="lead">Each week we post a short Scripture reflection and prayer encouragement &mdash; something to carry with you into your hour of Adoration and your daily prayer.</p>
+  <p>New to 16:8? <a href="168-introduction.html">Learn about the initiative</a> &middot; <a href="168-progress.html">See the parish progress &amp; log your prayer time</a>.</p>
+</div>
+<div id="reflections-list"></div>
+<div class="placeholder" id="reflections-empty" style="display:none;max-width:760px;margin:28px auto;">
+  <h3>No reflections posted yet</h3>
+  <p>The first reflection will appear here at the start of Advent.</p>
+</div>
+<script>
+(function () {
+  var esc = function (s) {
+    var d = document.createElement('div');
+    d.textContent = s == null ? '' : String(s);
+    return d.innerHTML;
+  };
+  fetch('https://scheduler.stmichaelsallangels.com/api/reflections')
+    .then(function (r) { return r.json(); })
+    .then(function (rows) {
+      var wrap = document.getElementById('reflections-list');
+      if (!Array.isArray(rows) || rows.length === 0) {
+        document.getElementById('reflections-empty').style.display = 'block';
+        return;
+      }
+      rows.forEach(function (r) {
+        var card = document.createElement('div');
+        card.className = 'prose reflection-card';
+        var head = document.createElement('p');
+        head.className = 'lead';
+        head.textContent = r.title;
+        card.appendChild(head);
+        var body = document.createElement('p');
+        body.textContent = r.body;
+        card.appendChild(body);
+        var meta = document.createElement('p');
+        meta.style.color = 'var(--muted)';
+        meta.style.fontSize = '.85rem';
+        var bits = [];
+        if (r.week_label) bits.push(r.week_label);
+        if (r.created_at) bits.push('Posted ' + new Date(r.created_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }));
+        meta.textContent = bits.join(' \u00b7 ');
+        card.appendChild(meta);
+        wrap.appendChild(card);
+      });
+    })
+    .catch(function () {
+      document.getElementById('reflections-empty').style.display = 'block';
+    });
+})();
+</script>""")
 
 P("contact.html", "Contact Us",
   "Contact Saint Michael & All Angels Catholic Church — address, phone, and a contact form.",
