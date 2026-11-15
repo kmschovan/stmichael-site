@@ -366,10 +366,15 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
 
 /* Side-by-side layout: thermometer (left) + giving card (right) */
 .fund-row { display: flex; gap: 24px; max-width: 1080px; margin: 36px auto 0; align-items: stretch; }
-.fund-row > .fund-meter-card, .fund-row > .fund-give-col { flex: 1; min-width: 0; }
+.fund-row > .fund-meter-card, .fund-row > .fund-give-col { flex: 1; min-width: 0; margin: 0; }
+.fund-row > .fund-meter-card { display: flex; flex-direction: column; max-width: none; }
+.fund-row > .fund-meter-card > .fund-meter-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: 28px; }
 .fund-give-col > div { margin: 0 !important; height: 100%; display: flex; flex-direction: column; }
 .fund-give-col > div > div:last-child { flex: 1; }
-@media (max-width: 940px) { .fund-row { flex-direction: column; } }
+@media (max-width: 940px) {
+  .fund-row { flex-direction: column; }
+  .fund-row > .fund-meter-card { margin: 36px 0 0; display: block; }
+}
 
 /* Vertical goal thermometer */
 .fund-meter-body.thermo { display: flex; gap: 22px; align-items: stretch; padding: 26px 26px 8px; }
