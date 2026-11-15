@@ -340,10 +340,10 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
   box-shadow: 0 10px 30px rgba(20, 50, 79, .08);
 }
 .fund-meter-head {
-  background: var(--burgundy); color: #fff; padding: 16px 24px;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  background: var(--burgundy); color: #fff; padding: 14px 24px; min-height: 62px;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 4px;
 }
-.fund-meter-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; }
+.fund-meter-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.25rem; }
 .fund-meter-tag {
   font-family: 'Inter', sans-serif; font-size: .72rem; letter-spacing: .12em;
   text-transform: uppercase; color: var(--gold-light);
@@ -368,7 +368,7 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
 .fund-row { display: flex; gap: 24px; max-width: 1080px; margin: 36px auto 0; align-items: stretch; }
 .fund-row > .fund-meter-card, .fund-row > .fund-give-col { flex: 1; min-width: 0; margin: 0; }
 .fund-row > .fund-meter-card { display: flex; flex-direction: column; max-width: none; }
-.fund-row > .fund-meter-card > .fund-meter-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: 28px; }
+.fund-row > .fund-meter-card > .fund-meter-body { flex: 1; display: flex; padding-bottom: 28px; }
 .fund-give-col > div { margin: 0 !important; height: 100%; display: flex; flex-direction: column; }
 .fund-give-col > div > div:last-child { flex: 1; }
 @media (max-width: 940px) {
