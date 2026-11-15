@@ -39,10 +39,70 @@
   <p>We are excited to continue the impactful legacy of our Sacramentals Fund, which was established thanks to the extraordinary generosity of our church community.</p>
   <p>This fund ensures that our church is always equipped with the essential items that enrich our worship — from the Easter Paschal Candle to communion supplies, palms, and more. These sacred elements not only illuminate our physical space but also symbolize the light of Christ in our lives.</p>
   <p>As we look ahead, we invite you to join us in sustaining this vital fund. Your contributions, no matter the size, help keep our spiritual journey vibrant and our worship deeply meaningful.</p>
-  <p>Click the button below and select the 'Sacramentals Fund' in the drop-down to make your donation today. No donation is too small.</p>
+</div>
+
+<div class="fund-meter-card">
+  <div class="fund-meter-head">
+    <span class="fund-meter-title" id="fund-label">Immediate Goal</span>
+    <span class="fund-meter-tag">Sacramentals Fund</span>
+  </div>
+  <div class="fund-meter-body">
+    <div class="fund-meter-nums">
+      <div><span class="fund-big" id="fund-raised">$0</span><span class="fund-cap">given so far</span></div>
+      <div style="text-align:right;"><span class="fund-big" id="fund-goal">$0</span><span class="fund-cap">goal</span></div>
+    </div>
+    <div class="fund-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="fund-bar-track">
+      <div class="fund-fill" id="fund-fill"></div>
+    </div>
+    <div class="fund-meter-nums" style="margin-top:10px;">
+      <div><span class="fund-pct" id="fund-pct">0%</span><span class="fund-cap">of goal</span></div>
+      <div style="text-align:right;"><span class="fund-remaining" id="fund-remaining"></span><span class="fund-cap" id="fund-remaining-cap"></span></div>
+    </div>
+  </div>
+  <div class="fund-meter-foot">
+    <p>Click the button below and select the <strong>"Sacramentals Fund"</strong> in the drop-down to make your donation today. No donation is too small.</p>
+    <a class="btn btn-primary" href="online-giving.html">Give to the Sacramentals Fund</a>
+    <p class="fund-updated" id="fund-updated"></p>
+  </div>
+</div>
+
+<div class="prose">
   <p>Thank you for your unwavering support and blessings!</p>
-  <p style="margin-top: 28px;"><a class="btn btn-primary" href="online-giving.html">Give to the Sacramentals Fund</a> <span style="color:var(--muted);font-size:.9rem;">— then select "Sacramentals Fund" in the fund drop-down.</span></p>
-</div></div>
+</div>
+
+<script>
+(function () {
+  var fmt = function (n) { return '$' + n.toLocaleString('en-US'); };
+  fetch('assets/data/fund.json').then(function (r) { return r.json(); }).then(function (d) {
+    var goal = d.goal || 0, raised = Math.min(d.raised || 0, goal);
+    var pct = goal > 0 ? Math.round(raised / goal * 100) : 0;
+    document.getElementById('fund-label').textContent = d.label || 'Immediate Goal';
+    document.getElementById('fund-raised').textContent = fmt(d.raised || 0);
+    document.getElementById('fund-goal').textContent = fmt(goal);
+    document.getElementById('fund-pct').textContent = pct + '%';
+    document.getElementById('fund-bar-track').setAttribute('aria-valuenow', pct);
+    var fill = document.getElementById('fund-fill');
+    fill.style.width = pct + '%';
+    var rem = goal - (d.raised || 0);
+    if (rem <= 0) {
+      document.getElementById('fund-remaining').textContent = 'Goal reached!';
+      document.getElementById('fund-remaining-cap').textContent = 'thank you!';
+      document.getElementById('fund-remaining').style.color = '#1d6b3f';
+    } else {
+      document.getElementById('fund-remaining').textContent = fmt(rem);
+      document.getElementById('fund-remaining-cap').textContent = 'still needed';
+    }
+    if (d.updated) {
+      var dt = new Date(d.updated + 'T12:00:00');
+      document.getElementById('fund-updated').textContent = 'Progress updated ' + dt.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + '.';
+    }
+  }).catch(function () {
+    var fill = document.getElementById('fund-fill');
+    fill.style.width = '100%';
+    fill.style.background = 'var(--line)';
+  });
+})();
+</script></div>
 </section>
 <footer>
   <div class="foot-grid">
