@@ -16,7 +16,10 @@ def link(label, href, ext=False):
 # ---------------------------------------------------------------- nav tree
 NAV = [
     ("Home", "index.html", None),
-    ("16:8", "168.html", None),
+    ("16:8", None, [
+        ("Introduction", "168-introduction.html", False),
+        ("Progress & Prayer Log", "168-progress.html", False),
+    ]),
     ("About", None, [
         ("About Us", "about.html", False),
         ("Mass Times", "mass-times.html", False),
@@ -232,7 +235,7 @@ def build_home():
     <p class="verse">"Give thanks to the Lord, call upon His name, make known His deeds."</p>
     <p class="ref">— 1 Chronicles 16:8</p>
     <p><strong>16:8 at St. Michael's</strong> — a yearlong parish prayer initiative. We will begin Wednesday, December 2, 2026 — the first Wednesday of Advent — with a blessing of the candles. Bring your candle and join us as we begin this journey together.</p>
-    <a class="btn btn-primary" style="background: var(--gold);" href="168.html">Learn About 16:8</a>
+    <a class="btn btn-primary" style="background: var(--gold);" href="168-introduction.html">Learn About 16:8</a>
   </div>
 </section>
 
@@ -701,7 +704,7 @@ P("anointing.html", "Anointing of the Sick",
   <p>To request anointing for yourself or a loved one — at the church, at home, or in the hospital — please call Father Randall at <a href="tel:9038217511">903-821-7511</a>. In urgent situations, call at any time.</p>
 </div>""", art="art-anointing.webp")
 
-P("168.html", "16:8",
+P("168-introduction.html", "16:8 — Introduction",
   "16:8 at St. Michael's — a yearlong parish prayer initiative: one hour of Eucharistic Adoration each week, twenty minutes of personal prayer each day.",
   "16:8", "16:8 at St. Michael's — Begin With Us",
   """<div class="sacrament-layout">
@@ -742,6 +745,41 @@ P("168.html", "16:8",
   <p>We believe God hears our prayers. We believe miracles can and do happen. We seek healing and trust in His perfect timing and presence during our challenges.</p>
 </div>
 
+<div style="max-width:760px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(20,50,79,.08);padding:34px 32px;text-align:center;">
+  <p class="lead" style="margin-bottom:10px;">Watch the parish prayer thermometer grow</p>
+  <p style="margin:0 0 24px;color:var(--muted);max-width:520px;margin-left:auto;margin-right:auto;">Log the minutes you spend in prayer &mdash; Adoration time, daily prayer, family prayer: it all counts &mdash; and watch our parish total climb toward 5,040 hours.</p>
+  <a class="btn btn-primary" href="168-progress.html">See the Progress &amp; Log Your Prayer Time</a>
+</div>
+
+<div class="prose">
+  <h2>How to Join</h2>
+  <p>Begin by choosing a seven-day prayer candle &mdash; <strong>$20 each</strong> &mdash; and bring it to the opening gathering for a special blessing:</p>
+  <p><strong>Wednesday, December 2, 2026</strong><br>the first Wednesday of Advent &mdash; opening gathering &amp; candle blessing<br>Wednesday evenings at St. Michael's</p>
+  <p>Call the parish office at <a href="tel:9038217511">903-821-7511</a> to reserve your candle or ask any questions.</p>
+  <p>We also encourage you to purchase a <strong>second candle for someone else</strong> and personally invite them to join you. Donated candles will be available, so cost never prevents anyone from participating. And you can join at any time throughout the year.</p>
+
+  <h2>Watching God Work</h2>
+  <p>A candle poster at the parish will show the commitments being made, one flame at a time. As the year goes on, gold flame stickers will be added to a shared display &mdash; a quiet way to recognize answered prayers and blessings without anyone having to share private details.</p>
+  <p>It is a visible reminder that God is working through the time we give Him.</p>
+
+  <h2>Weekly Reflections</h2>
+  <p>Each week we will post a short Scripture reflection and prayer encouragement here &mdash; something to carry with you into your hour of Adoration and your daily prayer.</p>
+</div>
+<div class="prose reflection-card">
+  <p class="lead">First Reflection &mdash; Advent, Week One</p>
+  <p>"Give thanks to the Lord, call upon His name; make known His deeds among the nations." <a href="https://www.biblegateway.com/passage/?search=1%20Chronicles%2016%3A8&version=RSVCE" target="_blank" rel="noopener">1 Chronicles 16:8</a></p>
+  <p>Advent begins in the dark &mdash; the days are shortest just as we light the first candle. That is the shape of the Christian life: we bring our small light to the darkness, and God does the rest. As you begin your hour of Adoration or your twenty minutes of daily prayer, start with thanksgiving. Name one thing &mdash; even one small thing &mdash; God has carried you through, and let that be the first word of your prayer.</p>
+  <p style="color:var(--muted);font-size:.9rem;">Check back each week &mdash; new reflections will be posted here throughout the year.</p>
+</div>""")
+
+P("168-progress.html", "16:8 — Progress & Prayer Log",
+  "Live parish prayer progress for 16:8 at St. Michael's — watch the thermometer climb and log your own prayer minutes.",
+  "16:8", "16:8 Parish Prayer Progress",
+  """<div class="prose">
+  <p class="lead">Every minute of prayer offered by our parishioners raises the thermometer below &mdash; Adoration time, daily prayer, family prayer: it all counts toward our goal of <strong>5,040 hours</strong> of prayer offered over the year.</p>
+  <p>Missed the introduction? <a href="168-introduction.html">Learn about 16:8 and how to join</a>.</p>
+</div>
+
 <div class="fund-meter-card">
   <div class="fund-meter-head">
     <span class="fund-meter-title">16:8 Parish Prayer Meter</span>
@@ -763,9 +801,9 @@ P("168.html", "16:8",
     </div>
   </div>
   <div class="fund-meter-foot">
-    <p>Log the minutes you spend in prayer &mdash; every entry raises the parish thermometer. Adoration time, daily prayer, family prayer: it all counts.</p>
+    <p>Live from the parish prayer log &mdash; updated whenever a parishioner logs time.</p>
     <a class="btn btn-primary" href="https://scheduler.stmichaelsallangels.com/?view=prayer" target="_blank" rel="noopener">Log Your Prayer Time</a>
-    <p class="fund-updated" id="prayer-updated">Live from the parish scheduler &mdash; sign in with your scheduler account.</p>
+    <p class="fund-updated" id="prayer-updated">Sign in with your scheduler account &mdash; takes less than a minute.</p>
   </div>
 </div>
 
@@ -800,25 +838,23 @@ P("168.html", "16:8",
 })();
 </script>
 
-<div class="prose">
-  <h2>How to Join</h2>
-  <p>Begin by choosing a seven-day prayer candle &mdash; <strong>$20 each</strong> &mdash; and bring it to the opening gathering for a special blessing:</p>
-  <p><strong>Wednesday, December 2, 2026</strong><br>the first Wednesday of Advent &mdash; opening gathering &amp; candle blessing<br>Wednesday evenings at St. Michael's</p>
-  <p>Call the parish office at <a href="tel:9038217511">903-821-7511</a> to reserve your candle or ask any questions.</p>
-  <p>We also encourage you to purchase a <strong>second candle for someone else</strong> and personally invite them to join you. Donated candles will be available, so cost never prevents anyone from participating. And you can join at any time throughout the year.</p>
-
-  <h2>Watching God Work</h2>
-  <p>A candle poster at the parish will show the commitments being made, one flame at a time. As the year goes on, gold flame stickers will be added to a shared display &mdash; a quiet way to recognize answered prayers and blessings without anyone having to share private details.</p>
-  <p>It is a visible reminder that God is working through the time we give Him.</p>
-
-  <h2>Weekly Reflections</h2>
-  <p>Each week we will post a short Scripture reflection and prayer encouragement here &mdash; something to carry with you into your hour of Adoration and your daily prayer.</p>
+<div class="cards give-grid" style="max-width:900px;margin:36px auto 0;">
+  <div class="give-card">
+    <h3>1 &middot; Sign in</h3>
+    <p>Use your Mass Scheduler account &mdash; the same one you use to sign up for Mass roles. <a href="https://scheduler.stmichaelsallangels.com/?view=prayer" target="_blank" rel="noopener">Go to the prayer log &rarr;</a></p>
+  </div>
+  <div class="give-card">
+    <h3>2 &middot; New here?</h3>
+    <p>Create a free account on the scheduler with your email &mdash; then tap <strong>Prayer Log</strong> at the top. <a href="https://scheduler.stmichaelsallangels.com/?view=prayer" target="_blank" rel="noopener">Create your account &rarr;</a></p>
+  </div>
+  <div class="give-card">
+    <h3>3 &middot; Log &amp; grow</h3>
+    <p>Enter the minutes you prayed and what you prayed. Every entry lifts the parish thermometer &mdash; and your own running total.</p>
+  </div>
 </div>
-<div class="prose reflection-card">
-  <p class="lead">First Reflection &mdash; Advent, Week One</p>
-  <p>"Give thanks to the Lord, call upon His name; make known His deeds among the nations." <a href="https://www.biblegateway.com/passage/?search=1%20Chronicles%2016%3A8&version=RSVCE" target="_blank" rel="noopener">1 Chronicles 16:8</a></p>
-  <p>Advent begins in the dark &mdash; the days are shortest just as we light the first candle. That is the shape of the Christian life: we bring our small light to the darkness, and God does the rest. As you begin your hour of Adoration or your twenty minutes of daily prayer, start with thanksgiving. Name one thing &mdash; even one small thing &mdash; God has carried you through, and let that be the first word of your prayer.</p>
-  <p style="color:var(--muted);font-size:.9rem;">Check back each week &mdash; new reflections will be posted here throughout the year.</p>
+
+<div class="prose" style="margin-top:36px;">
+  <p style="color:var(--muted);font-size:.9rem;">Your individual entries stay private &mdash; the parish sees only the combined total and how many people are praying.</p>
 </div>""")
 
 P("contact.html", "Contact Us",
@@ -917,7 +953,14 @@ def main():
     made = [build_home()]
     for fname, title, desc, eyebrow, hero_title, body, hero_sub in PAGES:
         made.append(subpage(fname, title, desc, eyebrow, hero_title, body, hero_sub))
-    print(f"built {len(made)} pages:")
+    # Legacy redirect: 168.html used to be the single 16:8 page
+    with open(os.path.join(SITE, "168.html"), "w", encoding="utf-8") as f:
+        f.write('<!DOCTYPE html><html><head><meta charset="utf-8">'
+                '<meta http-equiv="refresh" content="0; url=168-introduction.html">'
+                '<title>16:8 — Saint Michael &amp; All Angels</title></head>'
+                '<body><p>This page has moved. <a href="168-introduction.html">Go to 16:8 Introduction</a>'
+                ' &middot; <a href="168-progress.html">Progress &amp; Prayer Log</a></p></body></html>')
+    print(f"built {len(made) + 1} pages:")
     for f in made:
         size = os.path.getsize(os.path.join(SITE, f))
         print(f"  {f:28s} {size//1024:>4} KB")
