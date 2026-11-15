@@ -363,3 +363,24 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
 .fund-meter-foot { padding: 18px 28px 26px; text-align: center; }
 .fund-meter-foot p { font-size: .92rem; color: var(--ink); max-width: 520px; margin: 0 auto 20px; }
 .fund-updated { font-size: .78rem !important; color: var(--muted) !important; margin: 14px auto 0 !important; }
+
+/* Side-by-side layout: thermometer (left) + giving card (right) */
+.fund-row { display: flex; gap: 24px; max-width: 1080px; margin: 36px auto 0; align-items: stretch; }
+.fund-row > .fund-meter-card, .fund-row > .fund-give-col { flex: 1; min-width: 0; }
+.fund-give-col > div { margin: 0 !important; height: 100%; display: flex; flex-direction: column; }
+.fund-give-col > div > div:last-child { flex: 1; }
+@media (max-width: 940px) { .fund-row { flex-direction: column; } }
+
+/* Vertical goal thermometer */
+.fund-meter-body.thermo { display: flex; gap: 22px; align-items: stretch; padding: 26px 26px 8px; }
+.thermo-track {
+  position: relative; width: 46px; min-height: 240px; flex: 0 0 46px;
+  background: var(--parchment); border: 1px solid var(--line);
+  border-radius: 999px; overflow: hidden; align-self: stretch;
+}
+.thermo-fill {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 0;
+  background: linear-gradient(0deg, var(--gold), var(--gold-light));
+  transition: height 1s cubic-bezier(.2, .7, .3, 1);
+}
+.fund-nums { display: flex; flex-direction: column; justify-content: center; gap: 14px; }

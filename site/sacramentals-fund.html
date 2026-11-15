@@ -41,30 +41,29 @@
   <p>As we look ahead, we invite you to join us in sustaining this vital fund. Your contributions, no matter the size, help keep our spiritual journey vibrant and our worship deeply meaningful.</p>
 </div>
 
-<div class="fund-meter-card">
-  <div class="fund-meter-head">
-    <span class="fund-meter-title" id="fund-label">Immediate Goal</span>
-    <span class="fund-meter-tag">Sacramentals Fund</span>
-  </div>
-  <div class="fund-meter-body">
-    <div class="fund-meter-nums">
-      <div><span class="fund-big" id="fund-raised">$0</span><span class="fund-cap">given so far</span></div>
-      <div style="text-align:right;"><span class="fund-big" id="fund-goal">$0</span><span class="fund-cap">goal</span></div>
+<div class="fund-row">
+  <div class="fund-meter-card">
+    <div class="fund-meter-head">
+      <span class="fund-meter-title" id="fund-label">Immediate Goal</span>
+      <span class="fund-meter-tag">Goal Meter</span>
     </div>
-    <div class="fund-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="fund-bar-track">
-      <div class="fund-fill" id="fund-fill"></div>
+    <div class="fund-meter-body thermo">
+      <div class="thermo-track" id="fund-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="thermo-fill" id="fund-fill"></div>
+      </div>
+      <div class="fund-nums">
+        <div><span class="fund-big" id="fund-raised">$0</span><span class="fund-cap">given so far</span></div>
+        <div><span class="fund-pct" id="fund-pct">0%</span><span class="fund-cap">of goal</span></div>
+        <div><span class="fund-remaining" id="fund-remaining"></span><span class="fund-cap" id="fund-remaining-cap"></span></div>
+        <div><span class="fund-cap">Goal: <strong id="fund-goal">$0</strong></span></div>
+      </div>
     </div>
-    <div class="fund-meter-nums" style="margin-top:10px;">
-      <div><span class="fund-pct" id="fund-pct">0%</span><span class="fund-cap">of goal</span></div>
-      <div style="text-align:right;"><span class="fund-remaining" id="fund-remaining"></span><span class="fund-cap" id="fund-remaining-cap"></span></div>
+    <div class="fund-meter-foot" style="padding-top:0;">
+      <p class="fund-updated" id="fund-updated"></p>
     </div>
   </div>
-  <div class="fund-meter-foot">
-    <p>Use the giving form below to make your donation today — no donation is too small.</p>
-    <p class="fund-updated" id="fund-updated"></p>
-  </div>
-</div>
-<div style="max-width:760px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(20,50,79,.08);">
+  <div class="fund-give-col">
+  <div style="max-width:760px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(20,50,79,.08);">
   <div style="background:var(--burgundy);color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
     <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;">Give to Saint Michael &amp; All Angels</span>
     <span style="font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);">Secure &middot; ParishSoft Giving</span>
@@ -82,7 +81,9 @@
     <p style="margin:18px auto 0;font-size:.88rem;color:var(--ink);max-width:520px;">When the form opens, be sure to choose <strong>&ldquo;Sacramentals Fund&rdquo;</strong> from the fund drop-down — that directs your gift to candles, palms, communion supplies, and more.</p>
   </div>
 </div>
-<p style="max-width:760px;margin:14px auto 0;font-size:.85rem;color:var(--muted);text-align:center;">
+  </div>
+</div>
+<p style="max-width:1060px;margin:14px auto 0;font-size:.85rem;color:var(--muted);text-align:center;">
   Gifts are processed securely by <strong>ParishSoft Giving</strong>. Questions about the fund? Call the parish office.
 </p>
 
@@ -102,7 +103,7 @@
     document.getElementById('fund-pct').textContent = pct + '%';
     document.getElementById('fund-bar-track').setAttribute('aria-valuenow', pct);
     var fill = document.getElementById('fund-fill');
-    fill.style.width = pct + '%';
+    fill.style.height = pct + '%';
     var rem = goal - (d.raised || 0);
     if (rem <= 0) {
       document.getElementById('fund-remaining').textContent = 'Goal reached!';
@@ -118,7 +119,7 @@
     }
   }).catch(function () {
     var fill = document.getElementById('fund-fill');
-    fill.style.width = '100%';
+    fill.style.height = '100%';
     fill.style.background = 'var(--line)';
   });
 })();
