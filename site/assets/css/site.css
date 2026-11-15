@@ -376,10 +376,11 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
   .fund-row > .fund-meter-card { margin: 36px 0 0; display: block; }
 }
 
-/* Vertical goal thermometer */
-.fund-meter-body.thermo { display: flex; gap: 22px; align-items: stretch; padding: 26px 26px 8px; }
+/* Vertical goal thermometer — two centered halves: text left, tube right */
+.fund-meter-body.thermo { display: flex; gap: 0; align-items: stretch; padding: 26px 26px 8px; }
 .thermo-track {
   position: relative; width: 46px; min-height: 240px; flex: 0 0 46px;
+  margin: 0 auto;
   background: var(--parchment); border: 1px solid var(--line);
   border-radius: 999px; overflow: hidden; align-self: stretch;
 }
@@ -389,6 +390,7 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
   transition: height 1s cubic-bezier(.2, .7, .3, 1);
 }
 .fund-nums {
+  flex: 0 0 50%;
   display: flex; flex-direction: column; justify-content: space-between;
-  align-items: flex-start; flex: 1; min-width: 0; padding: 4px 0;
+  align-items: center; text-align: center; min-width: 0; padding: 4px 10px;
 }
