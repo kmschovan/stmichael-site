@@ -509,13 +509,19 @@ P("online-giving.html", "Online Giving",
   "Give online to Saint Michael & All Angels — one-time or recurring gifts.",
   "Stewardship", "Online Giving",
   """<div class="prose">
-  <p>Online giving is a convenient and secure way to support the parish — whether you're giving to the Regular Offertory, the Sacramentals Fund, or another special collection.</p>
-  <p>Through the parish's online giving tool, you have full control over the amount and frequency of your contributions, and you can set up recurring gifts so your support continues even when you're away.</p>
+  <p>Online giving is a convenient and secure way to support the parish — whether you're giving to the Regular Offertory, the Sacramentals Fund, or a special collection. Through the giving form below you have full control over the amount and frequency of your contributions, and you can set up recurring gifts so your support continues even when you're away.</p>
 </div>
-<div style="text-align:center;margin-top: 32px;">
-  <a class="btn btn-primary" style="font-size:1.05rem;padding:16px 36px;" href="https://www.stmichaelsallangels.com/parishioner" target="_blank" rel="noopener">Give Online Now &rarr;</a>
-  <p style="font-size:.84rem;color:var(--muted);margin-top:14px;">Opens the parish's current giving page. Once a new giving provider is chosen, this can be embedded directly on this page.</p>
-</div>""")
+<div style="max-width:1000px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(20,50,79,.08);">
+  <div style="background:var(--burgundy);color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+    <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;">Give to Saint Michael &amp; All Angels</span>
+    <span style="font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);">Secure &middot; ParishSoft Giving</span>
+  </div>
+  <iframe src="https://giving.parishsoft.com/App/Form/1acdfb5d-b7b1-4b80-ad4b-5f7b16cfa05a" title="Parish online giving form" loading="lazy"
+    style="width:100%;height:1500px;border:0;display:block;background:#fff;"></iframe>
+</div>
+<p style="max-width:1000px;margin:14px auto 0;font-size:.85rem;color:var(--muted);">
+  Gifts are processed securely by <strong>ParishSoft Giving</strong> — the same system used for parish faith-formation and fee payments. One-time and recurring options are available; gifts from a bank account carry a lower processing fee than cards. Questions about giving? Call the parish office.
+</p>""")
 
 P("bishops-appeal.html", "Bishop's Appeal",
   "Support the Bishop's Appeal of the Ordinariate of the Chair of Saint Peter.",
