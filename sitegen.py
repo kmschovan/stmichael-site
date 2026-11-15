@@ -740,7 +740,67 @@ P("168.html", "16:8",
 <div class="prose">
   <p>Our beginning goal is <strong>30 commitments</strong> &mdash; about 5,040 hours of prayer offered over the year. But the deeper goal is changed lives: even one person encountering Christ more deeply makes this worthwhile.</p>
   <p>We believe God hears our prayers. We believe miracles can and do happen. We seek healing and trust in His perfect timing and presence during our challenges.</p>
+</div>
 
+<div class="fund-meter-card">
+  <div class="fund-meter-head">
+    <span class="fund-meter-title">16:8 Parish Prayer Meter</span>
+    <span class="fund-meter-tag">Live Progress</span>
+  </div>
+  <div class="fund-meter-body thermo">
+    <div class="fund-nums">
+      <div><span class="fund-cap">Goal</span><span class="fund-big" id="prayer-goal">5,040 hrs</span></div>
+      <div><span class="fund-pct" id="prayer-pct">0%</span> <span class="fund-cap">of goal</span><br><span class="fund-big" id="prayer-total">0 hrs</span><span class="fund-cap" id="prayer-people">logged so far</span></div>
+      <div><span class="fund-remaining" id="prayer-remaining">5,040 hrs</span><span class="fund-cap">to go</span></div>
+    </div>
+    <div class="thermo-scale">
+      <div class="thermo-track" id="prayer-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="thermo-fill" id="prayer-fill"></div>
+      </div>
+      <span class="thermo-mark" style="bottom:25%">25%</span>
+      <span class="thermo-mark" style="bottom:50%">50%</span>
+      <span class="thermo-mark" style="bottom:75%">75%</span>
+    </div>
+  </div>
+  <div class="fund-meter-foot">
+    <p>Log the minutes you spend in prayer &mdash; every entry raises the parish thermometer. Adoration time, daily prayer, family prayer: it all counts.</p>
+    <a class="btn btn-primary" href="https://scheduler.stmichaelsallangels.com/?view=prayer" target="_blank" rel="noopener">Log Your Prayer Time</a>
+    <p class="fund-updated" id="prayer-updated">Live from the parish scheduler &mdash; sign in with your scheduler account.</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  fetch('https://scheduler.stmichaelsallangels.com/api/prayer/total')
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var fmt = function (h) { return Number(h).toLocaleString('en-US', { maximumFractionDigits: 1 }); };
+      var goal = d.goal_hours || 5040;
+      var hours = (d.total_minutes || 0) / 60;
+      var pct = goal > 0 ? Math.min(100, Math.round(hours / goal * 100)) : 0;
+      document.getElementById('prayer-goal').textContent = fmt(goal) + ' hrs';
+      document.getElementById('prayer-total').textContent = fmt(hours) + ' hrs';
+      document.getElementById('prayer-pct').textContent = pct + '%';
+      document.getElementById('prayer-track').setAttribute('aria-valuenow', pct);
+      document.getElementById('prayer-fill').style.height = pct + '%';
+      var rem = Math.max(0, goal - hours);
+      if (pct >= 100) {
+        document.getElementById('prayer-remaining').textContent = 'Goal reached!';
+        document.getElementById('prayer-people').textContent = 'thank you!';
+      } else {
+        document.getElementById('prayer-remaining').textContent = fmt(rem) + ' hrs';
+      }
+      if (d.participants) {
+        document.getElementById('prayer-updated').textContent = d.participants + ' parishioner' + (d.participants === 1 ? '' : 's') + ' logging prayer time.';
+      }
+    })
+    .catch(function () {
+      document.getElementById('prayer-remaining').textContent = '&mdash;';
+    });
+})();
+</script>
+
+<div class="prose">
   <h2>How to Join</h2>
   <p>Begin by choosing a seven-day prayer candle &mdash; <strong>$20 each</strong> &mdash; and bring it to the opening gathering for a special blessing:</p>
   <p><strong>Wednesday, December 2, 2026</strong><br>the first Wednesday of Advent &mdash; opening gathering &amp; candle blessing<br>Wednesday evenings at St. Michael's</p>
