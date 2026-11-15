@@ -378,11 +378,21 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
 
 /* Vertical goal thermometer — two centered halves: text left, tube right */
 .fund-meter-body.thermo { display: flex; gap: 0; align-items: stretch; padding: 26px 26px 8px; }
-.thermo-track {
-  position: relative; width: 46px; min-height: 240px; flex: 0 0 46px;
-  margin: 0 auto;
-  background: var(--parchment); border: 1px solid var(--line);
-  border-radius: 999px; overflow: hidden; align-self: stretch;
+.thermo-scale {
+  position: relative; flex: 0 0 46px; margin: 0 auto; align-self: stretch;
+}
+.thermo-scale .thermo-track { width: 100%; height: 100%; min-height: 240px; }
+.thermo-track::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(rgba(20,50,79,.30), rgba(20,50,79,.30)) 0 75%/100% 1px no-repeat,
+    linear-gradient(rgba(20,50,79,.30), rgba(20,50,79,.30)) 0 50%/100% 1px no-repeat,
+    linear-gradient(rgba(20,50,79,.30), rgba(20,50,79,.30)) 0 25%/100% 1px no-repeat;
+}
+.thermo-mark {
+  position: absolute; left: calc(100% + 8px); transform: translateY(50%);
+  font-family: 'Inter', sans-serif; font-size: .68rem; font-weight: 500;
+  color: var(--muted); white-space: nowrap;
 }
 .thermo-fill {
   position: absolute; bottom: 0; left: 0; right: 0; height: 0;
