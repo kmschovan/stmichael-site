@@ -48,14 +48,13 @@
       <span class="fund-meter-tag">Goal Meter</span>
     </div>
     <div class="fund-meter-body thermo">
+      <div class="fund-nums">
+        <div><span class="fund-cap">Goal</span><span class="fund-big" id="fund-goal">$0</span></div>
+        <div><span class="fund-pct" id="fund-pct">0%</span> <span class="fund-cap">of goal</span><br><span class="fund-big" id="fund-raised">$0</span><span class="fund-cap" id="fund-raised-cap">given so far</span></div>
+        <div><span class="fund-big" id="fund-remaining">$0</span><span class="fund-cap" id="fund-remaining-cap"></span></div>
+      </div>
       <div class="thermo-track" id="fund-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
         <div class="thermo-fill" id="fund-fill"></div>
-      </div>
-      <div class="fund-nums">
-        <div><span class="fund-big" id="fund-raised">$0</span><span class="fund-cap">given so far</span></div>
-        <div><span class="fund-pct" id="fund-pct">0%</span><span class="fund-cap">of goal</span></div>
-        <div><span class="fund-remaining" id="fund-remaining"></span><span class="fund-cap" id="fund-remaining-cap"></span></div>
-        <div><span class="fund-cap">Goal: <strong id="fund-goal">$0</strong></span></div>
       </div>
     </div>
     <div class="fund-meter-foot" style="padding-top:0;">
@@ -106,12 +105,10 @@
     fill.style.height = pct + '%';
     var rem = goal - (d.raised || 0);
     if (rem <= 0) {
-      document.getElementById('fund-remaining').textContent = 'Goal reached!';
-      document.getElementById('fund-remaining-cap').textContent = 'thank you!';
-      document.getElementById('fund-remaining').style.color = '#1d6b3f';
+      document.getElementById('fund-remaining').textContent = '$0';
+      document.getElementById('fund-raised-cap').textContent = 'goal reached — thank you!';
     } else {
-      document.getElementById('fund-remaining').textContent = fmt(rem);
-      document.getElementById('fund-remaining-cap').textContent = 'still needed';
+      document.getElementById('fund-remaining').textContent = '$0';
     }
     if (d.updated) {
       var dt = new Date(d.updated + 'T12:00:00');

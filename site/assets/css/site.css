@@ -388,4 +388,7 @@ nav.main .sub a:hover { color: var(--gold); background: var(--ivory); }
   background: linear-gradient(0deg, var(--gold), var(--gold-light));
   transition: height 1s cubic-bezier(.2, .7, .3, 1);
 }
-.fund-nums { display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+.fund-nums {
+  display: flex; flex-direction: column; justify-content: space-between;
+  align-items: flex-start; flex: 1; min-width: 0; padding: 4px 0;
+}
