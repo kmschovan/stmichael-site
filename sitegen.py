@@ -747,7 +747,7 @@ P("168-introduction.html", "16:8 — Introduction",
 </div>
 
 <div style="max-width:760px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(20,50,79,.08);padding:34px 32px;text-align:center;">
-  <p class="lead" style="margin-bottom:10px;">Watch the parish prayer thermometer grow</p>
+  <p class="lead" style="margin-bottom:10px;">Watch the parish prayer progress meter grow</p>
   <p style="margin:0 0 24px;color:var(--muted);max-width:520px;margin-left:auto;margin-right:auto;">Log the minutes you spend in prayer &mdash; Adoration time, daily prayer, family prayer: it all counts &mdash; and watch our parish total climb toward 5,040 hours.</p>
   <a class="btn btn-primary" href="168-progress.html">See the Progress &amp; Log Your Prayer Time</a>
 </div>
@@ -762,17 +762,17 @@ P("168-introduction.html", "16:8 — Introduction",
   <h2>Watching God Work</h2>
   <p>A candle poster at the parish will show the commitments being made, one flame at a time. As the year goes on, gold flame stickers will be added to a shared display &mdash; a quiet way to recognize answered prayers and blessings without anyone having to share private details.</p>
   <p>It is a visible reminder that God is working through the time we give Him.</p>
-  <p>And there is a second way to watch: the <a href="168-progress.html"><strong>Progress &amp; Prayer Log</strong></a> page shows a live parish thermometer &mdash; the combined minutes of prayer logged by parishioners, climbing week by week toward our 5,040-hour goal. Every time you log your own prayer time there, the thermometer rises for the whole parish to see.</p>
+  <p>And there is a second way to watch: the <a href="168-progress.html"><strong>Progress &amp; Prayer Log</strong></a> page shows a live parish progress meter &mdash; the combined minutes of prayer logged by parishioners, climbing week by week toward our 5,040-hour goal. Every time you log your own prayer time there, the meter rises for the whole parish to see.</p>
 
   <h2>Weekly Reflections</h2>
   <p>Each week we post a short Scripture reflection and prayer encouragement &mdash; something to carry with you into your hour of Adoration and your daily prayer. The growing collection lives on its own page: <a href="168-reflections.html">Read the Weekly Reflections</a>.</p>
 </div>""")
 
 P("168-progress.html", "16:8 — Progress & Prayer Log",
-  "Live parish prayer progress for 16:8 at St. Michael's — watch the thermometer climb and log your own prayer minutes.",
+  "Live parish prayer progress for 16:8 at St. Michael's — watch the progress meter climb and log your own prayer minutes.",
   "16:8", "16:8 Parish Prayer Progress",
   """<div class="prose">
-  <p class="lead">Every minute of prayer offered by our parishioners raises the thermometer below &mdash; Adoration time, daily prayer, family prayer: it all counts toward our goal of <strong>5,040 hours</strong> of prayer offered over the year.</p>
+  <p class="lead">Every minute of prayer offered by our parishioners raises the progress meter below &mdash; Adoration time, daily prayer, family prayer: it all counts toward our goal of <strong>5,040 hours</strong> of prayer offered over the year.</p>
   <p>Missed the introduction? <a href="168-introduction.html">Learn about 16:8 and how to join</a>.</p>
 </div>
 
@@ -845,7 +845,7 @@ P("168-progress.html", "16:8 — Progress & Prayer Log",
   </div>
   <div class="give-card">
     <h3>3 &middot; Log &amp; grow</h3>
-    <p>Enter the minutes you prayed and what you prayed. Every entry lifts the parish thermometer &mdash; and your own running total.</p>
+    <p>Enter the minutes you prayed and what you prayed. Every entry lifts the parish progress meter &mdash; and your own running total.</p>
   </div>
 </div>
 
