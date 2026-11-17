@@ -72,7 +72,6 @@ FOOTER_COLS = [
     ]),
     ("Connect", [
         ("Contact Us", "contact.html", False),
-        ("Newsletter Archive", "newsletter.html", False),
         ("Flocknote", "flocknote.html", False),
         ("Facebook", HARVEST["site"]["facebook"], True),
         ("Forms", "forms.html", False),
@@ -967,17 +966,6 @@ P("ocia.html", "OCIA — Becoming Catholic",
   <p>Inquiries are welcome at any time of year — you do not need to be sure of anything to begin. Call the parish at <a href="tel:9038217511">903-821-7511</a> or use the <a href="contact.html">contact form</a> and Father Randall or the OCIA coordinator will meet with you. There is never a cost.</p>
 </div>""")
 
-P("newsletter.html", "Newsletter Archive",
-  "The Faithful Focus newsletter archive of Saint Michael & All Angels.",
-  "Resources", "Faithful Focus — Newsletter Archive",
-  """<div class="prose">
-  <p>Our parish newsletter, <em>Faithful Focus</em>, shares news, devotions, and updates from the parish. Past issues will be archived here as they become available digitally.</p>
-</div>
-<div class="placeholder" style="margin-top: 28px;">
-  <h3>Archive coming soon</h3>
-  <p>Until the archive is populated, current newsletters are shared through <a href="flocknote.html">Flocknote</a>. Provide past issues (PDF or links) and Hermes will build the archive index.</p>
-</div>""")
-
 P("flocknote.html", "Flocknote",
   "Join the parish email and text list through Flocknote.",
   "Resources", "Stay Connected — Flocknote",
@@ -987,18 +975,6 @@ P("flocknote.html", "Flocknote",
 </div>
 <div style="text-align:center;margin-top: 32px;">
   <a class="btn btn-primary" style="font-size:1.05rem;padding:16px 36px;" href="{CHURCH['flocknote']}"{tgt(True)}>Join Flocknote &rarr;</a>
-</div>""")
-
-P("novena.html", "Novena to the Holy Spirit",
-  "A nine-day novena to the Holy Spirit, prayed between Ascension and Pentecost.",
-  "Resources", "Novena to the Holy Spirit",
-  """<div class="prose">
-  <p>A novena to the Holy Spirit is a nine-day prayer that invokes the third person of the Trinity and asks for His gifts and graces. It is usually prayed between Ascension Thursday and Pentecost Sunday, when the first disciples received the Holy Spirit.</p>
-  <p>Each day of the novena focuses on one of the seven gifts of the Holy Spirit: Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, and Fear of the Lord — crowned by the prayer for the fruits of the Spirit.</p>
-  <p>The complete novena — with a reflection and audio recording for each day — is available at My Catholic Life:</p>
-</div>
-<div style="text-align:center;margin-top: 32px;">
-  <a class="btn btn-primary" style="font-size:1.05rem;padding:16px 36px;" href="https://mycatholic.life/catholic-prayers/novena-to-the-holy-spirit/" target="_blank" rel="noopener">Pray the Novena &rarr;</a>
 </div>""")
 
 P("forms.html", "Forms",
@@ -1037,7 +1013,18 @@ def main():
                 '<title>16:8 — Saint Michael &amp; All Angels</title></head>'
                 '<body><p>This page has moved. <a href="168-introduction.html">Go to 16:8 Introduction</a>'
                 ' &middot; <a href="168-progress.html">Progress &amp; Prayer Log</a></p></body></html>')
-    print(f"built {len(made) + 1} pages:")
+    # Retired pages: redirect stubs so old links keep working
+    with open(os.path.join(SITE, "newsletter.html"), "w", encoding="utf-8") as f:
+        f.write('<!DOCTYPE html><html><head><meta charset="utf-8">'
+                '<meta http-equiv="refresh" content="0; url=flocknote.html">'
+                '<title>Faithful Focus — Saint Michael &amp; All Angels</title></head>'
+                '<body><p>Newsletters are shared through Flocknote. <a href="flocknote.html">Go to Flocknote</a></p></body></html>')
+    with open(os.path.join(SITE, "novena.html"), "w", encoding="utf-8") as f:
+        f.write('<!DOCTYPE html><html><head><meta charset="utf-8">'
+                '<meta http-equiv="refresh" content="0; url=prayers.html">'
+                '<title>Holy Spirit Novena — Saint Michael &amp; All Angels</title></head>'
+                '<body><p>This page has moved. <a href="prayers.html">Go to Prayers &amp; Intentions</a></p></body></html>')
+    print(f"built {len(made) + 2} pages:")
     for f in made:
         size = os.path.getsize(os.path.join(SITE, f))
         print(f"  {f:28s} {size//1024:>4} KB")
