@@ -51,6 +51,7 @@ NAV = [
     ]),
     ("Resources", None, [
         ("Contact Us", "contact.html", False),
+        ("OCIA — Becoming Catholic", "ocia.html", False),
         ("Newsletter Archive", "newsletter.html", False),
         ("Flocknote", "flocknote.html", False),
         ("Holy Spirit Novena", "novena.html", False),
@@ -940,6 +941,36 @@ P("contact.html", "Contact Us",
     <textarea id="c-msg" name="message" rows="6" required placeholder="How can we help?"></textarea>
     <button class="btn btn-primary" type="submit">Send Message</button>
   </form>
+</div>""")
+
+P("ocia.html", "OCIA — Becoming Catholic",
+  "The Order of Christian Initiation of Adults — the journey by which adults enter the Catholic Church at Saint Michael & All Angels, Denison TX.",
+  "Resources", "OCIA — Becoming Catholic",
+  """<div class="prose">
+  <p class="lead">"From the time of the apostles, becoming a Christian has been accomplished by a journey and initiation in several stages and regions to which the individual can commit himself for the rest of his life."</p>
+  <h2>What OCIA Is</h2>
+  <p>The <strong>Order of Christian Initiation of Adults (OCIA)</strong> is the Church's ancient process of formation for adults who wish to become Catholic — a journey of listening, study, prayer, and liturgical rites that unfolds over the course of a year and culminates in receiving the sacraments at the Easter Vigil. (It was known for decades as RCIA, the Rite of Christian Initiation of Adults; the Church renamed it in 2021 with a renewed emphasis on ongoing conversion rather than a class to be passed.)</p>
+  <p>At Saint Michael's the experience is personal and unhurried: meetings with the parish coordinator, a sponsor who walks the way with you, study of the faith as it is lived and prayed in our Ordinariate liturgy, and rites celebrated in the presence of the parish, which prays for and supports each inquirer by name.</p>
+  <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P3J.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1229</a></p>
+  <h2>Who Participates</h2>
+  <p>OCIA serves three kinds of seekers, each on a formation track suited to where they begin:</p>
+  <ul>
+    <li><strong>Adults who have never been baptized</strong> — the full journey of Christian initiation: catechumenate, the rites of Lent, and the sacraments of initiation (Baptism, Confirmation, Eucharist) at the Easter Vigil.</li>
+    <li><strong>Christians baptized in another tradition</strong> who are seeking full communion with the Catholic Church — their baptism is already valid and is never repeated; they prepare for Confirmation and the Eucharist.</li>
+    <li><strong>Baptized Catholics</strong> who have not yet received Confirmation or First Communion and wish to complete their initiation through adult formation.</li>
+  </ul>
+  <p>Spouses, fiancés preparing for marriage, and parents of children in the parish are especially welcome — many come because of someone they love, and find God waiting.</p>
+  <h2>The Stages of the Journey</h2>
+  <p>The Church names the stages of initiation precisely, because each is a real period of growth marked by a rite at the parish altar:</p>
+  <ol>
+    <li><strong>1. Period of Inquiry (Precatechumenate)</strong> — the no-obligation beginning. Come ask questions, share your story, and get to know the parish. At its close, those who wish to continue celebrate the <em>Rite of Acceptance into the Order of Catechumens</em> and become catechumens.</li>
+    <li><strong>2. The Catechumenate</strong> — the longest stage, usually running from autumn through Lent. Catechumens study the Creed and the sacraments, hear the Scriptures proclaimed and explained each Sunday (they are dismissed after the Liturgy of the Word for further catechesis), learn Christian prayer, and are accompanied by a sponsor chosen for the journey.</li>
+    <li><strong>3. Purification and Enlightenment (Lent)</strong> — the bishop (or his delegate) celebrates the <em>Rite of Election</em>, the Church "elects" the catechumens for the sacraments, and the Lenten Sundays bring the Scrutinies: prayers for deliverance and strengthening as the elect enter a season of recollection before Easter.</li>
+    <li><strong>4. Initiation at the Easter Vigil</strong> — the elect receive Baptism, Confirmation, and the Holy Eucharist in one unwinding act at the great Vigil of Easter, made members of Christ and of His Church.</li>
+    <li><strong>5. Mystagogy (Easter season into Pentecost)</strong> — the neophytes, newly initiated, reflect on the sacraments received and learn to live them: the whole season is spent "unwrapping the mysteries," joining the full parish life of worship and service.</li>
+  </ol>
+  <h2>Joining Us</h2>
+  <p>Inquiries are welcome at any time of year — you do not need to be sure of anything to begin. Call the parish at <a href="tel:9038217511">903-821-7511</a> or use the <a href="contact.html">contact form</a> and Father Randall or the OCIA coordinator will meet with you. There is never a cost.</p>
 </div>""")
 
 P("newsletter.html", "Newsletter Archive",
