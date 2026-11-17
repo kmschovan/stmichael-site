@@ -415,7 +415,7 @@ details.faq-item {
   border: 1px solid var(--line);
   border-radius: 10px;
   background: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   overflow: hidden;
 }
 details.faq-item[open] { box-shadow: 0 6px 18px rgba(20,50,79,.08); }
@@ -454,13 +454,7 @@ details.faq-item[open] summary { border-bottom: 1px solid var(--line); }
 
 /* FAQ accordion — one open at a time via details[name] (+ JS fallback) */
 .faq-list { max-width: 820px; margin: 0 auto; text-align: left; }
-details.faq-item {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: #fff;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
+
 details.faq-item[open] { box-shadow: 0 6px 18px rgba(20,50,79,.08); }
 details.faq-item summary {
   cursor: pointer;
