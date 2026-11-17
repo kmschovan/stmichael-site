@@ -47,9 +47,7 @@ NAV = [
     ("Resources", None, [
         ("Contact Us", "contact.html", False),
         ("OCIA — Becoming Catholic", "ocia.html", False),
-        ("Newsletter Archive", "newsletter.html", False),
         ("Flocknote", "flocknote.html", False),
-        ("Holy Spirit Novena", "novena.html", False),
         ("Forms", "forms.html", False),
         ("Mass Details", "https://scheduler.stmichaelsallangels.com/display.html", True),
         ("Mass Details (mobile)", "https://scheduler.stmichaelsallangels.com/display_mobile.html", True),
