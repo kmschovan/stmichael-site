@@ -125,7 +125,7 @@ def footer():
   <div class="foot-grid">
     <div>
       <h4>{CHURCH['name']}</h4>
-      <p class="mission">A parish of the Personal Ordinariate of the Chair of Saint Peter — fully Catholic, enriched by our Anglican heritage. All are welcome.</p>
+      <p class="mission">A Roman Catholic community-in-formation under the Personal Ordinariate of the Chair of Saint Peter — fully Catholic, enriched by our Anglican heritage. All are welcome.</p>
       <p class="mission">{CHURCH['address']}<br>{CHURCH['phone']}</p>
     </div>
     {cols}
@@ -208,8 +208,8 @@ def build_home():
     <a class="btn btn-ghost btn-new" href="about.html">I&#8217;m New</a>
     <div>
       <h1>St. Michael &amp; All Angels</h1>
-      <p class="welcome">A Parish of the Personal Ordinariate of the Chair of Saint Peter</p>
-      <p class="sub">A small Roman Catholic church with a big heart, celebrating reverent liturgy and rich Anglican heritage in the heart of Denison, Texas.</p>
+      <p class="welcome">A Roman Catholic community-in-formation under the <a href="https://ordinariate.net/" target="_blank" rel="noopener">Personal Ordinariate of the Chair of Saint Peter</a></p>
+      <p class="sub">A small church with a big heart, serving North Texas and southern Oklahoma. We worship the Blessed Trinity in the beautiful and reverent Ordinariate form of the Roman Rite — focusing on evangelization through reverent liturgy, orthodox teaching, fellowship, and the spiritual life. We invite you to join us for prayer and worship.</p>
     </div>
     <figure class="hero-photo">
       <img src="assets/img/hero-church.jpg" alt="St. Michael's church with cross">
@@ -293,7 +293,7 @@ def build_home():
 """
     return make_page("index.html",
         "Saint Michael & All Angels Catholic Church — Denison, TX",
-        "A parish of the Personal Ordinariate of the Chair of Saint Peter in Denison, Texas. Mass times, sacraments, stewardship, and a warm welcome.",
+        "A Roman Catholic community-in-formation in Denison, Texas under the Personal Ordinariate of the Chair of Saint Peter. Mass times, sacraments, stewardship, and a warm welcome.",
         body)
 
 # ================================================================ CONTENT PAGES
@@ -308,7 +308,7 @@ def P(fname, title, desc, eyebrow, hero_title, body, hero_sub=None, art=None):
     PAGES.append((fname, title, desc, eyebrow, hero_title, body, hero_sub))
 
 P("about.html", "About Us",
-  "About Saint Michael & All Angels Catholic Church — a parish of the Personal Ordinariate of the Chair of Saint Peter in Denison, Texas.",
+  "About Saint Michael & All Angels Catholic Church — a Roman Catholic community-in-formation under the Personal Ordinariate of the Chair of Saint Peter in Denison, Texas.",
   "About Us", "A small church with a big heart",
   f"""<div class="about-grid">
   <div class="text">
@@ -795,7 +795,7 @@ P("168-progress.html", "16:8 — Progress & Prayer Log",
   <div class="fund-meter-foot">
     <p>Live from the parish prayer log &mdash; updated whenever a parishioner logs time.</p>
     <a class="btn btn-primary" href="https://scheduler.stmichaelsallangels.com/?view=prayer" target="_blank" rel="noopener">Log Your Prayer Time</a>
-    <p class="fund-updated" id="prayer-updated">Sign in with your scheduler account &mdash; takes less than a minute.</p>
+    <p class="fund-updated" id="prayer-updated">Sign in with your Church Hub account &mdash; takes less than a minute.</p>
   </div>
 </div>
 
@@ -832,12 +832,12 @@ P("168-progress.html", "16:8 — Progress & Prayer Log",
 
 <div class="cards give-grid" style="max-width:900px;margin:36px auto 0;">
   <div class="give-card">
-    <h3>1 &middot; Sign in</h3>
-    <p>Use your Mass Scheduler account &mdash; the same one you use to sign up for Mass roles. <a href="https://scheduler.stmichaelsallangels.com/?view=prayer" target="_blank" rel="noopener">Go to the prayer log &rarr;</a></p>
+    <h3>1 &middot; Already volunteer?</h3>
+    <p><strong>You already have a Church Hub account</strong> &mdash; the same login you use to sign up for Mass roles. Just sign in and tap <strong>Prayer Log</strong>. <a href="https://scheduler.stmichaelsallangels.com/?view=prayer" target="_blank" rel="noopener">Sign in &rarr;</a></p>
   </div>
   <div class="give-card">
-    <h3>2 &middot; New here?</h3>
-    <p>Create a free account on the scheduler with your email &mdash; then tap <strong>Prayer Log</strong> at the top. <a href="https://scheduler.stmichaelsallangels.com/?view=prayer" target="_blank" rel="noopener">Create your account &rarr;</a></p>
+    <h3>2 &middot; New to 16:8?</h3>
+    <p>Create a free account with your email. The <strong>16:8 Coordinator</strong> approves new logins &mdash; you will get an email the moment yours is enabled. <a href="https://scheduler.stmichaelsallangels.com/#/register" target="_blank" rel="noopener">Create your account &rarr;</a></p>
   </div>
   <div class="give-card">
     <h3>3 &middot; Log &amp; grow</h3>
