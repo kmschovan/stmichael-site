@@ -53,7 +53,7 @@ NAV = [
         ("Forms", "forms.html", False),
         ("Mass Details", "https://scheduler.stmichaelsallangels.com/display.html", True),
         ("Mass Details (mobile)", "https://scheduler.stmichaelsallangels.com/display_mobile.html", True),
-        ("Mass Scheduler", "https://scheduler.stmichaelsallangels.com/", True),
+        ("Scheduler", "https://scheduler.stmichaelsallangels.com/", True),
     ]),
 ]
 
