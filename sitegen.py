@@ -518,7 +518,7 @@ P("time-talent-treasure.html", "Time, Talent & Treasure",
   <p>Being Christ's hands and voice in the world — by engaging in these Spiritual and Corporal Works of Mercy, we become partners with Christ in the work of redemption. As St. Francis of Assisi taught: <em>"It is in giving that we receive."</em></p>
   <h2>Treasure</h2>
   <p>The parable of the talents (Matthew 25:14–30) illustrates the Christian responsibility to share our material gifts. The first servant doubles five talents, the second doubles two, but the third buries one. The master praises the first two but rebukes the third for not utilizing the gift. This teaches us that God expects us to steward our resources — not bury them.</p>
-  <p>Our material treasure, like our time and talent, is entrusted to us by God. Returning a deliberate, planned portion to the parish supports the works of the Church and is an act of thanksgiving.</p>
+  <p>Our material treasure, like our time and talent, is entrusted to us by God. Returning a deliberate, planned portion to the parish supports the works of the Church and is an act of thanksgiving. Your generous sharing of treasure gives you a vital share in St. Michael's mission to make known the love and salvation of the Lord Jesus Christ — helping us extend our ministry throughout the Denison/Sherman and Grayson County area, so we can go even further making new disciples of Jesus Christ.</p>
   <p style="margin-top: 28px;"><a class="btn btn-primary" href="offertory.html">Ways to Give</a></p>
 </div>""")
 
@@ -527,6 +527,7 @@ P("offertory.html", "Regular Offertory",
   "Stewardship", "Regular Offertory",
   """<div class="prose">
   <p>Contributions to the Regular Offertory are crucial in covering the expenses associated with the day-to-day operations of the parish and its programs. These expenses encompass Father's payroll, building maintenance, utilities, and daily supplies, along with supporting our sacramental preparation services and liturgical programs.</p>
+  <p><strong>Your generous offering gives you a vital share in St. Michael's mission to make known the love and salvation of the Lord Jesus Christ.</strong> Help us extend our ministry throughout the Denison/Sherman and Grayson County area, so we can go even further making new disciples of Jesus Christ.</p>
   <p>You can contribute traditionally by placing your offering in the offertory plate during Mass. Alternatively, we encourage parish members to set up a recurring gift using the Online Giving tool on this website. Through this tool, you'll have full control over the amount and frequency of your contributions.</p>
   <p>We deeply appreciate your investment in and ongoing support of your parish. Thank you.</p>
   <p style="margin-top: 28px;"><a class="btn btn-primary" href="online-giving.html">Give Online Now</a></p>
@@ -616,6 +617,7 @@ P("online-giving.html", "Online Giving",
   "Stewardship", "Online Giving",
   """<div class="prose">
   <p>Online giving is a convenient and secure way to support the parish — whether you're giving to the Regular Offertory, the Sacramentals Fund, or a special collection. Through the giving form you have full control over the amount and frequency of your contributions, and you can set up recurring gifts so your support continues even when you're away.</p>
+  <p><strong>Your generous online gift gives you a vital share in St. Michael's mission to make known the love and salvation of the Lord Jesus Christ.</strong> Help us extend our ministry throughout the Denison/Sherman and Grayson County area, so we can go even further making new disciples of Jesus Christ.</p>
 </div>
 """
   + give_card() + """
