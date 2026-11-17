@@ -27,11 +27,6 @@ NAV = [
         ("Holy Days of Obligation", "holy-days.html", False),
         ("Finding Us", "finding-us.html", False),
         ("Prayers & Intentions", "prayers.html", False),
-        ("Parish Calendar", "calendar.html", False),
-        ("Ministry Schedules", "https://parish.key-three.com", True),
-        ("Volunteer Signup", "https://signup.com/go/LBAHSJn", True),
-        ("Finance Council", "finance-council.html", False),
-        ("Parish Council", "parish-council.html", False),
     ]),
     ("Stewardship", None, [
         ("Time, Talent & Treasure", "time-talent-treasure.html", False),
@@ -58,6 +53,7 @@ NAV = [
         ("Forms", "forms.html", False),
         ("Mass Details", "https://scheduler.stmichaelsallangels.com/display.html", True),
         ("Mass Details (mobile)", "https://scheduler.stmichaelsallangels.com/display_mobile.html", True),
+        ("Mass Scheduler", "https://scheduler.stmichaelsallangels.com/", True),
     ]),
 ]
 
