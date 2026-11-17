@@ -80,6 +80,7 @@ FOOTER_COLS = [
 ]
 
 CHURCH = HARVEST["site"]
+CSS_VERSION = "20261117"  # bump whenever site.css changes so browsers refetch
 ORDO_URL = "https://ordinariate.net/ordo"
 GIVING_WIX = "https://www.stmichaelsallangels.com/parishioner"
 
@@ -147,7 +148,7 @@ def page_head(title, desc):
 <link rel="icon" href="assets/images/crest.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v={CSS_VERSION}">
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"Church","name":"{CHURCH['name']}","url":"https://www.stmichaelsallangels.com/","telephone":"{CHURCH['phone']}","address":{{"@type":"PostalAddress","streetAddress":"101 E Texas St","addressLocality":"Denison","addressRegion":"TX","postalCode":"75020","addressCountry":"US"}},"denomination":"Roman Catholic"}}
 </script>
