@@ -527,7 +527,6 @@ P("offertory.html", "Regular Offertory",
   "Stewardship", "Regular Offertory",
   """<div class="prose">
   <p>Contributions to the Regular Offertory are crucial in covering the expenses associated with the day-to-day operations of the parish and its programs. These expenses encompass Father's payroll, building maintenance, utilities, and daily supplies, along with supporting our sacramental preparation services and liturgical programs.</p>
-  <p><em>Saint Michael &amp; All Angels Catholic Church is a Roman Catholic community-in-formation serving North Texas and southern Oklahoma under the Personal Ordinariate of the Chair of Saint Peter. We worship the Blessed Trinity in the beautiful and reverent Ordinariate form of the Roman Rite, focusing on evangelization through reverent liturgy, orthodox teaching, fellowship, and the spiritual life &mdash; a mission your offertory gift makes possible.</em></p>
   <p>You can contribute traditionally by placing your offering in the offertory plate during Mass. Alternatively, we encourage parish members to set up a recurring gift using the Online Giving tool on this website. Through this tool, you'll have full control over the amount and frequency of your contributions.</p>
   <p>We deeply appreciate your investment in and ongoing support of your parish. Thank you.</p>
   <p style="margin-top: 28px;"><a class="btn btn-primary" href="online-giving.html">Give Online Now</a></p>
@@ -617,7 +616,6 @@ P("online-giving.html", "Online Giving",
   "Stewardship", "Online Giving",
   """<div class="prose">
   <p>Online giving is a convenient and secure way to support the parish — whether you're giving to the Regular Offertory, the Sacramentals Fund, or a special collection. Through the giving form you have full control over the amount and frequency of your contributions, and you can set up recurring gifts so your support continues even when you're away.</p>
-  <p><em>Saint Michael &amp; All Angels Catholic Church is a Roman Catholic community-in-formation serving North Texas and southern Oklahoma under the Personal Ordinariate of the Chair of Saint Peter. We worship the Blessed Trinity in the beautiful and reverent Ordinariate form of the Roman Rite, focusing on evangelization through reverent liturgy, orthodox teaching, fellowship, and the spiritual life &mdash; your generosity keeps that mission alive.</em></p>
 </div>
 """
   + give_card() + """
