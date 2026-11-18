@@ -452,3 +452,11 @@ details.faq-item[open] summary { border-bottom: 1px solid var(--line); }
   details.faq-item summary { font-size: 1.05rem; padding: 13px 40px 13px 14px; }
   .faq-a { padding: 12px 14px 4px; }
 }
+
+/* Order of the Mass — liturgical text inside the accordion */
+.faq-a .lit { text-indent: 0; margin: 0 0 9px; }
+.faq-a .role { font-style: italic; font-weight: 600; color: var(--burgundy); }
+.faq-a .rubric { font-style: italic; color: var(--muted); font-size: .93em; }
+.faq-a .resp { font-weight: 700; }
+.faq-a .lit-prayers { margin: 10px 0 12px; padding: 2px 0 2px 12px; border-left: 3px solid var(--gold); }
+.faq-a .lit-prayers p { text-indent: 0; margin: 0 0 7px; line-height: 1.55; }

@@ -50,6 +50,7 @@ NAV = [
         ("OCIA — Becoming Catholic", "ocia.html", False),
         ("Flocknote", "flocknote.html", False),
         ("Forms", "forms.html", False),
+        ("Order of the Mass", "order-of-mass.html", False),
         ("Mass Details", "https://scheduler.stmichaelsallangels.com/display.html", True),
         ("Mass Details (mobile)", "https://scheduler.stmichaelsallangels.com/display_mobile.html", True),
         ("Scheduler", "https://scheduler.stmichaelsallangels.com/", True),
@@ -80,7 +81,7 @@ FOOTER_COLS = [
 ]
 
 CHURCH = HARVEST["site"]
-CSS_VERSION = "20261117"  # bump whenever site.css changes so browsers refetch
+CSS_VERSION = "20261117b"  # bump whenever site.css changes so browsers refetch
 ORDO_URL = "https://ordinariate.net/ordo"
 GIVING_WIX = "https://www.stmichaelsallangels.com/parishioner"
 
@@ -1030,6 +1031,147 @@ P("faq.html", "Frequently Asked Questions",
   "Frequently asked questions about Saint Michael & All Angels Catholic Church — a Roman Catholic community-in-formation (Ordinariate) in Denison, Texas.",
   "About Us", "Frequently Asked Questions",
   faq_body)
+
+
+# Order of the Mass — the Divine Worship form of the Roman Rite, rendered as an
+# exclusive accordion built on the same styles as the FAQ page.
+MASS_SECTIONS = [
+  ("The Introductory Rites", """<p class="lit"><span class="role">Priest:</span> In the Name of the Father &hellip; and of the Holy Spirit</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">Amen.</span></p>
+<p class="lit rubric">The Priest offers the Collect for Purity and may add the Summary of the Law.</p>
+<p class="lit rubric">Then is sung or said, the People responding after the Priest:</p>
+<p class="lit"><span class="role">Kyrie eleison.</span> Lord, have mercy upon us.</p>
+<p class="lit"><span class="role">Christe eleison.</span> <em>or</em> Christ, have mercy upon us.</p>
+<p class="lit"><span class="role">Kyrie eleison.</span> Lord, have mercy upon us.</p>
+<p class="lit rubric">On Sundays and Holy Days appointed, the following is sung or said:</p>
+<div class="lit-prayers">
+<p>Glory be to God on high, and on earth peace, good will towards men.</p>
+<p>We praise thee, we bless thee, we worship thee, we glorify thee, we give thanks to thee for thy great glory, O Lord God, heavenly King, God the Father Almighty.</p>
+<p>O Lord, the only begotten Son, Jesus Christ; O Lord God, Lamb of God, Son of the Father, that takest away the sins of the world, have mercy upon us.</p>
+<p>Thou that takest away the sins of the world, receive our prayer.</p>
+<p>Thou that sittest at the right hand of God the Father, have mercy upon us.</p>
+<p>For thou only art holy; thou only art the Lord; thou only, O Christ, with the Holy Ghost, ✠ art the Most High in the glory of God the Father. Amen.</p>
+</div>
+<p class="lit"><span class="role">Priest:</span> The Lord be with you.</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">And with thy spirit.</span></p>
+<p class="lit"><span class="role">Priest:</span> Let us pray.</p>
+<p class="lit rubric">The Priest says the Collect of the Day.</p>"""),
+  ("The Liturgy of the Word", """<p class="lit rubric">At the end of each reading the People respond:</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">Thanks be to God.</span></p>
+<p class="lit"><span class="role">Deacon or Priest:</span> The Lord be with you.</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">And with thy spirit.</span></p>
+<p class="lit"><span class="role">Deacon or Priest:</span> A reading from the Holy Gospel according to &hellip;</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">Glory be to thee, O Lord.</span></p>
+<p class="lit rubric">After the Gospel reading:</p>
+<p class="lit"><span class="role">Deacon or Priest:</span> The Gospel of the Lord.</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">Praise be to thee, O Christ.</span></p>
+<p class="lit rubric">After the Homily, on Sundays and Holy Days, the following is sung or said, all standing:</p>
+<div class="lit-prayers">
+<p>I believe in one God, the Father Almighty, maker of heaven and earth, and of all things visible and invisible;</p>
+<p>And in one Lord Jesus Christ, the only-begotten Son of God, begotten of his Father before all worlds, God of God, Light of Light, very God of very God, begotten, not made, being of one substance with the Father; by whom all things were made;</p>
+<p>who for us men and for our salvation came down from heaven, <span class="rubric">(Genuflect)</span> and was incarnate by the Holy Ghost of the Virgin Mary, and was made man; <span class="rubric">(Stand)</span> and was crucified also for us under Pontius Pilate; he suffered and was buried; and the third day he rose again according to the Scriptures, and ascended into heaven, and sitteth on the right hand of the Father;</p>
+<p>and he shall come again, with glory, to judge both the quick and the dead; whose kingdom shall have no end.</p>
+<p>And I believe in the Holy Ghost the Lord, the Giver of Life, who proceedeth from the Father and the Son; who with the Father and the Son together is worshiped and glorified; who spake by the Prophets.</p>
+<p>And I believe one holy Catholic and Apostolic Church; I acknowledge one Baptism for the remission of sins; and I look for the resurrection of the dead, ✠ and the life of the world to come. Amen.</p>
+</div>
+<p class="lit rubric">The Prayers of the People are offered.</p>"""),
+  ("The Penitential Rite", """<p class="lit rubric">After the bidding, the People kneel. Silence may be kept, and then the Priest and People say:</p>
+<div class="lit-prayers">
+<p>Almighty God, Father of our Lord Jesus Christ, maker of all things, judge of all men: We acknowledge and bewail our manifold sins and wickedness, which we from time to time most grievously have committed, by thought, word, and deed, against thy divine Majesty, provoking most justly thy wrath and indignation against us.</p>
+<p>We do earnestly repent, and are heartily sorry for these our misdoings; the remembrance of them is grievous unto us, the burden of them is intolerable.</p>
+<p>Have mercy upon us, have mercy upon us, most merciful Father; for thy Son our Lord Jesus Christ&rsquo;s sake, forgive us all that is past; and grant that we may ever hereafter serve and please thee in newness of life, to the honour and glory of thy Name; through Jesus Christ our Lord. Amen.</p>
+</div>
+<p class="lit rubric">The Priest offers a prayer for absolution.</p>"""),
+  ("The Liturgy of the Eucharist", """<p class="lit rubric">The altar is prepared, and then the Priest says:</p>
+<p class="lit"><span class="role">Priest:</span> Pray, brethren &hellip; the Father almighty.</p>
+<p class="lit rubric">The People stand and respond:</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">May the Lord accept the sacrifice at thy hands, for the praise and glory of his Name, for our good and the good of all his holy Church.</span></p>
+<p class="lit rubric">The Priest says the Prayer over the Offerings, and then follows the Eucharistic Prayer.</p>
+<p class="lit"><span class="role">Priest:</span> The Lord be with you.</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">And with thy spirit.</span></p>
+<p class="lit"><span class="role">Priest:</span> Lift up your hearts.</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">We lift them up unto the Lord.</span></p>
+<p class="lit"><span class="role">Priest:</span> Let us give thanks unto the Lord our God.</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">It is meet and right so to do.</span></p>
+<p class="lit rubric">After the Preface, all continue:</p>
+<div class="lit-prayers">
+<p>Holy, holy, holy, Lord God of Hosts: Heaven and earth are full of thy glory. Glory be to thee, O Lord Most High. Blessed is he that cometh in the Name of the Lord. Hosanna in the Highest.</p>
+</div>
+<p class="lit rubric">The People kneel, and the prayer continues.</p>
+<p class="lit"><span class="role">Priest:</span> The mystery of faith.</p>
+<p class="lit rubric">The People with the Priest (one of the following):</p>
+<p class="lit"><span class="resp">We proclaim thy Death, O Lord, and profess thy Resurrection until thou come again.</span></p>
+<p class="lit"><em>or</em></p>
+<p class="lit"><span class="resp">When we eat this Bread and drink this Cup, we proclaim thy Death, O Lord, until thou come again.</span></p>
+<p class="lit"><em>or</em></p>
+<p class="lit"><span class="resp">O Saviour of the world, who by thy Cross and precious Blood hast redeemed us: save us and help us, we humbly beseech thee, O Lord.</span></p>"""),
+  ("The Communion Rite", """<p class="lit rubric">The People standing, all say the Our Father.</p>
+<p class="lit rubric">The Priest continues: &ldquo;Deliver us &hellip; and safe from all distress.&rdquo;</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">For thine is the kingdom, and the power, and the glory, for ever and ever. Amen.</span></p>
+<p class="lit rubric">The Priest offers a prayer for the peace of Christ, and then says:</p>
+<p class="lit"><span class="role">Priest:</span> The peace of the Lord be always with you.</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">And with thy spirit.</span></p>
+<p class="lit rubric">The People may offer one another a sign of peace.</p>
+<p class="lit rubric">The People kneel.</p>
+<p class="lit rubric">Breaking the Host, the Priest says:</p>
+<p class="lit"><span class="role">Priest:</span> [Alleluia.] Christ our Passover is sacrificed for us;</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">Therefore let us keep the feast. [Alleluia.]</span></p>
+<p class="lit rubric">The following anthem is sung or said here:</p>
+<div class="lit-prayers">
+<p>O Lamb of God, that takest away the sins of the world, <span class="resp">have mercy upon us.</span></p>
+<p>O Lamb of God, that takest away the sins of the world, <span class="resp">have mercy upon us.</span></p>
+<p>O Lamb of God, that takest away the sins of the world, <span class="resp">grant us thy peace.</span></p>
+</div>
+<p class="lit rubric">The People join in saying this prayer:</p>
+<div class="lit-prayers">
+<p>We do not presume to come to this thy Table, O merciful Lord, trusting in our own righteousness, but in thy manifold and great mercies. We are not worthy so much as to gather up the crumbs under thy Table. But thou art the same Lord whose property is always to have mercy. Grant us therefore, gracious Lord, so to eat the flesh of thy dear Son Jesus Christ, and to drink his Blood, that our sinful bodies may be made clean by his Body, and our souls washed through his most precious Blood, and that we may evermore dwell in him, and he in us. Amen.</p>
+</div>
+<p class="lit"><span class="role">Priest:</span> Behold the Lamb of God, behold him that taketh away the sins of the world. Blessed are those who are called to the Supper of the Lamb.</p>
+<p class="lit rubric">The People respond thrice:</p>
+<p class="lit"><span class="resp">Lord, I am not worthy that thou shouldest come under my roof, but speak the word only, and my soul shall be healed.</span></p>
+<p class="lit rubric">The Liturgy continues with the communion of the faithful. At Saint Michael &amp; All Angels, communicants kneel at the altar rail and Father Randall administers communion by intinction, on the tongue. Those not receiving Holy Communion may approach with arms crossed for a blessing &mdash; see <a href="communion.html">Holy Communion</a>.</p>
+<p class="lit rubric">After Communion, silence may be kept.</p>
+<p class="lit rubric">Then the Priest standing and the People kneeling, all say the following:</p>
+<div class="lit-prayers">
+<p>Almighty and everliving God, we most heartily thank thee for that thou dost feed us, in these holy mysteries, with the spiritual food of the most precious Body and Blood of thy Son our Saviour Jesus Christ; and dost assure us thereby of thy favour and goodness towards us; and that we are very members incorporate in the mystical body of thy Son, the blessed company of all faithful people; and are also heirs, through hope, of thy everlasting kingdom, by the merits of the most precious death and Passion of thy dear Son. And we humbly beseech thee, O heavenly Father, so to assist us with thy grace, that we may continue in that holy fellowship, and do all such good works as thou hast prepared for us to walk in; through Jesus Christ our Lord, to whom, with thee and the Holy Spirit, be all honour and glory, world without end. Amen.</p>
+</div>
+<p class="lit rubric">The People remain kneeling and the Postcommunion Prayer follows.</p>"""),
+  ("The Concluding Rite", """<p class="lit"><span class="role">Priest:</span> The Lord be with you.</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">And with thy spirit.</span></p>
+<p class="lit rubric">The Priest gives the blessing.</p>
+<p class="lit rubric">The Deacon or Priest dismisses the People, and they respond:</p>
+<p class="lit"><span class="role">People:</span> <span class="resp">Thanks be to God.</span></p>
+<p class="lit rubric">The People stand for the recessional hymn.</p>"""),
+]
+
+mass_body = """<div class="prose">
+  <p class="lead">Holy Mass at Saint Michael &amp; All Angels is celebrated in the <strong>Divine Worship</strong> form of the Roman Rite &mdash; the Mass in sacral English, rooted in the Medieval English liturgy. This page follows the order of the Mass from beginning to end, so you can pray along with the priest and the responses. Tap a section to open it; only one is open at a time.</p>
+</div>
+<div class="faq-list">
+"""
+for _t, _h in MASS_SECTIONS:
+    mass_body += f'<details class="faq-item" name="mass"><summary>{_t}</summary><div class="faq-a">{_h}</div></details>'
+    mass_body += '\n'
+mass_body += """<p style="color:var(--muted);font-size:.86rem;margin-top:14px;">The text of Holy Mass follows <strong>Divine Worship: The Missal</strong> of the <a href="https://ordinariate.net/" target="_blank" rel="noopener">Personal Ordinariate of the Chair of Saint Peter</a>. Questions? Call the office at <a href="tel:9038217511">903-821-7511</a> or use the <a href="contact.html">contact form</a>.</p></div>
+<script>
+(function () {
+  var probe = document.createElement("details");
+  if ("name" in probe) return; /* native exclusive accordion */
+  var items = document.querySelectorAll('details[name="mass"]');
+  items.forEach(function (det) {
+    det.addEventListener("toggle", function () {
+      if (!det.open) return;
+      items.forEach(function (other) { if (other !== det) other.open = false; });
+    });
+  });
+})();
+</script>"""
+
+P("order-of-mass.html", "Order of the Mass",
+  "The order of Holy Mass at Saint Michael & All Angels — the Divine Worship form of the Roman Rite in sacral English, with the priest's parts and the People's responses.",
+  "Resources", "The Order of the Mass",
+  mass_body,
+  hero_sub="Follow along with Holy Mass as it is celebrated at Saint Michael & All Angels")
 
 
 P("flocknote.html", "Flocknote",
