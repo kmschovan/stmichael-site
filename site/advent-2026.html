@@ -101,6 +101,21 @@
     <span>Ordinariate of the Chair of Saint Peter</span>
   </div>
 </footer>
+<script>
+(function () {
+  try {
+    var p = location.pathname.replace(/\.html$/, '');
+    if (p === '/' || p === '') p = '/home';
+    fetch('https://scheduler.stmichaelsallangels.com/api/stats/visit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: p, referrer: document.referrer || '' }),
+      keepalive: true
+    }).catch(function () {});
+  } catch (e) {}
+})();
+</script>
+
 <a class="give-float" href="online-giving.html">Online Giving &nearr;</a>
 </body>
 </html>

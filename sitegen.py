@@ -120,6 +120,26 @@ def header():
   <div class="mobile-panel">{mobile_html}</div>
 </header>"""
 
+# Website statistics beacon — posts one page view to the Church Hub per page load.
+# Privacy-friendly: no cookies, no third parties; the server stores only a salted
+# daily hash of request metadata (never the raw IP).
+STATS_BEACON = """
+<script>
+(function () {
+  try {
+    var p = location.pathname.replace(/\\.html$/, '');
+    if (p === '/' || p === '') p = '/home';
+    fetch('https://scheduler.stmichaelsallangels.com/api/stats/visit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: p, referrer: document.referrer || '' }),
+      keepalive: true
+    }).catch(function () {});
+  } catch (e) {}
+})();
+</script>
+"""
+
 def footer():
     cols = "".join(
         '<div><h4>' + t + '</h4>' + "".join(link(l, h, e) for l, h, e in links) + '</div>'
@@ -136,7 +156,7 @@ def footer():
     <span>&copy; 2026 {CHURCH['name']} &middot; Denison, Texas</span>
     <span>Ordinariate of the Chair of Saint Peter</span>
   </div>
-</footer>"""
+</footer>""" + STATS_BEACON
 
 def page_head(title, desc):
     suffix = "" if "Saint Michael" in title else " — Saint Michael &amp; All Angels Catholic Church, Denison TX"
