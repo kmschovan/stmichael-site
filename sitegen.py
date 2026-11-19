@@ -63,7 +63,7 @@ FOOTER_COLS = [
     ("Our Parish", [
         ("Prayers & Intentions", "prayers.html", False),
         ("Parish Calendar", "calendar.html", False),
-        ("Volunteer Signup", "https://signup.com/go/LBAHSJn", True),
+        ("Volunteer Signup", "https://scheduler.stmichaelsallangels.com/", True),
         ("Finance Council", "finance-council.html", False),
         ("Parish Council", "parish-council.html", False),
     ]),
