@@ -51,6 +51,7 @@ NAV = [
         ("Flocknote", "flocknote.html", False),
         ("Forms", "forms.html", False),
         ("Order of the Mass", "order-of-mass.html", False),
+        ("Daily Mass Readings", "daily-readings.html", False),
         ("Mass Details", "https://scheduler.stmichaelsallangels.com/display.html", True),
         ("Mass Details (mobile)", "https://scheduler.stmichaelsallangels.com/display_mobile.html", True),
         ("Scheduler", "https://scheduler.stmichaelsallangels.com/", True),
@@ -1172,6 +1173,96 @@ P("order-of-mass.html", "Order of the Mass",
   "Resources", "The Order of the Mass",
   mass_body,
   hero_sub="Follow along with Holy Mass as it is celebrated at Saint Michael & All Angels")
+
+
+P("daily-readings.html", "Daily Mass Readings",
+  "The daily Mass readings at Saint Michael & All Angels — today's readings from the Ordinariate Ordo, linked to Bible Gateway (RSVCE).",
+  "Resources", "Daily Mass Readings",
+  """<div class="prose">
+  <p class="lead">Each day the Church feeds us from Scripture at Mass. The readings below follow today's Mass in the lectionary of the Personal Ordinariate of the Chair of Saint Peter &mdash; tap any citation to read the passage at Bible Gateway (RSVCE).</p>
+</div>
+<div class="prose" id="readings-card">
+  <p>Fetching today's readings&hellip;</p>
+</div>
+
+<div class="prose" style="margin-top: 26px;">
+  <p>Join us for Holy Mass &mdash; see <a href="mass-times.html">Mass Times</a> for our weekly schedule. Prefer to follow the whole liturgy? See the <a href="order-of-mass.html">Order of the Mass</a>.</p>
+</div>
+
+<script>
+(function () {
+  var wrap = document.getElementById('readings-card');
+  fetch('https://scheduler.stmichaelsallangels.com/api/ordo/today', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error('no entry for today'); return r.json(); })
+    .then(function (d) {
+      wrap.textContent = '';
+      var h2 = document.createElement('h2');
+      h2.textContent = d.title || 'Holy Mass';
+      wrap.appendChild(h2);
+      var bits = [];
+      if (d.date) {
+        var dt = new Date(d.date + 'T12:00:00');
+        bits.push(dt.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }));
+      }
+      if (d.season) bits.push(d.season);
+      if (d.rank) bits.push(d.rank);
+      if (d.color) bits.push('Liturgical color: ' + d.color);
+      var meta = document.createElement('p');
+      meta.style.color = 'var(--muted)';
+      meta.textContent = bits.join(' \\u00b7 ');
+      wrap.appendChild(meta);
+      if (d.notes) {
+        var n = document.createElement('p');
+        n.style.fontStyle = 'italic';
+        n.textContent = d.notes;
+        wrap.appendChild(n);
+      }
+      var readings = d.readings || [];
+      if (readings.length) {
+        var sched = document.createElement('div');
+        sched.className = 'sched';
+        sched.style.marginTop = '14px';
+        var tbl = document.createElement('table');
+        var hr = document.createElement('tr');
+        var th1 = document.createElement('th'); th1.textContent = 'Reading';
+        var th2 = document.createElement('th'); th2.textContent = 'Citation';
+        hr.appendChild(th1); hr.appendChild(th2); tbl.appendChild(hr);
+        readings.forEach(function (r) {
+          var tr = document.createElement('tr');
+          var td1 = document.createElement('td'); td1.textContent = r.label;
+          var td2 = document.createElement('td');
+          if (r.url) {
+            var a = document.createElement('a');
+            a.href = r.url; a.target = '_blank'; a.rel = 'noopener';
+            a.textContent = r.citation;
+            td2.appendChild(a);
+          } else { td2.textContent = r.citation; }
+          tr.appendChild(td1); tr.appendChild(td2);
+          tbl.appendChild(tr);
+        });
+        sched.appendChild(tbl);
+        wrap.appendChild(sched);
+      }
+      var foot = document.createElement('p');
+      foot.style.color = 'var(--muted)'; foot.style.fontSize = '.86rem'; foot.style.marginTop = '14px';
+      foot.textContent = 'Citations open at Bible Gateway in the Revised Standard Version, Catholic Edition.';
+      wrap.appendChild(foot);
+    })
+    .catch(function () {
+      wrap.textContent = '';
+      var p = document.createElement('p');
+      p.textContent = "Today's readings are not published on this page yet \\u2014 the daily Ordo data currently begins with the First Sunday of Advent (November 29), and will appear here automatically each day from then on.";
+      wrap.appendChild(p);
+      var p2 = document.createElement('p');
+      var a = document.createElement('a');
+      a.href = 'https://ordinariate.net/ordo';
+      a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = "Meanwhile, see the Ordinariate Ordo for today's readings";
+      p2.appendChild(a);
+      wrap.appendChild(p2);
+    });
+})();
+</script>""")
 
 
 P("flocknote.html", "Flocknote",
