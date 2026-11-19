@@ -25,6 +25,7 @@ NAV = [
         ("About Us", "about.html", False),
         ("FAQ", "faq.html", False),
         ("Mass Times", "mass-times.html", False),
+        ("Eucharistic Adoration", "adoration.html", False),
         ("Holy Days of Obligation", "holy-days.html", False),
         ("Finding Us", "finding-us.html", False),
         ("Prayers & Intentions", "prayers.html", False),
@@ -678,6 +679,27 @@ P("confession.html", "Confession",
   <p><strong>Saturdays from 10:00 – 11:00 am</strong> at the parish.</p>
   <p>For alternate times, please call Father Randall at <a href="tel:9038217511">903-821-7511</a>.</p>
 </div>""", art="art-confession.webp")
+
+P("adoration.html", "Eucharistic Adoration",
+  "Eucharistic Adoration at Saint Michael & All Angels — a quiet hour with Our Lord every Saturday morning, with confession available at the same time.",
+  "About Us", "An hour with Our Lord",
+  """<div class="prose">
+  <p class="lead"><em>&ldquo;Could you not watch with me one hour?&rdquo;</em> &mdash; <a href="https://www.biblegateway.com/passage/?search=Matthew%2026:40&version=RSVCE" target="_blank" rel="noopener">Matthew 26:40</a></p>
+  <p>The first invitation in Eucharistic Adoration is the Lord&rsquo;s own. Beginning soon, every Saturday morning the <strong>Blessed Sacrament will be exposed on the altar</strong> of Saint Michael &amp; All Angels while Father Randall hears confessions next door &mdash; a full hour of quiet, of presence, of simply being with Him. Bring the concern you have been carrying, the thanksgiving you have been saving, or nothing at all. He does the rest.</p>
+  <h2>Saturday Mornings &mdash; 10:00 to 11:00 am</h2>
+  <p>From <strong>10:00 to 11:00 am every Saturday</strong> the monstrance will stand on the altar and the church will be hushed and open. This is not a program and not a meeting &mdash; it is an audience with the King of Kings, and the most peaceful hour of your week.</p>
+  <h2>Two Halves, One Hour</h2>
+  <p>So that Our Lord is never left alone, the hour is kept by <strong>two adorers sharing 30-minute halves</strong>: the <strong>first half, 10:00 &ndash; 10:30 am</strong>, and the <strong>second half, 10:30 &ndash; 11:00 am</strong>. Take the half that suits you &mdash; another adorer takes the other, and together you keep the whole hour for Him.</p>
+  <h2>Take a Half</h2>
+  <p>Adoration sign-ups live in the <strong>Church Hub</strong> &mdash; the same place you volunteer for Mass roles and log your 16:8 prayer. Sign in, choose your Saturday, and take a half; the schedule fills in as adorers sign up, so you can always see who is keeping watch.</p>
+  <div style="text-align:center;margin: 26px 0;">
+    <a class="btn btn-primary" style="font-size:1.02rem;padding:15px 34px;" href="https://scheduler.stmichaelsallangels.com/?view=adoration" target="_blank" rel="noopener">Sign Up for Adoration &rarr;</a>
+  </div>
+  <p style="font-size:.95rem;">Not on the Adoration team yet? Call the parish office at <a href="tel:9038217511">903-821-7511</a> and we will add you &mdash; then take any open half you like.</p>
+  <div style="max-width:640px;margin:30px auto;border-left:3px solid var(--gold);background:#fff;padding:20px 26px;">
+    <p style="margin:0;font-size:.95rem;color:var(--ink);"><strong style="color:var(--burgundy);">While you keep watch</strong> &mdash; confession is available in the church office from 10:00 to 11:00 am. Arrive with your hour and leave with a clean heart: <em>come for adoration, stay for confession.</em></p>
+  </div>
+</div>""", art="adoration-monstrance.jpg")
 
 P("communion.html", "Communion",
   "The Holy Eucharist — the source and summit of the Christian life.",
