@@ -689,13 +689,14 @@ P("adoration.html", "Eucharistic Adoration",
   <h2>Saturday Mornings &mdash; 10:00 to 11:00 am</h2>
   <p>From <strong>10:00 to 11:00 am every Saturday</strong> the monstrance will stand on the altar and the church will be hushed and open. This is not a program and not a meeting &mdash; it is an audience with the King of Kings, and the most peaceful hour of your week.</p>
   <h2>Two Halves, One Hour</h2>
-  <p>So that Our Lord is never left alone, the hour is kept by <strong>two adorers sharing 30-minute halves</strong>: the <strong>first half, 10:00 &ndash; 10:30 am</strong>, and the <strong>second half, 10:30 &ndash; 11:00 am</strong>. Take the half that suits you &mdash; another adorer takes the other, and together you keep the whole hour for Him.</p>
-  <h2>Take a Half</h2>
-  <p>Adoration sign-ups live in the <strong>Church Hub</strong> &mdash; the same place you volunteer for Mass roles and log your 16:8 prayer. Sign in, choose your Saturday, and take a half; the schedule fills in as adorers sign up, so you can always see who is keeping watch.</p>
+  <p>So that Our Lord is never left alone, the hour is kept in <strong>two 30-minute halves</strong>: the <strong>first half, 10:00 &ndash; 10:30 am</strong>, and the <strong>second half, 10:30 &ndash; 11:00 am</strong>. Take the half that suits you &mdash; or take both and keep the whole hour for Him.</p>
+  <h2>Take a Half &mdash; or the Whole Hour</h2>
+  <p>Adoration sign-ups live in the <strong>Church Hub</strong> &mdash; the same place you volunteer for Mass roles and log your 16:8 prayer. <strong>Anyone can join</strong>: sign in, choose your Saturday, and take a half; the schedule fills in as adorers sign up, so you can always see who is keeping watch.</p>
+  <p><strong>One person can take both halves</strong> and keep the whole hour for Him &mdash; or, if you only have 30 minutes, take one half and know that another adorer has the other. And if you'd rather spend your 30 minutes in the <strong>confessional</strong> while another adorer keeps watch, you're invited to do both in the same hour: come for adoration, stay for confession.</p>
   <div style="text-align:center;margin: 26px 0;">
     <a class="btn btn-primary" style="font-size:1.02rem;padding:15px 34px;" href="https://scheduler.stmichaelsallangels.com/?view=adoration" target="_blank" rel="noopener">Sign Up for Adoration &rarr;</a>
   </div>
-  <p style="font-size:.95rem;">Not on the Adoration team yet? Call the parish office at <a href="tel:9038217511">903-821-7511</a> and we will add you &mdash; then take any open half you like.</p>
+  <p style="font-size:.95rem;">Need a Church Hub account? Call the parish office at <a href="tel:9038217511">903-821-7511</a> and we will set you up &mdash; then take any open half you like.</p>
   <div style="max-width:640px;margin:30px auto;border-left:3px solid var(--gold);background:#fff;padding:20px 26px;">
     <p style="margin:0;font-size:.95rem;color:var(--ink);"><strong style="color:var(--burgundy);">While you keep watch</strong> &mdash; confession is available in the church office from 10:00 to 11:00 am. Arrive with your hour and leave with a clean heart: <em>come for adoration, stay for confession.</em></p>
   </div>
