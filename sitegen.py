@@ -46,6 +46,7 @@ NAV = [
         ("Anointing of the Sick", "anointing.html", False),
     ]),
     ("Resources", None, [
+        ("Advent 2026", "advent-2026.html", False),
         ("Contact Us", "contact.html", False),
         ("OCIA — Becoming Catholic", "ocia.html", False),
         ("Flocknote", "flocknote.html", False),
@@ -82,7 +83,7 @@ FOOTER_COLS = [
 ]
 
 CHURCH = HARVEST["site"]
-CSS_VERSION = "20261117b"  # bump whenever site.css changes so browsers refetch
+CSS_VERSION = "20261117c"  # bump whenever site.css changes so browsers refetch
 ORDO_URL = "https://ordinariate.net/ordo"
 GIVING_WIX = "https://www.stmichaelsallangels.com/parishioner"
 
@@ -1263,6 +1264,62 @@ P("daily-readings.html", "Daily Mass Readings",
     });
 })();
 </script>""")
+
+P("advent-2026.html", "Advent 2026",
+  "Advent 2026 at Saint Michael & All Angels — the season of watching and waiting: Mass times, the 16:8 candle blessing, daily readings, and what Advent is all about.",
+  "Resources", "Advent 2026",
+  """<div class="prose">
+  <p class="lead">Advent 2026 begins <strong>Sunday, November 29</strong> &mdash; the Church's new year &mdash; and runs a full <strong>26 days</strong>, from the First Sunday of Advent to Christmas Eve. Four weeks of quiet, hopeful watching for the coming of Christ: in Bethlehem, at the end of time, and into our hearts each day.</p>
+</div>
+
+<div class="advent-grid">
+  <div class="advent-card">
+    <span class="sun">First Sunday &middot; Nov 29</span>
+    <h3>Hope</h3>
+    <div class="advent-candles"><span></span></div>
+    <p>One candle lit. "Be watchful, be ready."</p>
+  </div>
+  <div class="advent-card">
+    <span class="sun">Second Sunday &middot; Dec 6</span>
+    <h3>Peace</h3>
+    <div class="advent-candles"><span></span><span></span></div>
+    <p>Two candles lit. Prepare the way of the Lord.</p>
+  </div>
+  <div class="advent-card rose">
+    <span class="sun">Third Sunday &middot; Dec 13</span>
+    <h3>Joy</h3>
+    <div class="advent-candles"><span></span><span></span><span></span></div>
+    <p>Three candles &mdash; the rose candle of Gaudete Sunday.</p>
+  </div>
+  <div class="advent-card">
+    <span class="sun">Fourth Sunday &middot; Dec 20</span>
+    <h3>Love</h3>
+    <div class="advent-candles"><span></span><span></span><span></span><span></span></div>
+    <p>All four burning. The King is very near.</p>
+  </div>
+</div>
+
+<div class="prose">
+  <h2>What Is Advent?</h2>
+  <p><em>Adventus</em> &mdash; "the coming." Advent is the season the Church sets aside to prepare for the coming of Christ: His coming in history at Bethlehem, His coming in glory at the end of time, and His quiet daily coming into our hearts through grace. The Church dresses her altars in violet, restrains her songs to a holy longing, and asks us simply to make room.</p>
+  <p>It is a season of beginnings &mdash; and this year it is also long: 26 days rather than the usual 24, because Christmas falls late in the week. More time to watch. More time to pray.</p>
+</div>
+
+<div style="max-width:880px;margin:8px auto 0;">
+  <div class="video-embed">
+    <iframe src="https://www.youtube-nocookie.com/embed/oA51p5e6RbE?rel=0" title="What Is Advent? Advent 2026 Explained for Catholics" loading="lazy" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <p class="video-caption">Watch: <strong>What Is Advent? Advent 2026 Explained for Catholics</strong> &mdash; with thanks to <a href="https://www.youtube.com/@holyreels333" target="_blank" rel="noopener">HolyReels</a> on YouTube.</p>
+</div>
+
+<div class="prose">
+  <h2>Advent at Saint Michael's</h2>
+  <p>Weekday Mass is offered <strong>Wednesdays at 6:30 pm</strong>; the <strong>Saturday Vigil at 6:00 pm</strong> and <strong>Sunday Masses at 8:00 &amp; 10:00 am</strong> carry us through each week of the season. <strong>Confession</strong> is Saturdays from 10:00 &ndash; 11:00 am.</p>
+  <p>The <strong>16:8 prayer initiative opens Wednesday, December 2</strong> &mdash; the first Wednesday of Advent &mdash; with an opening gathering and blessing of the prayer candles. Bring your candle and begin the year of prayer with us: <a href="168-introduction.html">learn about 16:8</a>.</p>
+  <p>The <strong>Solemnity of the Immaculate Conception</strong> falls on Tuesday, December 8 &mdash; Holy Day Mass at 6:30 pm.</p>
+  <p><strong>Christmas at Saint Michael's:</strong> Midnight Mass on Friday, December 25 at 12:00 am, and Christmas Day Mass at 10:00 am. This year the midnight Mass takes the place of the usual Christmas Eve vigil, so there is no December 24 evening Mass &mdash; plan your arrival with the family for the great Midnight celebration.</p>
+  <p>Keep the season day by day: the <a href="daily-readings.html">Daily Mass Readings</a> page follows the Ordo with each day's readings linked to Bible Gateway, and the <a href="order-of-mass.html">Order of the Mass</a> page helps you follow along at Mass. And keep Advent at home &mdash; an Advent wreath on the table, one more candle each Sunday, exactly as our cards above light the way.</p>
+</div>""")
 
 
 P("flocknote.html", "Flocknote",
