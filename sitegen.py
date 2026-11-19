@@ -128,7 +128,6 @@ def footer():
   <div class="foot-grid">
     <div>
       <h4>{CHURCH['name']}</h4>
-      <p class="mission">A Roman Catholic community-in-formation under the Personal Ordinariate of the Chair of Saint Peter — fully Catholic, enriched by our Anglican heritage. All are welcome.</p>
       <p class="mission">{CHURCH['address']}<br>{CHURCH['phone']}</p>
     </div>
     {cols}
