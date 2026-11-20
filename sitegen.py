@@ -824,6 +824,17 @@ P("168-introduction.html", "16:8 — Introduction",
 
   <h2>Weekly Reflections</h2>
   <p>Each week we post a short Scripture reflection and prayer encouragement &mdash; something to carry with you into your hour of Adoration and your daily prayer. The growing collection lives on its own page: <a href="168-reflections.html">Read the Weekly Reflections</a>.</p>
+</div>
+
+<div class="prose">
+  <h2>Why, Because I Love You</h2>
+  <p>Why do we pray? Why give an hour, or a half, or whatever we have? Fr. Mike Schmitz puts words to the heart of it &mdash; not a duty to perform, but a love to answer. Take a few minutes with this; it is the "why" behind everything 16:8 is about.</p>
+</div>
+<div style="max-width:880px;margin:8px auto 0;">
+  <div class="video-embed">
+    <iframe src="https://www.youtube-nocookie.com/embed/DJpH1kqnJ3Y?rel=0&start=955" title="Why, Because I Love You — Fr. Mike Schmitz" loading="lazy" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <p class="video-caption">Watch: <strong>Monday Mass, Celebrated by Fr. Mike Schmitz</strong> &mdash; with thanks to <a href="https://www.youtube.com/@SaintPatricksCathedralNYC" target="_blank" rel="noopener">St. Patrick's Cathedral NYC</a> on YouTube.</p>
 </div>""")
 
 P("168-progress.html", "16:8 — Progress & Prayer Log",
