@@ -827,7 +827,7 @@ P("168-introduction.html", "16:8 — Introduction",
 </div>
 
 <div class="prose">
-  <h2>Why, Because I Love You</h2>
+  <h2>Why, Because I Love You Jesus</h2>
   <p>Why do we pray? Why give an hour, or a half, or whatever we have? Fr. Mike Schmitz puts words to the heart of it &mdash; not a duty to perform, but a love to answer. Take a few minutes with this; it is the "why" behind everything 16:8 is about.</p>
 </div>
 <div style="max-width:880px;margin:8px auto 0;">
