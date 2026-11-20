@@ -676,8 +676,15 @@ P("confession.html", "Confession",
   <p>In the Sacrament of Reconciliation, we approach God understanding how sin has hurt our soul and ask for His love and mercy. Confession helps us acknowledge our sinfulness, receive God's forgiveness, and labor — by charity, example, and prayer — for the conversion of others.</p>
   <p style="color:var(--muted);font-size:.86rem;"><a href="https://www.vatican.va/archive/ENG0015/__P46.HTM" target="_blank" rel="noopener">— Catechism of the Catholic Church, 1422</a></p>
   <h2>Confession Times</h2>
-  <p><strong>Saturdays from 10:00 – 11:00 am</strong> at the parish.</p>
+  <p><strong>Saturdays from 10:00 &ndash; 11:00 am</strong> at the parish.</p>
   <p>For alternate times, please call Father Randall at <a href="tel:9038217511">903-821-7511</a>.</p>
+
+  <h2>Why Go to Confession? &mdash; Because I Love You</h2>
+  <p>Fr. Mike Schmitz puts words to the heart of it: confession is not a box to check but a love to answer. Take a few minutes with this &mdash; and then come see for yourself on a Saturday morning.</p>
+  <div class="video-embed" style="margin-top: 20px;">
+    <iframe src="https://www.youtube-nocookie.com/embed/DJpH1kqnJ3Y?rel=0&start=955" title="Why, Because I Love You Jesus — Fr. Mike Schmitz" loading="lazy" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <p class="video-caption">Watch: <strong>Monday Mass, Celebrated by Fr. Mike Schmitz</strong> &mdash; with thanks to <a href="https://www.youtube.com/@SaintPatricksCathedralNYC" target="_blank" rel="noopener">St. Patrick's Cathedral NYC</a> on YouTube.</p>
 </div>""", art="art-confession.webp")
 
 P("adoration.html", "Eucharistic Adoration",
