@@ -23,6 +23,7 @@ NAV = [
     ]),
     ("About", None, [
         ("About Us", "about.html", False),
+        ("Contact Us", "contact.html", False),
         ("FAQ", "faq.html", False),
         ("Mass Times", "mass-times.html", False),
         ("Eucharistic Adoration", "adoration.html", False),
@@ -49,7 +50,6 @@ NAV = [
     ("Resources", None, [
         ("Advent 2026", "advent-2026.html", False),
         ("Advent Calendar", "advent-calendar.html", False),
-        ("Contact Us", "contact.html", False),
         ("OCIA — Becoming Catholic", "ocia.html", False),
         ("Flocknote", "flocknote.html", False),
         ("Forms", "forms.html", False),
