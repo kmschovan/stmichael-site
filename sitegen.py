@@ -48,6 +48,7 @@ NAV = [
     ]),
     ("Resources", None, [
         ("Advent 2026", "advent-2026.html", False),
+        ("Advent Calendar", "advent-calendar.html", False),
         ("Contact Us", "contact.html", False),
         ("OCIA — Becoming Catholic", "ocia.html", False),
         ("Flocknote", "flocknote.html", False),
@@ -85,7 +86,7 @@ FOOTER_COLS = [
 ]
 
 CHURCH = HARVEST["site"]
-CSS_VERSION = "20261117c"  # bump whenever site.css changes so browsers refetch
+CSS_VERSION = "20261121a"  # bump whenever site.css changes so browsers refetch
 ORDO_URL = "https://ordinariate.net/ordo"
 GIVING_WIX = "https://www.stmichaelsallangels.com/parishioner"
 
@@ -1789,6 +1790,114 @@ P("advent-2026.html", "Advent 2026",
   <p>Keep the season day by day: the <a href="daily-readings.html">Daily Mass Readings</a> page follows the Ordo with each day's readings linked to Bible Gateway, and the <a href="order-of-mass.html">Order of the Mass</a> page helps you follow along at Mass. And keep Advent at home &mdash; an Advent wreath on the table, one more candle each Sunday, exactly as our cards above light the way.</p>
 </div>""")
 
+
+# ================================================================ ADVENT CALENDAR 2026
+# Daily readings: 26-day plan from Christian Pure (christianpure.com/learn/advent-readings/).
+# Daily practices: USCCB Advent Calendar 2026 PDF (attributed below).
+# kind: '' plain · 'sun' Sunday · 'rose' Gaudete · 'feast' holy day · 'xmas' Christmas
+ADV_DAYS = [
+  ("sun", "29 <span class=\"m\">Nov</span>", "Ps 130:5–6", "Psalm 130:5-6",
+   "<strong>First Sunday of Advent.</strong> Begin your Advent journey by blessing your Advent wreath. Light the first violet candle and sing &ldquo;O Come, O Come, Emmanuel.&rdquo;"),
+  ("", "30", "Gen 15:5–6", "Genesis 15:5-6",
+   "Today is the Feast of Saint Andrew, the first-called apostle. Pray today for all those who help bring others to Christ."),
+  ("", "1 <span class=\"m\">Dec</span>", "2 Sam 7:16", "2 Samuel 7:16",
+   "What can you do this Advent to prepare your heart and life for the coming of Christ?"),
+  ("", "2", "Ps 80:3", "Psalm 80:3",
+   "Make plans to receive the gift of God&rsquo;s mercy in the Sacrament of Penance during this Advent season &mdash; <a href=\"confession.html\">Confession is heard here Saturdays, 10:00&ndash;11:00 am</a>."),
+  ("", "3", "Lam 3:25–26", "Lamentations 3:25-26",
+   "&ldquo;God is faithful, and by him you were called to fellowship with his Son, Jesus Christ our Lord.&rdquo; &mdash; 1 Corinthians 1:9"),
+  ("", "4", "Isa 64:4", "Isaiah 64:4",
+   "&ldquo;We journey as if on a bridge that connects earth to Heaven, a bridge that the Lord has built for us.&rdquo; &mdash; Pope Leo XIV, Homily, November 29, 2025"),
+  ("", "5", "Hab 2:3", "Habakkuk 2:3",
+   "Spend some time writing Christmas cards or sending Christmas greetings. Before bed, say a prayer of thanksgiving for all the people who have enriched your life and strengthened your faith."),
+  ("sun", "6", "Isa 40:3", "Isaiah 40:3",
+   "<strong>Second Sunday of Advent.</strong> Light two violet candles and ask God for the strength to be like John the Baptist, preparing the way of the Lord."),
+  ("", "7", "Isa 40:11", "Isaiah 40:11",
+   "&ldquo;The Lord does not delay his promise&hellip; not wishing that any should perish but that all should come to repentance.&rdquo; &mdash; 2 Peter 3:9"),
+  ("feast", "8", "Isa 11:1–2", "Isaiah 11:1-2",
+   "<strong>Solemnity of the Immaculate Conception</strong> &mdash; a holy day of obligation. Offer your Mass intention today that the nation will live up to its founding principles, established 250 years ago."),
+  ("", "9", "Isa 9:2", "Isaiah 9:2",
+   "Juan Diego carried the message of Our Lady of Guadalupe to his community. How can you share your faith by word or in action?"),
+  ("", "10", "Isa 9:6", "Isaiah 9:6",
+   "In the bustle of the holiday season, spend some time this week in silence and prayer, possibly before the Blessed Sacrament, to prepare your heart to receive the Lord at Christmas."),
+  ("", "11", "Mic 5:2", "Micah 5:2",
+   "&ldquo;Nothing is impossible to God. Let us prepare ourselves for his Kingdom&hellip; The little child, Jesus of Nazareth, will lead us!&rdquo; &mdash; Pope Leo XIV, Angelus, December 7, 2025"),
+  ("feast", "12", "Mal 3:1", "Malachi 3:1",
+   "<strong>Feast of Our Lady of Guadalupe.</strong> Pray for those who are experiencing difficult pregnancies, and for those who are experiencing child loss or infertility."),
+  ("rose", "13", "Phil 4:4–5", "Philippians 4:4-5",
+   "<strong>Gaudete Sunday.</strong> At the halfway point of Advent, light two violet candles and the rose candle &mdash; Rejoice! For the Lord is near!"),
+  ("", "14", "Zeph 3:17", "Zephaniah 3:17",
+   "&ldquo;Let us rejoice, since Jesus is our hope, especially in times of trial&hellip;&rdquo; &mdash; Pope Leo XIV, Angelus, December 14, 2025"),
+  ("", "15", "Isa 35:5–6", "Isaiah 35:5-6",
+   "According to custom the Christmas tree is set up before Christmas and remains until Epiphany &mdash; share the Church&rsquo;s blessing of a Christmas tree with your family and friends."),
+  ("", "16", "Lk 1:57–58", "Luke 1:57-58",
+   "&ldquo;Rejoice always. Pray without ceasing. In all circumstances give thanks, for this is the will of God for you in Christ Jesus. Do not quench the Spirit.&rdquo; &mdash; 1 Thessalonians 5:16–19"),
+  ("", "17", "Mt 3:1–2", "Matthew 3:1-2",
+   "<strong>The O Antiphons begin.</strong> A tradition of Evening Prayer since at least the eighth century &mdash; make each day&rsquo;s antiphon part of your evening meal or bedtime prayers."),
+  ("", "18", "Jn 1:35–36", "John 1:35-36",
+   "Use the Church&rsquo;s blessing to bless the Nativity Scene in your home: the <em>Blessing of a Christmas Manger or Nativity Scene</em>."),
+  ("", "19", "Jn 3:30", "John 3:30",
+   "Invite someone who may be alone during the holidays to join you for Mass or another event at your church."),
+  ("sun", "20", "Lk 1:38", "Luke 1:38",
+   "<strong>Fourth Sunday of Advent.</strong> Light all three violet candles and the rose candle; pray that the light of Christ will enter your heart so that you may share the warmth of God&rsquo;s love with those you meet."),
+  ("", "21", "Mt 1:20–21", "Matthew 1:20-21",
+   "&ldquo;I will sing forever; through all generations my mouth shall proclaim your faithfulness.&rdquo; &mdash; Psalm 89:2–3"),
+  ("", "22", "Lk 1:46–47", "Luke 1:46-47",
+   "&ldquo;Piety and charity, mercy and abandonment&hellip; a welcoming manger, a hospitable home, a sign of God&rsquo;s presence.&rdquo; &mdash; Pope Leo XIV, Angelus, December 21, 2025"),
+  ("", "23", "Lk 2:4–5", "Luke 2:4-5",
+   "In the bustle of Christmas celebrations, take a moment of silence to reflect on the gift of Jesus&rsquo; Incarnation and prepare to receive his Body and Blood in the Holy Eucharist at Christmas Mass."),
+  ("", "24", "Lk 2:11", "Luke 2:11",
+   "&ldquo;To find the Savior, one must not gaze upward, but look below: the omnipotence of God shines forth in the powerlessness of a newborn.&rdquo; &mdash; Pope Leo XIV, Homily, December 24, 2025"),
+  ("xmas", "25", "Lk 2:14", "Luke 2:14",
+   "<strong>Christmas.</strong> &ldquo;Glory to God in the highest and on earth peace to those on whom his favor rests.&rdquo; &mdash; Luke 2:14"),
+]
+
+def advent_calendar_body():
+    cells = []
+    for i, (kind, date_html, cite, bg_search, tip) in enumerate(ADV_DAYS):
+        col = i % 7
+        cls = "adv-day" + ((" adv-" + kind) if kind else "")
+        if col <= 1:
+            tip_cls = " adv-tip-l"
+        elif col >= 5:
+            tip_cls = " adv-tip-r"
+        else:
+            tip_cls = ""
+        url = ("https://www.biblegateway.com/passage/?search="
+               + bg_search.replace(" ", "+").replace(":", "%3A")
+               + "&version=RSVCE")
+        cells.append(
+            '<div class="' + cls + '" tabindex="0">'
+            '<span class="adv-date">' + date_html + "</span>"
+            '<div class="adv-tip' + tip_cls + '"><span class="adv-tip-tag">Daily Practice</span>' + tip + "</div>"
+            '<a class="adv-read" href="' + url + '" target="_blank" rel="noopener">' + cite + "</a>"
+            "</div>"
+        )
+    cells.append('<div class="adv-day adv-blank"></div>')
+    grid = '<div class="adv-cal">' + "".join(cells) + "</div>"
+    legend = ('<div class="adv-legend">'
+              '<span><i style="background:#F3F0F8;"></i> Sunday</span>'
+              '<span><i style="background:#FBF1F4;"></i> Gaudete Sunday</span>'
+              '<span><i style="background:#FCF6E8;"></i> Holy Days &amp; Christmas</span>'
+              "</div>")
+    sources = ('<p style="color:var(--muted);font-size:.86rem;margin-top:22px;">'
+               "Daily readings follow the 26-day plan from "
+               '<a href="https://christianpure.com/learn/advent-readings/" target="_blank" rel="noopener">Christian Pure</a>'
+               " &mdash; every citation opens the passage at Bible Gateway (RSVCE). "
+               "Daily practices are drawn from the "
+               '<a href="https://www.usccb.org/resources/Advent-Calendar-2026-%20English_0.pdf" target="_blank" rel="noopener">USCCB Advent Calendar 2026</a>'
+               " (hover or tap any date). Quotations from Pope Leo XIV retain their original attributions.</p>")
+    return ('<div class="prose">'
+            '<p class="lead">Twenty-six days, one short reading each &mdash; from the watchmen waiting for dawn to the shepherds keeping watch by night. Hover or tap any date for that day&rsquo;s practice; tap the reading to open the passage.</p>'
+            "</div>" + grid + legend + sources
+            + '<div class="prose" style="margin-top:30px;">'
+            "<p>Keep it simple: a verse or two a day, read aloud &mdash; alone in the morning, or with the family at supper or bedtime with the wreath lit. If a day slips past, read it with the next day&rsquo;s verse and carry on. And keep the season close at hand: the <a href=\"advent-2026.html\">Advent 2026</a> page has our parish schedule, <a href=\"168-introduction.html\">16:8</a> offers a candle and a year of prayer, and <a href=\"adoration.html\">Saturday adoration</a> pairs with confession all season long.</p>"
+            "</div>")
+
+P("advent-calendar.html", "Advent Calendar",
+  "Advent Calendar 2026 — a daily Bible reading and a daily practice for every day from the First Sunday of Advent through Christmas.",
+  "Resources", "Advent Calendar 2026",
+  advent_calendar_body())
 
 P("flocknote.html", "Flocknote",
   "Join the parish email and text list through Flocknote.",

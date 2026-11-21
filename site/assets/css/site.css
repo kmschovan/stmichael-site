@@ -475,3 +475,32 @@ details.faq-item[open] summary { border-bottom: 1px solid var(--line); }
 .advent-card .advent-candles span { width: 8px; height: 18px; border-radius: 2px 2px 1px 1px; background: #5B2A83; display: inline-block; }
 .advent-card.rose .advent-candles span:nth-child(3) { background: #D0608A; }
 .advent-card p { font-size: .84rem; color: var(--muted); margin: 0; line-height: 1.5; }
+
+/* Advent Calendar 2026 — daily readings + USCCB daily-practice hover tips */
+.adv-cal { display: grid; grid-template-columns: repeat(7, 1fr); max-width: 980px; margin: 26px auto 0; background: #fff; border: 1px solid var(--line); }
+.adv-day { position: relative; min-height: 104px; padding: 8px 8px 10px; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; cursor: default; }
+.adv-date { font-family: 'Inter', sans-serif; font-size: .72rem; font-weight: 700; color: var(--muted); align-self: flex-end; }
+.adv-date .m { color: var(--gold); }
+.adv-day.adv-sun { background: #F3F0F8; }
+.adv-day.adv-sun .adv-date { color: #5B2A83; }
+.adv-day.adv-rose { background: #FBF1F4; }
+.adv-day.adv-rose .adv-date { color: #C2507F; }
+.adv-day.adv-feast, .adv-day.adv-xmas { background: #FCF6E8; }
+.adv-day.adv-xmas { border: 2px solid var(--gold); }
+.adv-read { font-family: 'Inter', sans-serif; font-size: .68rem; font-weight: 700; color: var(--burgundy); text-decoration: none; border: 1px solid var(--line); background: var(--ivory); border-radius: 20px; padding: 3px 9px; align-self: flex-start; margin-top: auto; }
+.adv-read:hover { color: #fff; background: var(--burgundy); }
+.adv-tip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); width: 235px; background: var(--burgundy-deep); color: var(--ivory); padding: 12px 14px; border: 1px solid var(--gold); border-radius: 10px; z-index: 40; box-shadow: 0 14px 34px rgba(15,24,32,.35); font-family: 'Inter', sans-serif; font-size: .78rem; line-height: 1.5; text-align: left; }
+.adv-tip-tag { display: block; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 5px; }
+.adv-tip a { color: var(--gold-light); }
+.adv-tip-l { left: 8px; transform: none; }
+.adv-tip-r { left: auto; right: 8px; transform: none; }
+.adv-day:hover .adv-tip, .adv-day:focus-within .adv-tip { display: block; }
+.adv-legend { display: flex; gap: 18px; justify-content: center; margin: 14px auto 0; font-size: .8rem; color: var(--muted); flex-wrap: wrap; max-width: 980px; }
+.adv-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.adv-legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; border: 1px solid var(--line); }
+@media (max-width: 640px) {
+  .adv-day { min-height: 84px; padding: 4px 4px 6px; }
+  .adv-date { font-size: .58rem; }
+  .adv-read { font-size: .55rem; padding: 2px 5px; border-radius: 14px; }
+  .adv-tip { width: 180px; font-size: .7rem; padding: 9px 11px; bottom: calc(100% + 4px); }
+}
