@@ -50,16 +50,12 @@ NAV = [
     ("Resources", None, [
         ("Advent 2026", "advent-2026.html", False),
         ("OCIA — Becoming Catholic", "ocia.html", False),
-        ("Flocknote", "flocknote.html", False),
-        ("Forms", "forms.html", False),
         ("Order of the Mass", "order-of-mass.html", False),
         ("Daily Mass Readings", "daily-readings.html", False),
-        ("Examination of Conscience", "examination-of-conscience.html", False),
-        ("Precepts of the Church", "precepts-of-the-church.html", False),
-        ("How to Go to Confession", "how-to-go-to-confession.html", False),
         ("Mass Details", "https://scheduler.stmichaelsallangels.com/display.html", True),
         ("Mass Details (mobile)", "https://scheduler.stmichaelsallangels.com/display_mobile.html", True),
         ("Scheduler", "https://scheduler.stmichaelsallangels.com/", True),
+        ("Forms", "forms.html", False),
     ]),
 ]
 
