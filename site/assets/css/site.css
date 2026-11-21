@@ -480,6 +480,7 @@ details.faq-item[open] summary { border-bottom: 1px solid var(--line); }
 .foot-social a { width: 34px; height: 34px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; transition: transform .15s ease; }
 .foot-social a:hover { transform: translateY(-2px); }
 .foot-social svg { width: 34px; height: 34px; display: block; }
+.foot-social a img { width: 27px; height: auto; display: block; }
 
 /* Advent Calendar 2026 — daily readings + USCCB daily-practice hover tips */
 .adv-cal { display: grid; grid-template-columns: repeat(7, 1fr); max-width: 980px; margin: 26px auto 0; background: #fff; border: 1px solid var(--line); }
