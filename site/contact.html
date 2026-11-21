@@ -53,8 +53,7 @@
   </div>
 </div>
 <div class="contact-form">
-  <form data-netlify="true" name="contact" method="POST">
-    <input type="hidden" name="form-name" value="contact">
+  <form id="contactForm" name="contact" method="POST">
     <label for="c-name">Your Name *</label>
     <input id="c-name" name="name" type="text" required placeholder="Your name">
     <label for="c-email">Email *</label>
@@ -63,7 +62,17 @@
     <textarea id="c-msg" name="message" rows="6" required placeholder="How can we help?"></textarea>
     <button class="btn btn-primary" type="submit">Send Message</button>
   </form>
-</div></div>
+  <div id="contactThanks" style="display:none;background:rgba(176,122,42,.12);border:1px solid var(--gold);padding:16px 18px;margin-top:12px;">
+    <strong>Thank you!</strong> Please call the parish office at <a href="tel:9038217511">903-821-7511</a> to be sure we received your message, or reach us through <a href="https://www.facebook.com/stmichaelallangel" target="_blank" rel="noopener">Facebook</a>.
+  </div>
+</div>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  this.style.display = "none";
+  document.getElementById("contactThanks").style.display = "block";
+});
+</script></div>
 </section>
 <footer>
   <div class="foot-grid">

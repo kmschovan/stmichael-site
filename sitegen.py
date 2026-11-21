@@ -482,8 +482,7 @@ P("prayers.html", "Prayers & Intentions",
   <p>Please use the form below to send us your prayer requests and Mass Intentions. Due to the many prayer requests we receive, we will not be able to respond to your request — but please be assured our prayer teams will be praying for your prayer requests. For Mass Intentions, we will get back to you when we can schedule your request. May God bless you.</p>
 </div>
 <div class="contact-form" style="margin-top: 32px;">
-  <form data-netlify="true" name="prayer-requests" method="POST">
-    <input type="hidden" name="form-name" value="prayer-requests">
+  <form id="prayerForm" name="prayer-requests" method="POST">
     <label for="pr-name">Your Name (optional)</label>
     <input id="pr-name" name="name" type="text" placeholder="Your name">
     <label for="pr-intention">Prayer Request / Mass Intention *</label>
@@ -495,7 +494,17 @@ P("prayers.html", "Prayers & Intentions",
     </select>
     <button class="btn btn-primary" type="submit">Send Request</button>
   </form>
-</div>""")
+  <div id="prayerThanks" style="display:none;background:rgba(176,122,42,.12);border:1px solid var(--gold);padding:16px 18px;margin-top:12px;">
+    <strong>Thank you!</strong> To be sure we received your request, please call the parish office at <a href="tel:9038217511">903-821-7511</a>.
+  </div>
+</div>
+<script>
+document.getElementById("prayerForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  this.style.display = "none";
+  document.getElementById("prayerThanks").style.display = "block";
+});
+</script>""")
 
 P("calendar.html", "Parish Calendar",
   "Calendar of events at Saint Michael & All Angels Catholic Church, Denison TX.",
@@ -1036,8 +1045,7 @@ P("contact.html", "Contact Us",
   </div>
 </div>
 <div class="contact-form">
-  <form data-netlify="true" name="contact" method="POST">
-    <input type="hidden" name="form-name" value="contact">
+  <form id="contactForm" name="contact" method="POST">
     <label for="c-name">Your Name *</label>
     <input id="c-name" name="name" type="text" required placeholder="Your name">
     <label for="c-email">Email *</label>
@@ -1046,7 +1054,17 @@ P("contact.html", "Contact Us",
     <textarea id="c-msg" name="message" rows="6" required placeholder="How can we help?"></textarea>
     <button class="btn btn-primary" type="submit">Send Message</button>
   </form>
-</div>""")
+  <div id="contactThanks" style="display:none;background:rgba(176,122,42,.12);border:1px solid var(--gold);padding:16px 18px;margin-top:12px;">
+    <strong>Thank you!</strong> Please call the parish office at <a href="tel:9038217511">903-821-7511</a> to be sure we received your message, or reach us through <a href="https://www.facebook.com/stmichaelallangel" target="_blank" rel="noopener">Facebook</a>.
+  </div>
+</div>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  this.style.display = "none";
+  document.getElementById("contactThanks").style.display = "block";
+});
+</script>""")
 
 P("ocia.html", "OCIA — Becoming Catholic",
   "The Order of Christian Initiation of Adults — the journey by which adults enter the Catholic Church at Saint Michael & All Angels, Denison TX.",
@@ -1803,6 +1821,13 @@ def main():
     made = [build_home()]
     for fname, title, desc, eyebrow, hero_title, body, hero_sub in PAGES:
         made.append(subpage(fname, title, desc, eyebrow, hero_title, body, hero_sub))
+    # 404 shim: GitHub Pages has no native pretty URLs; this turns missing
+    # paths like /mass-times into /mass-times.html so old links keep working.
+    with open(os.path.join(SITE, "404.html"), "w", encoding="utf-8") as f:
+        f.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>Saint Michael &amp; All Angels</title></head><body>'
+                '<script>var p=location.pathname.replace(/\\/+$/,"");'
+                'if(!p.endsWith(".html")&&!p.endsWith("/")&&!/\\.\\w+$/.test(p))location.replace(p+".html");'
+                'else location.replace("/stmichael-site/");</script></body></html>')
     # Legacy redirect: 168.html used to be the single 16:8 page
     with open(os.path.join(SITE, "168.html"), "w", encoding="utf-8") as f:
         f.write('<!DOCTYPE html><html><head><meta charset="utf-8">'
