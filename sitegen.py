@@ -86,7 +86,7 @@ FOOTER_COLS = [
 ]
 
 CHURCH = HARVEST["site"]
-CSS_VERSION = "20261121a"  # bump whenever site.css changes so browsers refetch
+CSS_VERSION = "20261121b"  # bump whenever site.css changes so browsers refetch
 ORDO_URL = "https://ordinariate.net/ordo"
 GIVING_WIX = "https://www.stmichaelsallangels.com/parishioner"
 
@@ -154,6 +154,14 @@ def footer():
     <div>
       <h4>{CHURCH['name']}</h4>
       <p class="mission">{CHURCH['address']}<br>{CHURCH['phone']}</p>
+      <div class="foot-social">
+        <a href="{CHURCH['flocknote']}" target="_blank" rel="noopener" aria-label="Flocknote" title="Flocknote">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1D87C8"/><path d="M17.4 7.9c.5-.4 1-.6 1.6-.7-.5.7-1 1.3-1.6 1.9l.1.5c0 3.1-2.4 6.5-6.9 6.5-1.3 0-2.6-.3-3.6-1 .3 0 .7.1 1 .1 1.1 0 2.1-.4 2.9-1-1.1 0-2-.7-2.3-1.7.3.1.7.1 1.1 0-1.1-.2-2-1.2-2-2.4.4.2.8.3 1.2.3-.9-.6-1.3-1.8-.7-2.8 1.2 1.5 3 2.5 5 2.6-.2-.9 0-1.9.8-2.6 1-.9 2.6-.7 3.4.4z" fill="#fff"/></svg>
+        </a>
+        <a href="https://www.facebook.com/stmichaelallangel/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path d="M15.6 12.9l.4-2.4h-2.3V9.2c0-.7.4-1.3 1.4-1.3h1V6.4s-.9-.2-1.8-.2c-2 0-3.2 1.2-3.2 3.2v1.8H9.2v2.4h1.9v6h2.7v-6h1.8z" fill="#fff"/></svg>
+        </a>
+      </div>
     </div>
     {cols}
   </div>
