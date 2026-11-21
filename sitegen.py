@@ -974,6 +974,18 @@ P("168-reflections.html", "16:8 — Weekly Reflections",
         head.className = 'lead';
         head.textContent = r.title;
         card.appendChild(head);
+        var isFirst = r.id === 1 || /^First Reflection/.test(r.title || '');
+        if (isFirst) {
+          var wreath = document.createElement('img');
+          wreath.src = 'assets/images/advent-wreath.jpg';
+          wreath.alt = 'Advent wreath with purple candles and the Christ candle';
+          wreath.style.cssText = 'display:block;width:100%;max-width:360px;height:auto;margin:16px auto 12px;border:1px solid var(--line);padding:8px;background:#fff;box-shadow:0 8px 28px rgba(15,24,32,.10);';
+          card.appendChild(wreath);
+          var verse = document.createElement('p');
+          verse.style.cssText = "font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.3rem;color:var(--burgundy);text-align:center;margin:0 0 14px;";
+          verse.innerHTML = '&ldquo;I keep the Lord always before me.&rdquo; &mdash; <a href="https://www.biblegateway.com/passage/?search=Psalm%2016%3A8&version=RSVCE" target="_blank" rel="noopener">Psalm 16:8</a>';
+          card.appendChild(verse);
+        }
         var body = document.createElement('p');
         body.textContent = r.body;
         card.appendChild(body);
