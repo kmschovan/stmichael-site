@@ -690,6 +690,12 @@ P("confession.html", "Confession",
   <p><strong>Saturdays from 10:00 &ndash; 11:00 am</strong> at the parish.</p>
   <p>For alternate times, please call Father Randall at <a href="tel:9038217511">903-821-7511</a>.</p>
 
+  <h2>Prepare for Confession</h2>
+  <p>Before coming to the sacrament, prepare your heart with our companion pages &mdash; each is drawn from the Church&rsquo;s traditional examination of conscience:</p>
+  <p><a class="card" href="examination-of-conscience.html"><strong>Examination of Conscience &mdash; the Ten Commandments</strong></a><br>
+  <a class="card" href="precepts-of-the-church.html"><strong>Precepts of the Church</strong></a><br>
+  <a class="card" href="how-to-go-to-confession.html"><strong>How to Go to Confession &mdash; with the Act of Contrition</strong></a></p>
+
   <h2>Confession is a Place of Victory</h2>
   <p>Fr. Mike Schmitz puts words to the heart of it: confession is not a defeat for the sinner but the place where the war is finally won. Take a few minutes with this &mdash; and then come see for yourself on a Saturday morning.</p>
   <div class="video-embed" style="margin-top: 20px;">
@@ -1116,6 +1122,356 @@ P("faq.html", "Frequently Asked Questions",
   "About Us", "Frequently Asked Questions",
   faq_body)
 
+
+# ================================================================ EXAMINATION OF CONSCIENCE
+# Three pages built from the parish's "A Detailed Catholic Examination of
+# Conscience" (2nd ed.) document, rendered in the site's exclusive-accordion style.
+EXAM_CMD_ITEMS = [
+  ("First Commandment &mdash; &ldquo;I am the LORD your God. You shall worship the Lord your God and Him only shall you serve.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Reserved or harbored hatred for God?</li>
+   <li>Disobeyed the commandments of God or the Church?</li>
+   <li>Refused to accept what God has revealed as true, or what the Catholic Church proclaims for belief?</li>
+   <li>Denied the existence of God?</li>
+   <li>Neglected to nourish and protect my faith?</li>
+   <li>Neglected to reject everything opposed to a sound faith?</li>
+   <li>Deliberately misled others about doctrine or the faith?</li>
+   <li>Rejected the Catholic faith, joined another Christian denomination, or joined or practiced another religion?</li>
+   <li>Joined a group forbidden to Catholics (Masons, communists, etc.)?</li>
+   <li>Despaired about my salvation or the forgiveness of my sins?</li>
+   <li>Presumed God&rsquo;s mercy? (Committing a sin in expectation of forgiveness, or asking for forgiveness without interior conversion and practicing virtue.)</li>
+   <li>Loved someone or something more than God (money, power, sex, ambition, etc.)?</li>
+   <li>Let someone or something influence my choices more than God?</li>
+   <li>Engaged in superstitious practices? (Including horoscopes, fortune tellers, etc.)</li>
+   <li>Been involved in the occult or occult practices? (S&eacute;ances, Ouija board, worship of Satan, etc.)</li>
+   <li>Formally attempted to leave the Catholic Church?</li>
+   <li>Hidden a serious sin or told a lie in Confession?</li></ul>"""),
+  ("Second Commandment &mdash; &ldquo;You shall not take the name of the Lord your God in vain.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Used the name of God in cursing or blasphemy?</li>
+   <li>Failed to keep vows, promises, or resolutions that I have made to God? <em>(Specify in the confessional which one; the Priest has authority to remove the obligations of promises and resolutions if they are too rash or unjust.)</em></li>
+   <li>Spoken about the Faith, the Church, the saints, or sacred things with irreverence, hatred or defiance?</li>
+   <li>Watched television or movies, or listened to music that treated God, the Church, the saints, or sacred things irreverently?</li>
+   <li>Used vulgar, suggestive or obscene speech?</li>
+   <li>Belittled others in my speech?</li>
+   <li>Behaved disrespectfully in the church building (e.g., talking immoderately in church before, during, or after holy Mass)?</li>
+   <li>Misused places or things set apart for the worship of God?</li>
+   <li>Committed perjury? (Breaking an oath or lying under oath.)</li>
+   <li>Blamed God for my failings?</li></ul>"""),
+  ("Third Commandment &mdash; &ldquo;Remember to keep holy the Sabbath day.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Missed Mass on Sunday or Holy Days (through my own fault, without sufficient reason)?</li>
+   <li>Neglected to set time aside each day for personal prayer to God?</li>
+   <li>Committed a sacrilege against the Blessed Sacrament (thrown Him away; brought Him home; treated Him carelessly, etc.)?</li>
+   <li>Received any sacrament while in the state of mortal sin?</li>
+   <li>Habitually come late to and/or leave early from Mass?</li>
+   <li>Shopped, labored, practiced sports or done business unnecessarily on Sunday or other Holy Days of Obligation?</li>
+   <li>Failed to attend to taking my children to Mass?</li>
+   <li>Failed to provide proper instruction in the Faith to my children?</li>
+   <li>Knowingly eaten meat on a forbidden day (or not fasted on a fast day)?</li>
+   <li>Eaten or drunk within one hour of receiving Communion (other than medical need)?</li></ul>"""),
+  ("Fourth Commandment &mdash; &ldquo;Honor your father and your mother.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>(If still under my parents&rsquo; care) Obeyed all that my parents reasonably asked of me?</li>
+   <li>Shown disregard for my parents&rsquo; wishes, displayed contempt of their demands, and/or disdained their very being?</li>
+   <li>Neglected the needs of my parents in their old age or in their time of need?</li>
+   <li>Harbored hatred for my parents?</li>
+   <li>Brought shame on them?</li>
+   <li>(If still in school) Obeyed the reasonable demands of my teachers?</li>
+   <li>Disrespected my teachers?</li>
+   <li>(If I have children) Neglected to give my children proper food, clothing, shelter, education, discipline and care (even after Confirmation)?</li>
+   <li>Provided for the religious education and formation of my children for as long as they are under my care?</li>
+   <li>Ensured that my children still under my care regularly frequent the sacraments of Penance and Holy Communion?</li>
+   <li>Educated my children in a way that corresponds to Catholic religious disciplines?</li>
+   <li>Provided my children with a positive, prudent and personalized education in the Catholic teaching on human sexuality?</li>
+   <li>Been to my children a good example of how to live the Catholic Faith?</li>
+   <li>Prayed with and for my children?</li>
+   <li>(For everyone) Lived in humble obedience to those who legitimately exercise authority over me?</li>
+   <li>Broken any just law?</li>
+   <li>Supported or voted for a politician whose positions are opposed to the teachings of Christ and the Catholic Church?</li>
+   <li>Failed to pray for the deceased members of my family &mdash; the Poor Souls of Purgatory included?</li></ul>"""),
+  ("Fifth Commandment &mdash; &ldquo;You shall not murder.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Unjustly and intentionally killed a human being (murder)?</li>
+   <li>Been guilty, through negligence and/or lack of intention, of the death of another?</li>
+   <li>Been involved in an abortion, directly or indirectly (through advice, encouragement, providing money, or facilitating it in any other way)?</li>
+   <li>Seriously considered or attempted suicide?</li>
+   <li>Supported, promoted, or encouraged the practice of assisted suicide or mercy killing (euthanasia)?</li>
+   <li>Deliberately desired to kill an innocent human being?</li>
+   <li>Unjustly inflicted bodily harm on another person?</li>
+   <li>Unjustly threatened another person with bodily harm?</li>
+   <li>Verbally or emotionally abused another person?</li>
+   <li>Gossiped, slandered, detracted, calumniated?</li>
+   <li>Hated another person, or wished him or her evil?</li>
+   <li>Been prejudiced, or unjustly discriminated against others because of their race, color, nationality, sex or religion?</li>
+   <li>Joined a hate group?</li>
+   <li>Purposely provoked another by teasing or nagging?</li>
+   <li>Recklessly endangered my life or health, or that of another, by my actions?</li>
+   <li>Driven recklessly or under the influence of alcohol or other drugs?</li>
+   <li>Abused alcohol or other drugs?</li>
+   <li>Sold or given drugs to others to use for non-therapeutic purposes?</li>
+   <li>Used tobacco immoderately?</li>
+   <li>Over-eaten?</li>
+   <li>Encouraged others to sin by giving scandal?</li>
+   <li>Helped another to commit a mortal sin (through advice, driving them somewhere, dressing and/or acting immodestly, etc.)?</li>
+   <li>Caused serious injury of another by criminal neglect?</li>
+   <li>Indulged in unjust anger?</li>
+   <li>Refused to control my temper?</li>
+   <li>Been fateful to, quarreled with, or willfully hurt someone?</li>
+   <li>Been unforgiving of others, especially when mercy or pardon was requested?</li>
+   <li>Sought revenge or hoped something bad would happen to someone?</li>
+   <li>Delighted to see someone else get hurt or suffer?</li>
+   <li>Treated animals cruelly, causing them to suffer or die needlessly?</li></ul>"""),
+  ("Sixth &amp; Ninth Commandments &mdash; &ldquo;You shall not commit adultery. You shall not covet your neighbor&rsquo;s wife.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Neglected to practice and grow in the virtue of chastity?</li>
+   <li>Given in to lust? (The desire for sexual pleasure unrelated to spousal love in marriage.)</li>
+   <li>Used an artificial means of birth control (including withdrawal)?</li>
+   <li>Refused to be open to conception, without just cause? (Catechism, 2368)</li>
+   <li>Participated in immoral techniques such as in vitro fertilization or artificial insemination?</li>
+   <li>Sterilized my sex organs for contraceptive purposes?</li>
+   <li>Deprived my spouse of the marital right, without just cause?</li>
+   <li>Claimed my own marital right without concern for my spouse?</li>
+   <li>Deliberately caused male climax outside of normal sexual intercourse?</li>
+   <li>Masturbated? (Deliberate stimulation of one&rsquo;s own sexual organs for sexual pleasure outside of the conjugal act.) (Catechism, 2366)</li>
+   <li>Willfully entertained impure thoughts?</li>
+   <li>Purchased, viewed, or made use of pornography?</li>
+   <li>Watched or promoted movies and television that involve sex and nudity?</li>
+   <li>Listened to music or jokes that are harmful to purity? Read books that are immoral?</li>
+   <li>Committed adultery? (Sexual relations with someone who is married, or with someone other than my spouse.)</li>
+   <li>Committed incest? (Sexual relations with a relative closer than the third degree or an in-law.)</li>
+   <li>Committed fornication? (Sexual relations with someone of the opposite sex when the two are not married to one another or any others.)</li>
+   <li>Engaged in homosexual activity?</li>
+   <li>Committed rape?</li>
+   <li>Engaged in sexual foreplay (e.g., &ldquo;petting&rdquo;, or excessive touching) reserved for marriage?</li>
+   <li>Preyed upon children or youth for my sexual pleasure?</li>
+   <li>Engaged in unnatural sexual activities?</li>
+   <li>Engaged in prostitution, or paid for the services of a prostitute?</li>
+   <li>Seduced someone, or allowed myself to be seduced?</li>
+   <li>Made uninvited and unwelcome sexual advances toward another?</li>
+   <li>Purposely dressed immodestly?</li></ul>"""),
+  ("Seventh &amp; Tenth Commandments &mdash; &ldquo;You shall not steal. You shall not covet your neighbor&rsquo;s goods.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Stolen? (Taken something that doesn&rsquo;t belong to me against the reasonable will of the owner.)</li>
+   <li>Envied others on account of their possessions?</li>
+   <li>Neglected to live in a spirit of Gospel poverty and simplicity?</li>
+   <li>Neglected to give generously to others in need?</li>
+   <li>Failed to consider that God has provided me with money so that I might use it to benefit others, as well as for my own legitimate needs?</li>
+   <li>Allowed myself to be conformed to a consumer mentality (buy, buy, buy; throw away, waste; spend, spend, spend)?</li>
+   <li>Neglected to practice the corporal works of mercy?</li>
+   <li>Deliberately defaced, destroyed or lost another&rsquo;s property?</li>
+   <li>Cheated on a test, taxes, sports, games, or in business?</li>
+   <li>Squandered money in compulsive gambling?</li>
+   <li>Made a false claim to an insurance company?</li>
+   <li>Failed to pay my employees a just wage, or failed to give a full day&rsquo;s work for a full day&rsquo;s pay?</li>
+   <li>Failed to honor my part of a contract?</li>
+   <li>Failed to make good on a debt?</li>
+   <li>Overcharged someone, especially to take advantage of another&rsquo;s hardship or ignorance?</li>
+   <li>Misused natural resources?</li></ul>"""),
+  ("Eighth Commandment &mdash; &ldquo;You shall not bear false witness against your neighbor.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Lied?</li>
+   <li>Knowingly and willfully deceived another?</li>
+   <li>Perjured myself under oath?</li>
+   <li>Gossiped?</li>
+   <li>Committed detraction? (Destroying a person&rsquo;s reputation by telling others about his faults for no good reason.)</li>
+   <li>Committed slander or calumny? (Telling lies about another person in order to destroy his reputation.)</li>
+   <li>Committed libel? (Writing lies about another person in order to destroy his reputation &mdash; the written word has a longer &ldquo;life&rdquo; of damage.)</li>
+   <li>Been guilty of rash judgment? (Assuming the worst of another person based on circumstantial evidence.)</li>
+   <li>Failed to make reparation for a lie I told, or for harm done to a person&rsquo;s reputation?</li>
+   <li>Failed to speak out in defense of the Catholic Faith, the Church, or of another person?</li>
+   <li>Betrayed another&rsquo;s confidence through speech, deed, or in writing?</li></ul>"""),
+]
+
+exam_body = """<div class="prose">
+  <p class="lead">A good examination of conscience helps us call to mind our sins and failings during a period of quiet reflection before approaching the Priest in Confession. Set aside some quiet time, begin with a prayer to the Holy Spirit, and work honestly through each of the Ten Commandments below. Tap a Commandment to open its questions.</p>
+  <p><strong>When is a sin mortal?</strong> A mortal sin is committed when three conditions are met: <strong>(1) grave matter</strong> &mdash; the act is contrary to God&rsquo;s will under the Ten Commandments and the Precepts of the Church; <strong>(2) full knowledge</strong> that the act was sinful; and <strong>(3) full consent</strong> &mdash; it was committed with intentionality, not forced. If any of these three conditions is not met, the sin is venial. It is still a very good idea to confess venial sins, since all sin offends God, Who deserves all of our love.</p>
+</div>
+<div class="faq-list">
+"""
+for _q, _a in EXAM_CMD_ITEMS:
+    exam_body += f'<details class="faq-item" name="exam"><summary>{_q}</summary><div class="faq-a">{_a}</div></details>'
+    exam_body += '\n'
+exam_body += """<p style="color:var(--muted);font-size:.86rem;margin-top:14px;">After the Ten Commandments, continue with the <a href="precepts-of-the-church.html">Precepts of the Church</a>, then see <a href="how-to-go-to-confession.html">How to Go to Confession</a>.</p></div>
+<script>
+(function () {
+  var probe = document.createElement("details");
+  if ("name" in probe) return; /* native exclusive accordion */
+  var items = document.querySelectorAll('details[name="exam"]');
+  items.forEach(function (det) {
+    det.addEventListener("toggle", function () {
+      if (!det.open) return;
+      items.forEach(function (other) { if (other !== det) other.open = false; });
+    });
+  });
+})();
+</script>"""
+
+P("examination-of-conscience.html", "Examination of Conscience",
+  "A detailed Catholic examination of conscience through the Ten Commandments — preparation for the Sacrament of Confession at Saint Michael & All Angels.",
+  "Confession", "Examination of Conscience",
+  exam_body)
+
+# --- Precepts of the Church page -------------------------------------------
+PRECEPT_ITEMS = [
+  ("First Precept of the Church &mdash; &ldquo;You shall attend Mass on Sundays and Holy Days of Obligation and rest from servile labor.&rdquo;",
+   "<p>(See the Third Commandment in the <a href=\"examination-of-conscience.html\">Examination of Conscience</a>.)</p>"),
+  ("Second Precept of the Church &mdash; &ldquo;You shall confess your sins to a Priest at least once a year.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Made a good Confession of my mortal sins at least once a year?</li>
+   <li>Purposely omitted telling my mortal sins in my last Confession?</li>
+   <li>Neglected to perform the penance I was given?</li>
+   <li>Neglected to make reparation for any harm I have done to others?</li></ul>"""),
+  ("Third Precept of the Church &mdash; &ldquo;You shall humbly receive your Creator in Holy Communion at least once during the Easter season.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Neglected to fulfill my Easter duty to receive Holy Communion at least once between the First Sunday of Lent and Trinity Sunday?</li>
+   <li>Received Holy Communion while in the state of mortal sin?</li>
+   <li>Failed to fast for at least one hour before receiving Holy Communion?</li>
+   <li>Received Holy Communion more than twice in one day?</li></ul>"""),
+  ("Fourth Precept of the Church &mdash; &ldquo;You shall observe the prescribed days of fasting and abstinence established by the Church.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Neglected to do penance every Friday of the year, if not abstaining from meat?</li>
+   <li>Neglected to abstain from meat on Ash Wednesday and the Fridays of Lent (if I am 14 years of age or older)?</li>
+   <li>Neglected to fast on Ash Wednesday and Good Friday (if I am between the ages of 18 and 59)?</li>
+   <li>Participated in diversions on days of penance (e.g., attended crawfish boils and fish fries, ballgames, movies, shopping on Ash Wednesday &amp; Good Friday)?</li>
+   <li>Neglected to spend time in prayer, do spiritual and corporal works of mercy, and practice self-denial?</li></ul>"""),
+  ("Fifth Precept of the Church &mdash; &ldquo;You shall contribute to the support of the Church.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Neglected to contribute a just amount of my time, talents and money to support my parish and the work of the Church?</li>
+   <li>Neglected to support the Church by not trying to become a saint or by not striving to make sincere progress each day in sanctity?</li></ul>"""),
+  ("An Additional Precept of the Church &mdash; &ldquo;You shall observe the laws of the Church concerning marriage.&rdquo;",
+   """<p>Have I&hellip;</p><ul>
+   <li>Been living in an invalid and/or illicit marriage according to the laws of the Catholic Church?</li>
+   <li>Abandoned my spouse and/or family by separation or divorce?</li>
+   <li>Kept company with someone whom I cannot marry in the Catholic Church?</li>
+   <li>Given scandal by living with a member of the opposite sex without the benefit of a marriage blessed by the Catholic Church?</li>
+   <li>Entered into marriage with more than one person at the same time?</li>
+   <li>Failed to embrace the teachings given by the Catholic Church, which are supported by the Natural Law: that marriage can only exist between one man and one woman, and that no other union can be a valid natural and/or sacramental marriage?</li>
+   <li>Supported pro same-sex union politicians?</li>
+   <li>Publicly proclaimed that the Church&rsquo;s teaching on marriage is wrong and, as such, taught others to reject it?</li></ul>
+   <p style="color:var(--muted);font-size:.86rem;"><em>The Catechism of the Catholic Church officially lists five Precepts. This additional precept is counted among those teachings so fundamental to Catholicism that they must be observed in order to consider oneself a faithful and practicing Catholic.</em></p>"""),
+]
+
+precepts_body = """<div class="prose">
+  <p class="lead">The Precepts of the Church are the minimum obligations required of every Catholic in matters of worship, penance, and support of the Church. Work through each one honestly as part of your examination of conscience. Tap a Precept to open its questions.</p>
+</div>
+<div class="faq-list">
+"""
+for _q, _a in PRECEPT_ITEMS:
+    precepts_body += f'<details class="faq-item" name="precepts"><summary>{_q}</summary><div class="faq-a">{_a}</div></details>'
+    precepts_body += '\n'
+precepts_body += """<p style="color:var(--muted);font-size:.86rem;margin-top:14px;">Begin with the <a href="examination-of-conscience.html">Ten Commandments</a>, then see <a href="how-to-go-to-confession.html">How to Go to Confession</a>.</p></div>
+<script>
+(function () {
+  var probe = document.createElement("details");
+  if ("name" in probe) return; /* native exclusive accordion */
+  var items = document.querySelectorAll('details[name="precepts"]');
+  items.forEach(function (det) {
+    det.addEventListener("toggle", function () {
+      if (!det.open) return;
+      items.forEach(function (other) { if (other !== det) other.open = false; });
+    });
+  });
+})();
+</script>"""
+
+P("precepts-of-the-church.html", "Precepts of the Church",
+  "The Precepts of the Church — the minimum obligations of every Catholic — as an examination of conscience for Confession at Saint Michael & All Angels.",
+  "Confession", "Precepts of the Church",
+  precepts_body)
+
+# --- How to Go to Confession page -------------------------------------------
+QUOTES_ITEMS = [
+  ("The Bible on Confession",
+   """<ul>
+   <li>&ldquo;I give you the keys to the kingdom of heaven, and whatever you bind on earth shall be bound in heaven and whatever you loose on earth shall be loosed in heaven&rdquo; (Matthew 16:19).</li>
+   <li>&ldquo;Truly I say to you, whatever you bind on earth shall be bound in heaven, and whatever you loose on earth shall be loosed in heaven&rdquo; (Matthew 18:18).</li>
+   <li>&ldquo;Receive the Holy Spirit. If you forgive the sins of any, they are forgiven; if you retain the sins of any, they are retained&rdquo; (John 20:22-23).</li>
+   <li>&ldquo;Go, show yourself to the Priest&rdquo; (Luke 5:14; 17:14; Matthew 8:4).</li>
+   <li>&ldquo;If you love Me, you will keep My commandments&rdquo; (John 14:15).</li>
+   <li>&ldquo;He who believes in the Son has eternal life; but he who does not obey the Son will not see life, but the wrath of God abides on him&rdquo; (John 3:36).</li></ul>"""),
+  ("The Catechism of the Catholic Church on Confession",
+   """<ul>
+   <li>&ldquo;You shall confess your sins (to a Priest) at least once a year&rdquo; (2042).</li>
+   <li>&ldquo;Christ instituted the sacrament of Penance for all sinful members of His Church: above all for those who, since Baptism, have fallen into grave sin, and have thus lost their baptismal grace and wounded ecclesial communion. It is to them that the sacrament of Penance offers a new possibility to convert and to recover the grace of justification. The Fathers of the Church present this sacrament as <strong>&lsquo;the second plank [of salvation] after the shipwreck which is the loss of grace&rsquo;</strong>&rdquo; (1446).</li>
+   <li>&ldquo;All mortal sins of which penitents after a diligent self-examination are conscious must be recounted by them in confession, even if they are most secret and have been committed against the last two precepts of the Decalogue; for these sins sometimes wound the soul more grievously and are more dangerous than those which are committed openly&rdquo; (1456; Council of Trent, DS 1680).</li></ul>"""),
+  ("The Saints on Confession",
+   """<ul>
+   <li>&ldquo;Confession is an act of honesty and courage &mdash; an act of entrusting ourselves, beyond sin, to the mercy of a loving and forgiving God&rdquo; (Pope St. John Paul II).</li>
+   <li>&ldquo;The confession of evil works is the first beginning of good works&rdquo; (St. Augustine).</li>
+   <li>&ldquo;Go to your confessor; open your heart to him; display to him all the recesses of your soul; take the advice that he will give you with the utmost humility and simplicity. For God, Who has an infinite love for obedience, frequently renders profitable the counsels we take from others, but especially from those who are the guides of our souls&rdquo; (St. Francis de Sales).</li>
+   <li>&ldquo;In failing to confess, Lord, I would only hide You from myself, not myself from You&rdquo; (St. Augustine).</li>
+   <li>&ldquo;Confession is like a bridle that keeps the soul which reflects on it from committing sin, but anything left unconfessed we continue to do without fear as if in the dark&rdquo; (St. John Climacus).</li>
+   <li>&ldquo;A soul does not benefit from the sacrament of confession if it is not humble. Pride keeps it in darkness. The soul neither knows how, nor is it willing, to probe with precision the depths of its own misery. It puts on a mask and avoids everything that might bring it recovery&rdquo; (St. Faustina).</li>
+   <li>&ldquo;At the time of your examination (of sins) beware of the devil that ties your tongue&rdquo; (St. Josemaria Escriva).</li>
+   <li>&ldquo;The devil does not bring sinners to hell with their eyes open: he first blinds them with the malice of their own sins. Before we fall into sin, the enemy labors to blind us, that we may not see the evil we do and the ruin we bring upon ourselves by offending God. After we commit sin, he seeks to make us dumb [i.e., silent], that, through shame, we may conceal our guilt in confession&rdquo; (St. Alphonsus Liguori).</li>
+   <li>&ldquo;The want of proper examination, true contrition, and a firm purpose of amendment, is the cause of bad confessions, and of the ruin of souls&rdquo; (St. Benedict Joseph Labre).</li>
+   <li>&ldquo;Obedience to a confessor is the most acceptable offering which we can make to God, and the most secure way of doing the divine will&rdquo; (St. Alphonsus Liguori).</li></ul>"""),
+  ("Pope Francis on Confession",
+   """<ul>
+   <li>&ldquo;Someone can say, &lsquo;I confess my sins only to God.&rsquo; Yes, you can say to God, &lsquo;forgive me,&rsquo; and say your sins. But our sins are also against our brothers, against the Church. This is why it is necessary to ask forgiveness of the Church and of our brothers, in the person of the Priest &hellip; Forgiveness is not something we can give ourselves.&rdquo;</li>
+   <li>&ldquo;Father, I am embarrassed! Even embarrassment is good. It&rsquo;s healthy to have a bit of shame &hellip; it does us good, because it makes us more humble. Don&rsquo;t be afraid of confession &hellip; When someone is in line for confession he feels all these things &mdash; even shame &mdash; but then, when he finishes confessing, he leaves free, great, beautiful, forgiven, clean, happy. The sacrament of reconciliation is a sacrament of healing.&rdquo;</li>
+   <li>&ldquo;Be courageous, and go to confession.&rdquo;</li></ul>"""),
+]
+
+howto_body = """<div class="prose">
+  <p class="lead">Forgotten how to go to confession, or never learned? Here is the &ldquo;How To&rdquo; for the Sacrament of Penance. Confession is offered <strong>Saturdays from 10:00 &ndash; 11:00 am</strong> at the parish, or by appointment with <a href="tel:9038217511">Father Randall</a>.</p>
+  <p><span style="color:var(--muted);font-size:.9rem;"><strong>Penitent</strong> &mdash; the person confessing his sins. &nbsp;<strong>Confessor</strong> &mdash; the Priest administering the Sacrament.</span></p>
+</div>
+<div class="faq-list">"""
+HOWTO_STEPS = [
+  ("1. Enter the confessional",
+   "<p>The Penitent enters the confessional and kneels down at the screen.</p>"),
+  ("2. Begin with the Sign of the Cross",
+   "<p>The Penitent, making the sign of the cross, says: <em>&ldquo;Bless me, Father, for I have sinned. It has been ________ (state amount of time) since my last confession. These are my sins.&rdquo;</em></p>"),
+  ("3. Confess your sins",
+   "<p>The Penitent confesses his sins. The Confessor listens, but he may ask questions if something is unclear or in order to lead the Penitent to a more thorough examination of conscience. All mortal sins &mdash; each kind and the number of times committed &mdash; must be confessed. All venial sins should be confessed.</p>"),
+  ("4. Finish your confession",
+   "<p>When the Penitent finishes confessing, he signifies this by saying: <em>&ldquo;For these and all my sins, I ask forgiveness of God and absolution from you, Father.&rdquo;</em> The Confessor may offer some advice or counsel, so that the Penitent may take the necessary steps to amend his life.</p>"),
+  ("5. Receive your penance",
+   "<p>The Confessor gives a penance (usually a prayer or a good work) and then instructs the Penitent to make an Act of Contrition. There are different formulas; an Act of Contrition is usually printed in the confessional.</p>"),
+  ("6. Pray the Act of Contrition",
+   "<p>After the Penitent has made an Act of Contrition, the Confessor imparts absolution with the sacramental formula. The Penitent makes the Sign of the Cross at the absolution.</p>"),
+  ("7. Go in peace",
+   "<p>The Confessor concludes with these or similar words: <em>&ldquo;Your sins are forgiven. Go in peace.&rdquo;</em> The Penitent responds: <em>&ldquo;Thanks be to God.&rdquo;</em></p>"),
+  ("8. Fulfill your penance",
+   "<p>The Penitent leaves the confessional and fulfills the penance as soon as possible.</p>"),
+]
+for _t, _b in HOWTO_STEPS:
+    howto_body += f'<details class="faq-item" name="howto"><summary><strong>{_t}</strong></summary><div class="faq-a">{_b}</div></details>'
+    howto_body += '\n'
+howto_body += "</div>\n"
+
+contrition_block = """<div class="prose">
+  <h2>The Act of Contrition</h2>
+  <p style="margin-bottom:6px;"><em>O my God, I am heartily sorry for having offended Thee. And I detest all my sins because I dread the loss of heaven and the pains of hell but, most of all, because they offend Thee, my God, Who art all good and deserving of all my love. And I firmly resolve with the help of Thy grace to confess my sins, to do penance and to amend my life. Amen.</em></p>
+  <p style="margin-bottom:6px;"><em>Or:</em></p>
+  <p><em>O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, Who art all good and deserving of all my love. And I firmly resolve, with the help of Thy grace, to sin no more and to avoid the near occasions of sin. Amen.</em></p>
+</div>
+<div class="faq-list">"""
+for _q, _a in QUOTES_ITEMS:
+    contrition_block += f'<details class="faq-item" name="quotes"><summary>{_q}</summary><div class="faq-a">{_a}</div></details>'
+    contrition_block += '\n'
+contrition_block += """</div>
+<p style="color:var(--muted);font-size:.86rem;margin-top:14px;">Prepare with the <a href="examination-of-conscience.html">Examination of Conscience &mdash; Ten Commandments</a> and the <a href="precepts-of-the-church.html">Precepts of the Church</a>.</p>
+<script>
+(function () {
+  var probe = document.createElement("details");
+  if ("name" in probe) return; /* native exclusive accordion */
+  var items = document.querySelectorAll('details[name="howto"], details[name="quotes"]');
+  items.forEach(function (det) {
+    det.addEventListener("toggle", function () {
+      if (!det.open) return;
+      items.forEach(function (other) { if (other !== det && other.name === det.name) other.open = false; });
+    });
+  });
+})();
+</script>"""
+
+P("how-to-go-to-confession.html", "How to Go to Confession",
+  "A step-by-step guide to the Sacrament of Penance with the Act of Contrition — Scripture, Catechism, and the Saints on Confession. Saint Michael & All Angels, Denison, Texas.",
+  "Confession", "How to Go to Confession",
+  howto_body + contrition_block)
 
 # Order of the Mass — the Divine Worship form of the Roman Rite, rendered as an
 # exclusive accordion built on the same styles as the FAQ page.
