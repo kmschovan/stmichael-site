@@ -49,7 +49,6 @@ NAV = [
     ]),
     ("Resources", None, [
         ("Advent 2026", "advent-2026.html", False),
-        ("Advent Calendar", "advent-calendar.html", False),
         ("OCIA — Becoming Catholic", "ocia.html", False),
         ("Flocknote", "flocknote.html", False),
         ("Forms", "forms.html", False),
@@ -1796,6 +1795,12 @@ P("advent-2026.html", "Advent 2026",
   <p>The <strong>Solemnity of the Immaculate Conception</strong> falls on Tuesday, December 8 &mdash; Holy Day Mass at 6:30 pm.</p>
   <p><strong>Christmas at Saint Michael's:</strong> Midnight Mass on Friday, December 25 at 12:00 am, and Christmas Day Mass at 10:00 am. This year the Mass takes the place as usual at midnight on the 24th &mdash; plan your arrival with the family for the great Midnight celebration.</p>
   <p>Keep the season day by day: the <a href="daily-readings.html">Daily Mass Readings</a> page follows the Ordo with each day's readings linked to Bible Gateway, and the <a href="order-of-mass.html">Order of the Mass</a> page helps you follow along at Mass. And keep Advent at home &mdash; an Advent wreath on the table, one more candle each Sunday, exactly as our cards above light the way.</p>
+</div>
+
+<div class="prose">
+  <h2>The Advent Calendar</h2>
+  <p>One more way to keep the season: our <a href="advent-calendar.html"><strong>Advent Calendar 2026</strong></a> lays out all 26 days of Advent, from November 29 through Christmas. Each date carries a short daily Bible reading &mdash; from the watchmen waiting for dawn to the shepherds keeping watch by night &mdash; and a simple daily practice drawn from the USCCB&rsquo;s Advent calendar: blessing the wreath, the O Antiphons, planning a confession, inviting the lonely, and more. Hover or tap any date to see the day.</p>
+  <p style="text-align:center;margin-top:22px;"><a class="btn btn-primary" href="advent-calendar.html">Open the Advent Calendar &rarr;</a></p>
 </div>""")
 
 
