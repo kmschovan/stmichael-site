@@ -1867,8 +1867,8 @@ def _prayer_item(title, body_html):
 
 WREATH_ACCORDION = (
     '<div class="prose">'
-    "<h2>Advent Wreath Prayers</h2>"
-    '<p class="lead">Blessing the wreath, and the prayer for each week of Advent. The Advent wreath is a family&rsquo;s calendar of light: an evergreen circle with four candles, three violet and one rose, lit one more each week until the room is bright and Christmas arrives. Bless the wreath when it is first set out; pray the week&rsquo;s prayer at the evening meal &mdash; in many families the youngest lights the candles and the oldest reads the prayer.</p>'
+    "<h2>Advent Wreath and Prayers</h2>"
+    '<p class="lead">Blessing the wreath, and the prayer for each week of Advent. The Advent wreath is a family&rsquo;s calendar of light: an evergreen circle with four candles, three violet and one rose, lit one more each week until the room is bright and Christmas arrives. Bless the wreath when it is first set out; pray the week&rsquo;s prayer at the evening meal &mdash; in many families the youngest child lights the candles and the oldest reads the prayer. The circle has no beginning and no end; the evergreen does not die in winter; the growing light answers the shortening days. The rose candle is lit on Gaudete Sunday, the third week, when the Church relaxes the penitential violet for a day because Christmas is close. Nobody remembers the year&rsquo;s homilies; everyone remembers the wreath.</p>'
     "</div>"
     '<div class="faq-list">'
     + _prayer_item("Blessing of the Wreath",
@@ -1881,8 +1881,6 @@ WREATH_ACCORDION = (
         '<div class="lit-prayers"><p>Lord God, may we, Your people, who look forward to the birthday of Christ, experience the joy of salvation and celebrate that feast with love and thanksgiving. Amen.</p></div>')
     + _prayer_item("Fourth Week &mdash; the candle of love",
         '<div class="lit-prayers"><p>Come, Lord Jesus, do not delay; give new courage to Your people who trust in Your love. By Your coming, raise us to the joy of Your kingdom, where You live and reign for ever and ever. Amen.</p></div>')
-    + _prayer_item("About the Wreath",
-        "<p>The circle has no beginning and no end; the evergreen does not die in winter; the growing light answers the shortening days. The rose candle is lit on Gaudete Sunday, the third week, when the Church relaxes the penitential violet for a day because Christmas is close. In many families the youngest child lights the candles and the oldest reads the prayer. Nobody remembers the year&rsquo;s homilies; everyone remembers the wreath.</p>")
     + "</div>"
     + '<p style="color:var(--muted);font-size:.86rem;margin-top:14px;">Prayers drawn from <a href="https://catholic-repository.org/prayers/advent-wreath-prayers/" target="_blank" rel="noopener">catholic-repository.org</a>.</p>'
     + '<script>'
@@ -1934,9 +1932,10 @@ def advent_calendar_body():
                "Daily practices are drawn from the "
                '<a href="https://www.usccb.org/resources/Advent-Calendar-2026-%20English_0.pdf" target="_blank" rel="noopener">USCCB Advent Calendar 2026</a>'
                " (hover or tap any date). Quotations from Pope Leo XIV retain their original attributions.</p>")
-    return ('<div class="prose">'
+    return (WREATH_ACCORDION
+            + '<div class="prose">'
             '<p class="lead">Twenty-six days, one short reading each &mdash; from the watchmen waiting for dawn to the shepherds keeping watch by night. Hover or tap any date for that day&rsquo;s practice; tap the reading to open the passage.</p>'
-            "</div>" + WREATH_ACCORDION + grid + legend + sources
+            "</div>" + grid + legend + sources
             + '<div class="prose" style="margin-top:30px;">'
             "<p>Keep it simple: a verse or two a day, read aloud &mdash; alone in the morning, or with the family at supper or bedtime with the wreath lit. If a day slips past, read it with the next day&rsquo;s verse and carry on. And keep the season close at hand: the <a href=\"advent-2026.html\">Advent 2026</a> page has our parish schedule, <a href=\"168-introduction.html\">16:8</a> offers a candle and a year of prayer, and <a href=\"adoration.html\">Saturday adoration</a> pairs with confession all season long.</p>"
             "</div>")
