@@ -1868,7 +1868,7 @@ def _prayer_item(title, body_html):
 WREATH_ACCORDION = (
     '<div class="prose">'
     "<h2>Advent Wreath and Prayers</h2>"
-    '<p class="lead">Blessing the wreath, and the prayer for each week of Advent. The Advent wreath is a family&rsquo;s calendar of light: an evergreen circle with four candles, three violet and one rose, lit one more each week until the room is bright and Christmas arrives. Bless the wreath when it is first set out; pray the week&rsquo;s prayer at the evening meal &mdash; in many families the youngest child lights the candles and the oldest reads the prayer. The circle has no beginning and no end; the evergreen does not die in winter; the growing light answers the shortening days. The rose candle is lit on Gaudete Sunday, the third week, when the Church relaxes the penitential violet for a day because Christmas is close. Nobody remembers the year&rsquo;s homilies; everyone remembers the wreath.</p>'
+    '<p class="lead">Blessing the wreath, and the prayer for each week of Advent. The Advent wreath is a family&rsquo;s calendar of light: an evergreen circle with four candles, three violet and one rose, lit one more each week until the room is bright and Christmas arrives. Bless the wreath when it is first set out; pray the week&rsquo;s prayer at the evening meal &mdash; in many families the youngest child lights the candles and the oldest reads the prayer. The circle has no beginning and no end; the evergreen does not die in winter; the growing light answers the shortening days. The rose candle is lit on Gaudete Sunday, the third week, when the Church relaxes the penitential violet for a day because Christmas is close.</p>'
     "</div>"
     '<div class="faq-list">'
     + _prayer_item("Blessing of the Wreath",
