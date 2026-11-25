@@ -1882,7 +1882,7 @@ WREATH_ACCORDION = (
     + _prayer_item("Fourth Week &mdash; the candle of love",
         '<div class="lit-prayers"><p>Come, Lord Jesus, do not delay; give new courage to Your people who trust in Your love. By Your coming, raise us to the joy of Your kingdom, where You live and reign for ever and ever. Amen.</p></div>')
     + _prayer_item("About the Wreath",
-        "<p>The circle has no beginning and no end; the evergreen does not die in winter; the growing light answers the shortening days. The rose candle is lit on Gaudete Sunday, the third week, when the Church relaxes the penitential violet for a day because Christmas is close. Nobody remembers the year&rsquo;s homilies; everyone remembers the wreath.</p>")
+        "<p>The circle has no beginning and no end; the evergreen does not die in winter; the growing light answers the shortening days. The rose candle is lit on Gaudete Sunday, the third week, when the Church relaxes the penitential violet for a day because Christmas is close. In many families the youngest child lights the candles and the oldest reads the prayer. Nobody remembers the year&rsquo;s homilies; everyone remembers the wreath.</p>")
     + "</div>"
     + '<p style="color:var(--muted);font-size:.86rem;margin-top:14px;">Prayers drawn from <a href="https://catholic-repository.org/prayers/advent-wreath-prayers/" target="_blank" rel="noopener">catholic-repository.org</a>.</p>'
     + '<script>'
