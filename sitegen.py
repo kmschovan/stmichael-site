@@ -862,7 +862,7 @@ P("168-introduction.html", "16:8 — Introduction",
 <div class="prose">
   <h2>How to Join</h2>
   <p>Begin by choosing a seven-day prayer candle &mdash; <strong>$20 each</strong> &mdash; and bring it to the opening gathering for a special blessing:</p>
-  <p><strong>Wednesday, December 2, 2026</strong><br>the first Wednesday of Advent &mdash; opening gathering &amp; candle blessing<br>Wednesday evenings at St. Michael's</p>
+  <p><strong>Wednesday, December 2, 2026</strong><br>the first Wednesday of Advent &mdash; opening gathering &amp; candle blessing<br>The initial meeting and introduction will take place after Mass, at <strong>7:30 pm</strong>, and will include our first Wednesday Adoration.</p>
   <p>Call the parish office at <a href="tel:9038217511">903-821-7511</a> to reserve your candle or ask any questions.</p>
   <p>We also encourage you to purchase a <strong>second candle for someone else</strong> and personally invite them to join you. Donated candles will be available, so cost never prevents anyone from participating. And you can join at any time throughout the year.</p>
 
