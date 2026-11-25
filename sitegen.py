@@ -1861,6 +1861,44 @@ ADV_DAYS = [
    "<strong>Christmas.</strong> &ldquo;Glory to God in the highest and on earth peace to those on whom his favor rests.&rdquo; &mdash; Luke 2:14"),
 ]
 
+def _prayer_item(title, body_html):
+    return ('<details class="faq-item" name="advent"><summary>' + title
+            + '</summary><div class="faq-a">' + body_html + "</div></details>")
+
+WREATH_ACCORDION = (
+    '<div class="prose">'
+    "<h2>Advent Wreath Prayers</h2>"
+    '<p class="lead">Blessing the wreath, and the prayer for each week of Advent. The Advent wreath is a family&rsquo;s calendar of light: an evergreen circle with four candles, three violet and one rose, lit one more each week until the room is bright and Christmas arrives. Bless the wreath when it is first set out; pray the week&rsquo;s prayer at the evening meal &mdash; in many families the youngest lights the candles and the oldest reads the prayer.</p>'
+    "</div>"
+    '<div class="faq-list">'
+    + _prayer_item("Blessing of the Wreath",
+        '<div class="lit-prayers"><p>Lord God, Your Church joyfully awaits the coming of its Saviour, who enlightens our hearts and dispels the darkness of ignorance and sin. Pour forth Your blessings upon us as we light the candles of this wreath. May their light reflect the splendour of Christ, who is Lord, for ever and ever. Amen.</p></div>')
+    + _prayer_item("First Week &mdash; the candle of hope",
+        '<div class="lit-prayers"><p>Lord, stir up Your power and come. Protect us by Your strength and save us from the threatening dangers of our sins, for You are our help and our redeemer. Amen.</p></div>')
+    + _prayer_item("Second Week &mdash; the candle of peace",
+        '<div class="lit-prayers"><p>Lord, let Your light shine on those who dwell in darkness and in the shadow of death, and guide our feet into the way of peace. Amen.</p></div>')
+    + _prayer_item("Third Week &mdash; the rose candle, of joy",
+        '<div class="lit-prayers"><p>Lord God, may we, Your people, who look forward to the birthday of Christ, experience the joy of salvation and celebrate that feast with love and thanksgiving. Amen.</p></div>')
+    + _prayer_item("Fourth Week &mdash; the candle of love",
+        '<div class="lit-prayers"><p>Come, Lord Jesus, do not delay; give new courage to Your people who trust in Your love. By Your coming, raise us to the joy of Your kingdom, where You live and reign for ever and ever. Amen.</p></div>')
+    + _prayer_item("About the Wreath",
+        "<p>The circle has no beginning and no end; the evergreen does not die in winter; the growing light answers the shortening days. The rose candle is lit on Gaudete Sunday, the third week, when the Church relaxes the penitential violet for a day because Christmas is close. Nobody remembers the year&rsquo;s homilies; everyone remembers the wreath.</p>")
+    + "</div>"
+    + '<p style="color:var(--muted);font-size:.86rem;margin-top:14px;">Prayers drawn from <a href="https://catholic-repository.org/prayers/advent-wreath-prayers/" target="_blank" rel="noopener">catholic-repository.org</a>.</p>'
+    + '<script>'
+    + '(function () {'
+    + '  var probe = document.createElement("details");'
+    + '  if ("name" in probe) return; /* native exclusive accordion */'
+    + '  var items = document.querySelectorAll(\'details[name="advent"]\');'
+    + '  items.forEach(function (det) {'
+    + '    det.addEventListener("toggle", function () {'
+    + '      if (!det.open) return;'
+    + '      items.forEach(function (other) { if (other !== det) other.open = false; });'
+    + '    });'
+    + '  });'
+    + '})();'
+    + "</script>")
+
 def advent_calendar_body():
     cells = []
     for i, (kind, date_html, cite, bg_search, tip) in enumerate(ADV_DAYS):
@@ -1898,7 +1936,7 @@ def advent_calendar_body():
                " (hover or tap any date). Quotations from Pope Leo XIV retain their original attributions.</p>")
     return ('<div class="prose">'
             '<p class="lead">Twenty-six days, one short reading each &mdash; from the watchmen waiting for dawn to the shepherds keeping watch by night. Hover or tap any date for that day&rsquo;s practice; tap the reading to open the passage.</p>'
-            "</div>" + grid + legend + sources
+            "</div>" + WREATH_ACCORDION + grid + legend + sources
             + '<div class="prose" style="margin-top:30px;">'
             "<p>Keep it simple: a verse or two a day, read aloud &mdash; alone in the morning, or with the family at supper or bedtime with the wreath lit. If a day slips past, read it with the next day&rsquo;s verse and carry on. And keep the season close at hand: the <a href=\"advent-2026.html\">Advent 2026</a> page has our parish schedule, <a href=\"168-introduction.html\">16:8</a> offers a candle and a year of prayer, and <a href=\"adoration.html\">Saturday adoration</a> pairs with confession all season long.</p>"
             "</div>")
