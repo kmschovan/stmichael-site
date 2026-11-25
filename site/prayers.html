@@ -39,7 +39,7 @@
   <p>Please use the form below to send us your prayer requests and Mass Intentions. Due to the many prayer requests we receive, we will not be able to respond to your request — but please be assured our prayer teams will be praying for your prayer requests. For Mass Intentions, we will get back to you when we can schedule your request. May God bless you.</p>
 </div>
 <div class="contact-form" style="margin-top: 32px;">
-  <form id="prayerForm" name="prayer-requests" method="POST">
+  <form id="prayerForm" name="prayer-requests">
     <label for="pr-name">Your Name (optional)</label>
     <input id="pr-name" name="name" type="text" placeholder="Your name">
     <label for="pr-intention">Prayer Request / Mass Intention *</label>
@@ -49,17 +49,41 @@
       <option value="prayer">Prayer request only</option>
       <option value="mass">Mass intention (please schedule)</option>
     </select>
-    <button class="btn btn-primary" type="submit">Send Request</button>
+    <input type="text" name="website" id="pr-web" style="display:none" tabindex="-1" autocomplete="off">
+    <button class="btn btn-primary" type="submit" id="prayerSend">Send Request</button>
   </form>
   <div id="prayerThanks" style="display:none;background:rgba(176,122,42,.12);border:1px solid var(--gold);padding:16px 18px;margin-top:12px;">
-    <strong>Thank you!</strong> To be sure we received your request, please call the parish office at <a href="tel:9038217511">903-821-7511</a>.
+    <strong>Thank you!</strong> Your request has been sent &mdash; our prayer teams will keep your intention in prayer, and Mass-intention requests will be scheduled through the parish office.
   </div>
+  <div id="prayerError" style="display:none;color:#b91c1c;margin-top:12px;font-size:.92rem;"></div>
 </div>
 <script>
 document.getElementById("prayerForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  this.style.display = "none";
-  document.getElementById("prayerThanks").style.display = "block";
+  var btn = document.getElementById("prayerSend");
+  btn.disabled = true; btn.textContent = "Sending…";
+  fetch("https://scheduler.stmichaelsallangels.com/api/prayer-request", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: document.getElementById("pr-name").value,
+      intention: document.getElementById("pr-intention").value,
+      type: document.getElementById("pr-type").value,
+      website: document.getElementById("pr-web").value
+    })
+  }).then(function (r) {
+    if (!r.ok) return r.json().catch(function () {}).then(function (d) { throw new Error((d && d.error) || "send failed"); });
+  }).then(function () {
+    document.getElementById("prayerForm").style.display = "none";
+    document.getElementById("prayerThanks").style.display = "block";
+  }).catch(function (err) {
+    var box = document.getElementById("prayerError");
+    box.textContent = err.message === "send failed"
+      ? "Your request could not be sent just now — please try again, or call the parish office at 903-821-7511."
+      : (err.message || "Something went wrong — please call the parish office at 903-821-7511.");
+    box.style.display = "block";
+    btn.disabled = false; btn.textContent = "Send Request";
+  });
 });
 </script></div>
 </section>
