@@ -16,11 +16,6 @@ def link(label, href, ext=False):
 # ---------------------------------------------------------------- nav tree
 NAV = [
     ("Home", "index.html", None),
-    ("16:8", None, [
-        ("Introduction", "168-introduction.html", False),
-        ("Progress & Prayer Log", "168-progress.html", False),
-        ("Weekly Reflections", "168-reflections.html", False),
-    ]),
     ("About", None, [
         ("About Us", "about.html", False),
         ("Contact Us", "contact.html", False),
@@ -46,6 +41,11 @@ NAV = [
         ("Marriage", "marriage.html", False),
         ("Holy Orders", "holy-orders.html", False),
         ("Anointing of the Sick", "anointing.html", False),
+    ]),
+    ("16:8", None, [
+        ("Introduction", "168-introduction.html", False),
+        ("Progress & Prayer Log", "168-progress.html", False),
+        ("Weekly Reflections", "168-reflections.html", False),
     ]),
     ("Resources", None, [
         ("Advent 2026", "advent-2026.html", False),
