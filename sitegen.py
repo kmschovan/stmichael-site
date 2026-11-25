@@ -1882,7 +1882,6 @@ WREATH_ACCORDION = (
     + _prayer_item("Fourth Week &mdash; the candle of love",
         '<div class="lit-prayers"><p>Come, Lord Jesus, do not delay; give new courage to Your people who trust in Your love. By Your coming, raise us to the joy of Your kingdom, where You live and reign for ever and ever. Amen.</p></div>')
     + "</div>"
-    + '<p style="color:var(--muted);font-size:.86rem;margin-top:14px;">Prayers drawn from <a href="https://catholic-repository.org/prayers/advent-wreath-prayers/" target="_blank" rel="noopener">catholic-repository.org</a>.</p>'
     + '<script>'
     + '(function () {'
     + '  var probe = document.createElement("details");'
