@@ -1058,24 +1058,48 @@ P("contact.html", "Contact Us",
   </div>
 </div>
 <div class="contact-form">
-  <form id="contactForm" name="contact" method="POST">
+  <form id="contactForm" name="contact">
     <label for="c-name">Your Name *</label>
     <input id="c-name" name="name" type="text" required placeholder="Your name">
     <label for="c-email">Email *</label>
     <input id="c-email" name="email" type="email" required placeholder="you@example.com">
     <label for="c-msg">Message *</label>
     <textarea id="c-msg" name="message" rows="6" required placeholder="How can we help?"></textarea>
-    <button class="btn btn-primary" type="submit">Send Message</button>
+    <input type="text" name="website" id="c-web" style="display:none" tabindex="-1" autocomplete="off">
+    <button class="btn btn-primary" type="submit" id="contactSend">Send Message</button>
   </form>
   <div id="contactThanks" style="display:none;background:rgba(176,122,42,.12);border:1px solid var(--gold);padding:16px 18px;margin-top:12px;">
-    <strong>Thank you!</strong> Please call the parish office at <a href="tel:9038217511">903-821-7511</a> to be sure we received your message, or reach us through <a href="https://www.facebook.com/stmichaelallangel" target="_blank" rel="noopener">Facebook</a>.
+    <strong>Thank you!</strong> Your message has been sent &mdash; Father Randall receives every message by email, and you can expect a reply at the address you gave.
   </div>
+  <div id="contactError" style="display:none;color:#b91c1c;margin-top:12px;font-size:.92rem;"></div>
 </div>
 <script>
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  this.style.display = "none";
-  document.getElementById("contactThanks").style.display = "block";
+  var btn = document.getElementById("contactSend");
+  btn.disabled = true; btn.textContent = "Sending\u2026";
+  fetch("https://scheduler.stmichaelsallangels.com/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: document.getElementById("c-name").value,
+      email: document.getElementById("c-email").value,
+      message: document.getElementById("c-msg").value,
+      website: document.getElementById("c-web").value
+    })
+  }).then(function (r) {
+    if (!r.ok) return r.json().catch(function () {}).then(function (d) { throw new Error((d && d.error) || "send failed"); });
+  }).then(function () {
+    document.getElementById("contactForm").style.display = "none";
+    document.getElementById("contactThanks").style.display = "block";
+  }).catch(function (err) {
+    var box = document.getElementById("contactError");
+    box.textContent = err.message === "send failed"
+      ? "Your message could not be sent just now \u2014 please try again, or call the parish office at 903-821-7511."
+      : (err.message || "Something went wrong \u2014 please call the parish office at 903-821-7511.");
+    box.style.display = "block";
+    btn.disabled = false; btn.textContent = "Send Message";
+  });
 });
 </script>""")
 
