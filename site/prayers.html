@@ -38,6 +38,44 @@
   <div class="wrap"><div class="prose">
   <p>Please use the form below to send us your prayer requests and Mass Intentions. Due to the many prayer requests we receive, we will not be able to respond to your request — but please be assured our prayer teams will be praying for your prayer requests. For Mass Intentions, we will get back to you when we can schedule your request. May God bless you.</p>
 </div>
+<div class="prose">
+  <h2>Mass Intentions and Offerings</h2>
+  <p>Considering a Mass intention? Tap a question to open it &mdash; only one is open at a time.</p>
+</div>
+<div class="faq-list">
+  <details class="faq-item" name="massinfo"><summary>What does it mean to have a Mass offered for someone?</summary><div class="faq-a">
+    <p>When a priest offers a Mass, he does so with three intentions in mind. First, that he may offer it reverently and validly within the norms established by the Church. Second, he offers it in union with and for the good of the whole Church. Finally, he may offer it with a particular intention in mind &mdash; for example, in thanksgiving for particular blessings received, for someone living on a special occasion such as the anniversary of one&rsquo;s baptism, for health and healing for someone who is ill, or, as is most common, for someone who has died.</p>
+  </div></details>
+  <details class="faq-item" name="massinfo"><summary>What is the customary offering?</summary><div class="faq-a">
+    <p>Typically, when someone requests that a priest offer a Mass for a particular intention, a stipend &mdash; a monetary gift &mdash; is offered to the priest. The bishop sets the amount that becomes customary; at Saint Michael&rsquo;s that amount has been $10 for as long as anyone here can remember. A person is not obligated to make an offering for a Mass: if someone requests a Mass, the request must be fulfilled whether or not an offering is made.</p>
+  </div></details>
+  <details class="faq-item" name="massinfo"><summary>How do I schedule a Mass intention?</summary><div class="faq-a">
+    <p>Masses at Saint Michael&rsquo;s are scheduled through the parish office, and the stipend is paid to the parish &mdash; these offerings help support the parish&rsquo;s priests and retired priests of the Ordinariate. We prefer that you schedule Masses through the parish office at <a href="tel:9038217511">903-821-7511</a>, rather than approach Father Randall directly: since most of the Masses we offer are celebrated here at Saint Michael&rsquo;s, it is difficult to fulfill intentions requested of us personally. Usually a requested Mass is fulfilled within one year of the submission.</p>
+  </div></details>
+  <details class="faq-item" name="massinfo"><summary>What if there are more requests than Masses?</summary><div class="faq-a">
+    <p>There are times when there are simply too many requests, and not every intention can be fulfilled here. At those times some requests are passed on to the Ordinariate, which forwards them to retired or missionary priests &mdash; the stipends attached to these intentions often provide valuable income for those priests.</p>
+  </div></details>
+  <details class="faq-item" name="massinfo"><summary>Why are Masses offered for those who have died?</summary><div class="faq-a">
+    <p>It is easy to understand a Mass offered in thanksgiving for blessings received, or for the needs of someone living; it can be harder &mdash; especially for non-Catholics &mdash; to understand why Masses are offered for those who have died. Yet this is an ancient tradition reaching back to the earliest days of the Church, one that Martin Luther contested at the time of the Reformation.</p>
+    <p>As Catholics we believe that the bonds that unite us do not unravel with death: the living remain bound to those whose souls are in heaven and to the souls in purgatory &mdash; the state of a soul in need of purifying before it can be in perfect union with God. Since the soul cannot purify itself, it needs our prayers in a spirit of charity, and the grace of God. A perfect act of charity is to have a loved one remembered at a Mass &mdash; and family and friends can be remembered this way, including non-Catholics.</p>
+  </div></details>
+  <details class="faq-item" name="massinfo"><summary>What about the Sunday Mass for the parish?</summary><div class="faq-a">
+    <p>Each Sunday, one Mass must be offered for the intention of the living and deceased members of the parish &mdash; this is mandated by Church law. That is why you see a Mass listed as such in the bulletin.</p>
+  </div></details>
+</div>
+<script>
+(function () {
+  var probe = document.createElement("details");
+  if ("name" in probe) return; /* native exclusive accordion */
+  var items = document.querySelectorAll('details[name="massinfo"]');
+  items.forEach(function (det) {
+    det.addEventListener("toggle", function () {
+      if (!det.open) return;
+      items.forEach(function (other) { if (other !== det) other.open = false; });
+    });
+  });
+})();
+</script>
 <div class="contact-form" style="margin-top: 32px;">
   <form id="prayerForm" name="prayer-requests">
     <label for="pr-name">Your Name (optional)</label>
@@ -49,6 +87,10 @@
       <option value="prayer">Prayer request only</option>
       <option value="mass">Mass intention (please schedule)</option>
     </select>
+    <label for="pr-phone">Contact Number <span id="pr-phone-req" style="color:#b91c1c;">(required for Mass intentions)</span></label>
+    <input id="pr-phone" name="phone" type="tel" placeholder="Your phone number">
+    <label for="pr-email">Email Address <span id="pr-email-req" style="color:#b91c1c;">(required for Mass intentions)</span></label>
+    <input id="pr-email" name="email" type="email" placeholder="you@example.com">
     <input type="text" name="website" id="pr-web" style="display:none" tabindex="-1" autocomplete="off">
     <button class="btn btn-primary" type="submit" id="prayerSend">Send Request</button>
   </form>
@@ -58,6 +100,14 @@
   <div id="prayerError" style="display:none;color:#b91c1c;margin-top:12px;font-size:.92rem;"></div>
 </div>
 <script>
+var prType = document.getElementById("pr-type");
+function prSyncContact() {
+  var req = prType.value === "mass";
+  document.getElementById("pr-phone").required = req;
+  document.getElementById("pr-email").required = req;
+}
+prType.addEventListener("change", prSyncContact);
+prSyncContact();
 document.getElementById("prayerForm").addEventListener("submit", function (e) {
   e.preventDefault();
   var btn = document.getElementById("prayerSend");
@@ -68,7 +118,9 @@ document.getElementById("prayerForm").addEventListener("submit", function (e) {
     body: JSON.stringify({
       name: document.getElementById("pr-name").value,
       intention: document.getElementById("pr-intention").value,
-      type: document.getElementById("pr-type").value,
+      type: prType.value,
+      phone: document.getElementById("pr-phone").value,
+      email: document.getElementById("pr-email").value,
       website: document.getElementById("pr-web").value
     })
   }).then(function (r) {
