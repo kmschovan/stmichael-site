@@ -483,7 +483,7 @@ P("prayers.html", "Prayers & Intentions",
   "Submit prayer requests and Mass intentions to Saint Michael & All Angels Catholic Church.",
   "Our Parish", "Prayer Requests & Mass Intentions",
   """<div class="prose">
-  <p>Please use the form below to send us your prayer requests and Mass Intentions. Due to the many prayer requests we receive, we will not be able to respond to your request — but please be assured our prayer teams will be praying for your prayer requests. For Mass Intentions, we will get back to you when we can schedule your request. May God bless you.</p>
+  <p>Please use the form below to send us your prayer requests and Mass Intentions. Due to the many prayer requests we receive, we may not be able to respond to your request — but please be assured our prayer teams will be praying for your prayer requests. For Mass Intentions, we will get back to you when we can schedule your request. May God bless you.</p>
 </div>
 <div class="prose">
   <h2>Mass Intentions and Offerings</h2>
